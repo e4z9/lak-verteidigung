@@ -3,7 +3,9 @@ Author: Ez
 
 # Handbuch der Verteidigung
 
-#### Aktualisierungen:
+***
+
+Author: Ez
 
 v2:
 750ST+AS Faustregel.
@@ -12,11 +14,26 @@ Brückentipp zu verschobenen Rundenzeiten.
 Brückenformular.
 Brückenbriefe.
 Interne Verlinkung.
+Inhaltsverzeichnis.
 
 v1:
 Erster Entwurf :D
 
-## Einheiten 
+***
+
+## Inhalt
+
+* [Einheiten][]
+* [Gebäude][]
+* [Entfernungen][]
+* [Kampf][]
+* [Nachtmodus][]
+* [Warnposten][]
+* [Erste Maßnahmen][]
+* [Generelle Techniken][]
+* [Brücken][]
+
+## Einheiten [Einheiten]
 
 ### Einheitentypen
 Es gibt 3 Einheitentypen, die vor allem zur Verteidigung genutzt werden (deff-Truppen): Armbrustschütze (AS), Speerträger (ST) und Panzerreiter (PR). Die drei offensiven Einheitentypen (off-Truppen), Bogenschütze (BS), Schwertkämpfer (SK) und Lanzenreiter (LR), können teilweise auch effektiv für Verteidigungstechniken benutzt werden, wie wir später beim [Brückenbau][Brücken] sehen werden. Das sollte aber, wenn möglich, die Ausnahme sein.
@@ -43,7 +60,7 @@ Ohne „Umgebungskarte“ aus der Bibliothek:
 * ST: 11 ⅔ min/Feld
 * SK: 13 ⅓ min/Feld
 
-## Gebäude
+## Gebäude [Gebäude]
 
 ### Wehranlage [Wehranlage]
 Die Wehranlage erhöht die Verteidigung von Einheiten in der Burg um bis zu 100%! Weiterhin fügt die Wehranlage pro Kampfrunde einen festen Bonus zum Verteidigungswert gegen Artillerie, Infanterie und Kavallerie hinzu. Dieser feste Bonus ist mit maximal 1000 Punkten pro Gattung nicht sehr hoch (5-10 Verteidigungseinheiten?), und deshalb umso effektiver, je länger ein Kampf dauert, und je weniger Verteidigungseinheiten pro Kampfrunde ansonsten teilnehmen. Das kann bei langen [Brücken][] ein deutlicher Faktor werden. Die Wehranlage ist eines der wichtigsten Verteidigungsinstrumente, und Stufe 18 ist Pflicht für jede größere Burg!
@@ -74,17 +91,12 @@ Auf Stufe 10 erlaubt die Bibliothek auch die Erforschung von "Umgebungskarte". D
 * Stufe 10
     * Zisterne: 5% Verteidigung (Einheiten)
 
-## Nachtmodus [Nachtmodus]
-In der Nacht gibt es eine 8-stündige Phase, in der Verteidiger einen Bonus von 100% auf alle Verteidigungswerte bekommen. Die genaue Zeit hängt vom Server und der Zeitzone ab. Deutsche Server sind von 23-7 Uhr MEZ ("Winterzeit") im Nachtmodus (das ist während der Sommerzeit von 24-8 Uhr). Beim schicken von Einheiten wird neben der Ankunftszeit durch ein Sonnen- oder Mondsymbol angezeigt, ob die Einheiten am Tag oder im Nachtmodus am Ziel ankommen.
-
-Wenn der Verteidiger es schafft einen Kampf durch [Brücken][] bis zum einsetzen des Nachtmodus zu ziehen, ist das ein großer Vorteil.
-
-## Entfernungen
+## Entfernungen [Entfernungen]
 Mit etwas Übung kann man auf der Kartenansicht sehr leicht sehen, wie weit Burgen voneinander entfernt sind (wenn sie nicht zu weit voneinander weg sind). Das ist zum Beispiel wichtig beim [Brücken][] und beim Warnpostennetz. Ein Bild sagt mehr als tausend Worte (jede der Linien ist ein Feld weiter von der zentralen Burg entfernt):
 
 ![Entfernungsbestimmung](brueckenburgen.png)
 
-## Kampf
+## Kampf [Kampf]
 
 ### Kampfmechanik [Kampfmechanik]
 Ein Kampf ist in Runden gegliedert. Der Ablauf dabei ist wie folgt:
@@ -104,6 +116,11 @@ Die Berechnung der Verluste in jeder Kampfrunde ist linear in der Anzahl der geg
 
 Das ist anders als in den meisten Strategie- und RTS-Spielen, die grob gesehen dem [quadratischen Gesetz von Lanchester](https://de.wikipedia.org/wiki/Gesetz_von_Lanchester) folgen. Bei diesem hängen die Verluste von der Differenz der quadrierten Anzahl der Einheiten beider Parteien ab. Bei dieser Art von Kampf ist es von großem Vorteil mit einer großen Übermacht anzugreifen oder zu verteidigen, denn je größer die eigene Übermacht ist, desto geringer sind die eigenen Verluste. Bei L&K gilt dies nicht. Eine größere Übermacht bringt keinen Vorteil bei den eigenen Verlusten. Deshalb gibt es keinen Nachteil, mit der geringstmöglichen Zahl an Einheiten zu verteidigen, was man sich beim [Brücken][] zunutze macht.
 
+## Nachtmodus [Nachtmodus]
+In der Nacht gibt es eine 8-stündige Phase, in der Verteidiger einen Bonus von 100% auf alle Verteidigungswerte bekommen. Die genaue Zeit hängt vom Server und der Zeitzone ab. Deutsche Server sind von 23-7 Uhr MEZ ("Winterzeit") im Nachtmodus (das ist während der Sommerzeit von 24-8 Uhr). Beim schicken von Einheiten wird neben der Ankunftszeit durch ein Sonnen- oder Mondsymbol angezeigt, ob die Einheiten am Tag oder im Nachtmodus am Ziel ankommen.
+
+Wenn der Verteidiger es schafft einen Kampf durch [Brücken][] bis zum einsetzen des Nachtmodus zu ziehen, ist das ein großer Vorteil.
+
 ## Warnposten [Warnposten]
 Niemand wird durchgehend online sein (die meisten Menschen müssen zumindest zwischendurch ein paar Stunden schlafen 😉), aber selbst im eigenen Bündnis bekommt man keine Angriffswarnungen für andere Spieler. Deshalb kann es sinnvoll sein, ein Warnpostennetz aufzusetzen. Dabei macht man sich zunutze, dass alle Verteidiger im Fall eines Angriffs eine Meldung bekommen. Die kommt zwar erst wenn der Angriff schon läuft, aber das kann besser sein als gar nichts.
 
@@ -116,7 +133,7 @@ Um ein effektives Warnpostennetz aufzubauen, schickt jeder 1 Handkarren + 4 Spee
 
 Es ist nicht sinnvoll Warnposten weiter als maximal 10 Felder entfernt zu plazieren, denn die Angriffsmeldung kommt erst nach der ersten Kampfrunde, und eine voll besetzte Burg mit etwa 3000 Einheiten fällt nach 6 Runden. Panzerreiter, die schnellste Einheit, brauchen aber schon 50 Minuten (= 5 Runden) um 10 Felder zurückzulegen.
 
-## Erste Maßnahmen im Fall eines Angriffs
+## Erste Maßnahmen im Fall eines Angriffs [Erste Maßnahmen]
 
 ### Ruhe bewahren!
 Wenn eine Burg blinkt, kann dies das erste Mal ein wenig erschreckend sein. Wichtig im Falle eines Angriffs ist es aber vor allem Ruhe zu bewahren. Aktionismus und „HILFE ICH WERDE ANGEGRIFFEN“ im Forum zu schreiben bringt niemandem etwas. Erstmal die Lage einschätzen, Möglichkeiten abwägen, und dann gezielt mit ausreichend Informationen Hilfe vom Bündnis erfragen.
@@ -153,7 +170,7 @@ Ohne diese Informationen ist es sehr schwierig für das Bündnis, dir zu helfen.
 
 Am besten ist es auch, gleich den Link zu einem [Brückenformular][] mitzuliefern.
 
-## Generelle Techniken
+## Generelle Techniken [Generelle Techniken]
 
 ### Fakes (=Scheinangriffe) aussortieren [Fakes]
 Wenn mehrere Burgen angegriffen werden, ist das wichtigste überhaupt, die Fakes auszusortieren. Nur so ist es möglich die scharfen Angriffe effektiv abzuwehren. Eine übliche (weil effektive) Angriffstechnik ist es, auf viele Burgen 1 SK zu schicken, und nur auf eine oder wenige Burgen einen scharfen Angriff mit Silber zu machen (so dass alle möglichst gleichzeitig ankommen). Wenn du nicht in der Lage bist die Fakes zu erkennen, und dann die scharfen Angriffe entweder selbst zu verteidigen, oder solange bis Verstärkung vom Bündnis eintrifft, musst du entweder deine Verteidigung über viele Burgen verteilen, oder auf wenige Burgen konzentrieren von denen du nicht weißt, ob sie echten Angriffen ausgesetzt sein werden.
