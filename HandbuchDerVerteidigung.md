@@ -1,3 +1,6 @@
+Title: Handbuch der Verteidigung
+Author: Ez
+
 # Handbuch der Verteidigung
 
 #### Aktualisierungen:
