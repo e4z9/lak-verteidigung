@@ -193,8 +193,8 @@ Brücken ist *die* Verteidigungstechnik in L&K schlechthin. Es ist eine Technik 
 
 * mehr Zeit zum Eintreffen von Verstärkung
 * dadurch hilfreich beim Aussortieren von [Fakes][]
-* Strecken in den Nachtmodus bringt großen Verteidigungsbonus
-* Wehranlage macht maximalen Schaden
+* Strecken in den [Nachtmodus][] bringt großen Verteidigungsbonus
+* [Wehranlage][] macht maximalen Schaden
 
 Die wesentlichen Nachteile sind der Aufwand, dass man zu passenden Zeiten online sein muss (je nach angewendeter Technik), und dass man bei einem einzigen kleinen Fehler den man übersieht, oder nicht mehr schafft auszugleichen, die Burg im wesentlichen kampflos verlieren kann.
 
