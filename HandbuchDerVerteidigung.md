@@ -1,6 +1,6 @@
 # Handbuch der Verteidigung
 
-##### Aktualisierungen:
+#### Aktualisierungen:
 
 v2:
 750ST+AS Faustregel.
