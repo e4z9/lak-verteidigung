@@ -1,0 +1,7 @@
+h2 {
+    background-color: #dddddd;
+    border-width: 1px;
+    border-style: solid;
+}
+h3 { background-color: #eeeeee; }
+h4 { font-variant: small-caps; font-weight: bolder; }
