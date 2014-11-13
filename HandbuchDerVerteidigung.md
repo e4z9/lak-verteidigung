@@ -227,6 +227,18 @@ Dort trägt man die genaue Angriffszeit, das Datum, den Burgnamen, und den Burgl
 
 Die resultierende Liste hat eine Zeile pro Kampfrunde. In jeder Zeile steht rot hinterlegt ein Zeitintervall von 8 Minuten. Wer nun 55 oder mehr Einheiten geschickt hat, tippt oder klickt das Zeitintervall in dem die Einheiten in der Burg *ankommen*, und markiert es so grau. Der Besitzer der zu verteidigenden Burg überprüft die Daten im Formular mit den tatsächlichen Ankunftszeiten die er in der Einheitenübersicht der Burg sieht, und tippt noch einmal das Zeitintervall, und markiert es so grün. Wenn eine Zeit falsch eingetragen wurde, kann man das Intervall noch einmal tippen, dann wird es wieder rot.
 
+### Brückenlöcher mit Gold stopfen
+Wenn es doch einmal passiert, und du ein Loch in deiner Brücke entdeckst, aber alle deine Einheiten zu lange brauchen um die Lücke stopfen zu können, dann gibt es häufig noch einen Ausweg: Gold.
+
+#### Truppen sofort zurück holen
+Man kann mit Gold Einheiten, die sich auf dem Rückweg zu ihrer Burg befinden, sofort zurück holen. Schicke also z.B. 55 ST auf den Rückweg, und drücke in der Einheitenübersicht der Burg für sie den Beschleunigungsknopf.
+Einheiten, die sich auf dem *Hinweg* zu einer Burg befinden, kann man nicht Beschleunigen.
+
+55 ST aus einer Entfernung von 6 Feldern sofort zurück holen kostet 17 Gold.
+
+#### Einheiten sofort rekrutieren
+Sofern genug Ressourcen in der Burg vorhanden sind, kann man 55 Einheiten mit 110 Gold sofort rekrutieren. Dazu starte den Bau von 55 Einheiten (am besten Speerträger, die brauchen am wenigsten Ressourcen), drückst den Beschleunigungsknopf einmal zum Halbieren der Zeit (55 Gold), und nocheinmal zur sofortigen Fertigstellung (55 Gold).
+
 ### Alleine Brücken
 
 Es gibt einige Techniken mit der man mit den Einheiten aus der angegriffenen Burg selbst effektiv Brücken bauen kann. Die meisten erfordern, dass man während des Angriffes zu bestimmten Zeiten online sein kann.
