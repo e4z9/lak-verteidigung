@@ -35,7 +35,7 @@ Erster Entwurf :D
 
 ## Einheiten [Einheiten]
 
-### Einheitentypen
+### Einheitentypen [Einheitentypen]
 Es gibt 3 Einheitentypen, die vor allem zur Verteidigung genutzt werden (deff-Truppen): Armbrustschütze (AS), Speerträger (ST) und Panzerreiter (PR). Die drei offensiven Einheitentypen (off-Truppen), Bogenschütze (BS), Schwertkämpfer (SK) und Lanzenreiter (LR), können teilweise auch effektiv für Verteidigungstechniken benutzt werden, wie wir später beim [Brückenbau][Brücken] sehen werden. Das sollte aber, wenn möglich, die Ausnahme sein.
 
 ### Gattungen [Gattungen]
@@ -359,6 +359,32 @@ So wird’s gemacht:
 
 Der Burgfried hat auf Stufe 10 eine Entfernung von 25 Feldern. Wenn man einmal 55 von jedem Einheitentyp tauschen schickt, dann kommen sie im Abstand von 39,5 Minuten zurück. Wenn man das noch 3 weitere mal im Abstand von 10 Minuten wiederholt, dann ist die Brücke komplett. Wenn nicht, dann klaffen große Lücken in der Brücke 😀.
 
+#### Rohstoffbrücke Allgemein
+Bei der Rohstoffbrücke schickt man Einheiten mit der Funktion "Rohstoffe senden" aus der Burg, so dass sie zum gewünschten Zeitpunkt wieder in der Burg eintreffen.
+
+Vorteile:
+
+* Sehr flexibel
+* Kann weit vor Beginn des Angriffes gebaut werden, zum Beispiel auch am Tag vorher
+
+Nachteile:
+
+* Bisschen was für Bastler
+* Aufwändig zu prüfen
+* Am effektivsten mit Panzerreitern und Armbrustschützen *ohne* erforschter "Umgebungskarte", geht aber auch mit anderen Einheiten und mit erforschter "Umgebungskarte"
+
+So wird’s gemacht:
+
+1. Rechne aus wieviel Zeit bis zum Beginn des Zeitfensters vor der Kampfrunde ist, zu der die Verteidigungseinheiten ankommen sollen (siehe [Brückenformular][]), und *halbiere* diese Zeit.
+2. Suche eine Burg, die exakt so weit entfernt ist, dass z.B. Panzerreiter oder Armbrustschützen von der angegriffenen Burg die oben ausgerechnete Zeit dorthin brauchen.
+3. Bevor du Einheiten dorthin schickst, überprüfe die Zeiten noch einmal, denn deine Suche hat die Zeiten verändert!
+4. Schicke 55 Einheiten mit "Rohstoffe senden" und einer Rohstoffeinheit zu der Burg.
+5. Wenn du *keine* "Umgebungskarte" erforscht hast und Panzerreiter schickst, kannst du gleich weitere 55 PR zu einer Burg schicken, die 1 Feld weiter entfernt ist (diese kommen dann 10 Minuten = 1 Kampfrunde später zurück), weitere zu einer Burg, die 2 Felder weiter entfernt als die erste ist (diese kommen dann 20 Minuten = 2 Kampfrunden später zurück), und so weiter.
+6. Wenn du *keine* "Umgebungskarte" erforscht hast und Armbrustschützen schickst, kannst du gleich weitere 55 AS zu einer Burg schicken, die 1 Feld weiter entfernt ist (diese kommen dann 20 Minuten = 2 Kampfrunden später zurück), weitere zu einer Burg, die 2 Felder weiter entfernt als die erste ist (diese kommen dann 40 Minuten = 4 Kampfrunden später zurück), und so weiter.
+7. Alle 5 Minuten nachdem du in 4. die ersten Einheiten losgeschickt hast, kannst du dieselbe(n) Burg(en) wieder benutzen. Die Einheiten kommen dann pro 5 Minuten späterem losschicken 10 Minuten später zurück.
+
+Wenn man also die erste Burg für einen [Einheitentyp][Einheitentypen] gefunden hat, kann man besonders mit PR oder AS ohne "Umgebungskarte" sehr schnell und effektiv Brücken bauen. Leider kann man die Brücke erst ohne große Rechnerei auf Korrektheit überprüfen, wenn die Einheiten auf dem Rückweg sind. Vorher werden in der Einheitenübersicht der Burg nur die Ankunftszeiten bei der entfernten Burg angezeigt.
+
 ### Brückenbriefe
 
 #### 6 Felder Deff + Off Brücke (1 Stunde, wiederholbar)
@@ -388,3 +414,13 @@ Vorraussetzung: Burgfried Stufe 10 und erforschte Umgebungskarte
 1. 103 Minuten (Toleranz +-3) vor Eintreffen der gegnerischen Einheiten, Gruppen von jeweils 55 PR, 55 LR, 55 AS, 55 BS, 55 ST, 55 SK getrennt voneinander auf deinen Burgfried zum Kupfer oder Silber tauschen schicken.
 2. 93 Minuten, 83 Minuten und 73 Minuten vor Eintreffen der gegnerischen Einheiten wiederholen.
 3. Erst jetzt ist die Brücke gebaut, vorher klaffen große Lücken!
+
+#### Rohstoffbrücke Allgemein (solange der Vorrat reicht)
+
+1. Rechne aus wieviel Zeit bis zum Beginn des Zeitfensters vor der Kampfrunde ist, zu der die Verteidigungseinheiten ankommen sollen, und *halbiere* diese Zeit.
+2. Suche eine Burg, die exakt so weit entfernt ist, dass z.B. Panzerreiter oder Armbrustschützen von der angegriffenen Burg die oben ausgerechnete Zeit dorthin brauchen.
+3. Bevor du Einheiten dorthin schickst, überprüfe die Zeiten noch einmal, denn deine Suche hat die Zeiten verändert!
+4. Schicke 55 Einheiten mit "Rohstoffe senden" und einer Rohstoffeinheit zu der Burg.
+5. Wenn du *keine* "Umgebungskarte" erforscht hast und Panzerreiter schickst, kannst du gleich weitere 55 PR zu einer Burg schicken, die 1 Feld weiter entfernt ist (diese kommen dann 10 Minuten = 1 Kampfrunde später zurück), weitere zu einer Burg, die 2 Felder weiter entfernt als die erste ist (diese kommen dann 20 Minuten = 2 Kampfrunden später zurück), und so weiter.
+6. Wenn du *keine* "Umgebungskarte" erforscht hast und Armbrustschützen schickst, kannst du gleich weitere 55 AS zu einer Burg schicken, die 1 Feld weiter entfernt ist (diese kommen dann 20 Minuten = 2 Kampfrunden später zurück), weitere zu einer Burg, die 2 Felder weiter entfernt als die erste ist (diese kommen dann 40 Minuten = 4 Kampfrunden später zurück), und so weiter.
+7. Alle 5 Minuten nachdem du in 4. die ersten Einheiten losgeschickt hast, kannst du dieselbe(n) Burg(en) wieder benutzen. Die Einheiten kommen dann pro 5 Minuten späterem losschicken 10 Minuten später zurück.
