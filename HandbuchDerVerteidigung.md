@@ -385,6 +385,36 @@ So wird’s gemacht:
 
 Wenn man also die erste Burg für einen [Einheitentyp][Einheitentypen] gefunden hat, kann man besonders mit PR oder AS ohne "Umgebungskarte" sehr schnell und effektiv Brücken bauen. Leider kann man die Brücke erst ohne große Rechnerei auf Korrektheit überprüfen, wenn die Einheiten auf dem Rückweg sind. Vorher werden in der Einheitenübersicht der Burg nur die Ankunftszeiten bei der entfernten Burg angezeigt.
 
+#### Rohstoffbrücke nach Angriffsbeginn (1 1/2 Stunden, einmalig)
+
+Vorteile:
+
+* Nach Eintreffen der Angriffstruppen schnell eine Brücke anfangen
+* Keine Vorbereitungszeit
+
+Nachteile:
+
+* Braucht viele Panzerreiter
+* Braucht ein paar nicht-freie Burgen in den richtigen Abständen
+
+So wird’s gemacht:
+
+Schicke 1-8 Minuten (mit "Umgebungskarte" 5-8 Minuten) *nach* Eintreffen der feindlichen Einheiten folgende Einheiten mit der Funktion "Rohstoffe senden" zu den folgenden Burgen im angegebenen Abstand zu deiner Burg (auf jeden Fall müssen 110 Einheiten für die erste Kampfrunde in der Burg verbleiben!):
+
+1. 55 PR zu 1 Feld entfernter Burg
+2. 55 PR zu 2 Felder entfernter Burg  
+oder 55 AS zu 1 Feld entfernter Burg
+3. 55 PR zu 3 Felder entfernter Burg
+4. 55 PR zu 4 Felder entfernter Burg  
+oder 55 AS zu 2 Felder entfernter Burg
+5. 55 PR zu 5 Felder entfernter Burg
+6. 55 PR zu 6 Felder entfernter Burg  
+oder 55 AS zu 3 Felder entfernter Burg
+7. 55 PR zu 7 Felder entfernter Burg  
+oder 55 ST zu 3 Felder entfernter Burg
+8. 55 PR zu 8 Felder entfernter Burg  
+oder 55 AS zu 4 Felder entfernter Burg
+
 ### Brückenbriefe
 
 #### 6 Felder Deff + Off Brücke (1 Stunde, wiederholbar)
@@ -424,3 +454,21 @@ Vorraussetzung: Burgfried Stufe 10 und erforschte Umgebungskarte
 5. Wenn du *keine* "Umgebungskarte" erforscht hast und Panzerreiter schickst, kannst du gleich weitere 55 PR zu einer Burg schicken, die 1 Feld weiter entfernt ist (diese kommen dann 10 Minuten = 1 Kampfrunde später zurück), weitere zu einer Burg, die 2 Felder weiter entfernt als die erste ist (diese kommen dann 20 Minuten = 2 Kampfrunden später zurück), und so weiter.
 6. Wenn du *keine* "Umgebungskarte" erforscht hast und Armbrustschützen schickst, kannst du gleich weitere 55 AS zu einer Burg schicken, die 1 Feld weiter entfernt ist (diese kommen dann 20 Minuten = 2 Kampfrunden später zurück), weitere zu einer Burg, die 2 Felder weiter entfernt als die erste ist (diese kommen dann 40 Minuten = 4 Kampfrunden später zurück), und so weiter.
 7. Alle 5 Minuten nachdem du in 4. die ersten Einheiten losgeschickt hast, kannst du dieselbe(n) Burg(en) wieder benutzen. Die Einheiten kommen dann pro 5 Minuten späterem losschicken 10 Minuten später zurück.
+
+#### Rohstoffbrücke nach Angriffsbeginn (1 1/2 Stunden, einmalig)
+Schicke 1-8 Minuten (mit "Umgebungskarte" 5-8 Minuten) *nach* Eintreffen der feindlichen Einheiten folgende Einheiten mit der Funktion "Rohstoffe senden" zu den folgenden Burgen im angegebenen Abstand zu deiner Burg (mindestens 110 Einheiten in Burg belassen!):
+
+1. 55 PR zu 1 Feld entfernter Burg
+2. 55 PR zu 2 Felder entfernter Burg  
+oder 55 AS zu 1 Feld entfernter Burg
+3. 55 PR zu 3 Felder entfernter Burg
+4. 55 PR zu 4 Felder entfernter Burg  
+oder 55 AS zu 2 Felder entfernter Burg
+5. 55 PR zu 5 Felder entfernter Burg
+6. 55 PR zu 6 Felder entfernter Burg  
+oder 55 AS zu 3 Felder entfernter Burg
+7. 55 PR zu 7 Felder entfernter Burg  
+oder 55 ST zu 3 Felder entfernter Burg
+8. 55 PR zu 8 Felder entfernter Burg  
+oder 55 AS zu 4 Felder entfernter Burg
+
