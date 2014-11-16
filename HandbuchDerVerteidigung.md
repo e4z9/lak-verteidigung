@@ -24,14 +24,34 @@ Erster Entwurf :D
 ## Inhalt
 
 * [Einheiten][]
+    * [Einheitentypen][]
+    * [Gattungen][]
+    * [Panzerreiter und Aufteilung der Verteidigungseinheiten][Aufteilung]
+    * [Bewegungsgeschwindigkeiten][]
 * [Gebäude][]
+    * [Wehranlage][]
+    * [Zeughaus][]
+    * [Bibliothek][]
 * [Entfernungen][]
 * [Kampf][]
+    * [Kampfmechanik][]
+    * [Theoretische Einordnung][]
 * [Nachtmodus][]
 * [Warnposten][]
 * [Erste Maßnahmen][]
+    * [Ruhe bewahren!][Ruhe bewahren]
+    * [Lage einschätzen][]
+    * [Angriffsmeldung an das Bündnis][Angriffsmeldung]
 * [Generelle Techniken][]
+    * [Fakes (=Scheinangriffe) aussortieren][Fakes]
+    * [Truppenstärke verschleiern][]
+    * [Off-Truppen sichern][]
 * [Brücken][]
+    * [Brückenformular][]
+    * [Angriffszeit für Brücke sichern][Angriffszeit sichern]
+    * [Brückenlöcher mit Gold stopfen][BrückenGold]
+    * [Alleine Brücken][]
+    * [Brückenbriefe][]
 
 ## Einheiten [Einheiten]
 
@@ -41,7 +61,7 @@ Es gibt 3 Einheitentypen, die vor allem zur Verteidigung genutzt werden (deff-Tr
 ### Gattungen [Gattungen]
 Die sechs Einheitentypen sind in drei Gattungen eingeteilt: Artillerie (AS, BS), Infanterie (ST, SK) und Kavallerie (PR, LR). Jeder Gattung ist also jeweils ein defensiver und ein offensiver Einheitentyp zugeordnet. Dabei ist es so, dass Artillerie am stärksten gegen Infanterie, Infanterie am stärksten gegen Kavallerie, und Kavallerie am stärksten gegen Artillerie ist.
 
-### Panzerreiter und Aufteilung der Verteidigungseinheiten
+### Panzerreiter und Aufteilung der Verteidigungseinheiten [Aufteilung]
 *1 ST + 1 SK sind in allen Werten außer Geschwindigkeit und Rekrutierungszeit besser als (oder gleich wie) 1 PR*
 
 Das heißt, dass Panzerreiter “nur" rekrutiert werden, weil sie die mobilsten Einheiten sind, und weil sie zum [Brücken][] bauen sehr praktisch sind.
@@ -65,7 +85,7 @@ Ohne „Umgebungskarte“ aus der Bibliothek:
 ### Wehranlage [Wehranlage]
 Die Wehranlage erhöht die Verteidigung von Einheiten in der Burg um bis zu 100%! Weiterhin fügt die Wehranlage pro Kampfrunde einen festen Bonus zum Verteidigungswert gegen Artillerie, Infanterie und Kavallerie hinzu. Dieser feste Bonus ist mit maximal 1000 Punkten pro Gattung nicht sehr hoch (5-10 Verteidigungseinheiten?), und deshalb umso effektiver, je länger ein Kampf dauert, und je weniger Verteidigungseinheiten pro Kampfrunde ansonsten teilnehmen. Das kann bei langen [Brücken][] ein deutlicher Faktor werden. Die Wehranlage ist eines der wichtigsten Verteidigungsinstrumente, und Stufe 18 ist Pflicht für jede größere Burg!
 
-### Zeughaus
+### Zeughaus [Zeughaus]
 Je höher die Stufe des Zeughauses, desto schneller werden Einheiten rekrutiert. Dein Ziel sollte es sein das Zeughaus mindestens auf Stufe 20 zu haben, und durchgehend Truppen zu rekrutieren. Gerade auch in der Nacht!
 
 ### Bibliothek [Bibliothek]
@@ -111,7 +131,7 @@ Die Verluste werden wie folgt berechnet: Die Angriffswerte der angreifenden Einh
 
 Dann werden diese Werte per [Gattung][Gattungen] verglichen. Das Verhältnis der Werte zueinander ist gleich dem prozentualen Verlust in dieser Truppengattung (maximal 100%). Beispiel: Wenn das Verhältnis zwischen Artilleriewert des Angreifers und des Verteidigers 3:2 ist, dann verliert der Angreifer 2/3 seiner Artillerieeinheiten, und der Verteidiger 3/2 (also alle). Eine Beispielrechnung ist in der L&K FAQ zu finden (z.B. Profil > FAQ auf iOS).
 
-### Theoretische Einordnung
+### Theoretische Einordnung [Theoretische Einordnung]
 Die Berechnung der Verluste in jeder Kampfrunde ist linear in der Anzahl der gegnerischen Einheiten. Das heißt, dass die eigenen Verluste ausschließlich von der Anzahl (und Typen) der Einheiten des Gegners abhängen, und dass doppelte Anzahl der Einheiten des Gegners auch in doppelt so hohen Verlusten resultieren.
 
 Das ist anders als in den meisten Strategie- und RTS-Spielen, die grob gesehen dem [quadratischen Gesetz von Lanchester](https://de.wikipedia.org/wiki/Gesetz_von_Lanchester) folgen. Bei diesem hängen die Verluste von der Differenz der quadrierten Anzahl der Einheiten beider Parteien ab. Bei dieser Art von Kampf ist es von großem Vorteil mit einer großen Übermacht anzugreifen oder zu verteidigen, denn je größer die eigene Übermacht ist, desto geringer sind die eigenen Verluste. Bei L&K gilt dies nicht. Eine größere Übermacht bringt keinen Vorteil bei den eigenen Verlusten. Deshalb gibt es keinen Nachteil, mit der geringstmöglichen Zahl an Einheiten zu verteidigen, was man sich beim [Brücken][] zunutze macht.
@@ -135,10 +155,10 @@ Es ist nicht sinnvoll Warnposten weiter als maximal 10 Felder entfernt zu plazie
 
 ## Erste Maßnahmen im Fall eines Angriffs [Erste Maßnahmen]
 
-### Ruhe bewahren!
+### Ruhe bewahren! [Ruhe bewahren]
 Wenn eine Burg blinkt, kann dies das erste Mal ein wenig erschreckend sein. Wichtig im Falle eines Angriffs ist es aber vor allem Ruhe zu bewahren. Aktionismus und „HILFE ICH WERDE ANGEGRIFFEN“ im Forum zu schreiben bringt niemandem etwas. Erstmal die Lage einschätzen, Möglichkeiten abwägen, und dann gezielt mit ausreichend Informationen Hilfe vom Bündnis erfragen.
 
-### Lage einschätzen
+### Lage einschätzen [Lage einschätzen]
 Zuerst solltest du dir ein paar Gedanken darüber machen, in welcher Lage du dich eigentlich befindest. Je nach Rahmenbedingungen hast du dann verschiedene Möglichkeiten die Verteidigung zu organisieren.
 
 #### Zeitpunkt des Angriffs
@@ -157,7 +177,7 @@ Dies ist ein sehr wichtiger Aspekt, denn er bestimmt entscheidend darüber, welc
 
 Wenn du während des Angriffes nicht online sein kannst, dann informiere auf jeden Fall dein Bündnis darüber! Dann können deine Mitspieler zumindest [Warnposten][] in deine Burgen stellen, um z.B. [Fakes][] auszusortieren.
 
-### Angriffsmeldung an das Bündnis
+### Angriffsmeldung an das Bündnis [Angriffsmeldung]
 Die Angriffsmeldung an das Bündnis sollte mindestens die folgenden Informationen enthalten:
 
 * Angegriffene Burg (Name + Link)
@@ -181,11 +201,11 @@ Nur selten kann man bei ungeübten Angreifern Fakes auch vor eintreffen der Trup
 
 Eine andere Technik um Fakes zu erkennen, ist es, einen Spion auf eine oder mehrere Burgen des Angreifers zu schicken. Wenn die Spione noch sehr viele Offensiveinheiten in den Burgen berichten, dann handelt es sich vermutlich bei allen Angriffen um einen Fake. Wenn nicht, dann ist wahrscheinlich mindestens ein Angriff scharf.
 
-### Truppenstärke verschleiern
+### Truppenstärke verschleiern [Truppenstärke verschleiern]
 Es klingt absurd, doch wenn du zu Beginn des Angriffs online sein kannst, solltest du vorher alle deine Truppen bis auf 220 Verteidigungseinheiten aus der angegriffenen Burg in eine Nachbarburg abziehen, sofern du nicht sowieso [brückst][Brücken]. Sobald die erste Sammelphase beginnt, kannst du in der Einheitenübersicht der Burg sehen, wieviele und welche Truppen die Burg angreifen. Wenn sich der Angriff als [Fake][Fakes] herausstellt, schickst du besser deine Einheiten erst nach Ende des Kampfes zurück, denn dann sieht der Angreifer (sofern er mehr als 100 Einheiten geschickt hat) nur 220 Einheiten statt der vollen Verteidigungsstärke in seinen Kampfberichten.
 Wenn der Angriff ernst ist, schickst du deine Einheiten in den Kampf. Denk an die Bewegungsgeschwindigkeiten der Einheiten, und dass genug Einheiten bis zur zweiten Kampfrunde zurück sein müssen (das ist 20 Minuten nach Beginn der ersten Sammelphase).
 
-### Off-Truppen sichern
+### Off-Truppen sichern [Off-Truppen sichern]
 Wenn du deine off-Truppen nicht zum [Brücken][] benutzt, und sie nicht anderweitig für die Verteidigung brauchst, solltest du sie vor dem Kampf auf eine benachbarte Burg schicken. Die brauchst du noch für den Gegenschlag!
 
 ## Brücken [Brücken]
@@ -220,14 +240,14 @@ Dort trägt man die genaue Angriffszeit, das Datum, den Burgnamen, und den Burgl
 
 Die resultierende Liste hat eine Zeile pro Kampfrunde. In jeder Zeile steht rot hinterlegt ein Zeitintervall von 8 Minuten. Wer nun 55 oder mehr Einheiten geschickt hat, tippt oder klickt das Zeitintervall in dem die Einheiten in der Burg *ankommen*, und markiert es so grau. Der Besitzer der zu verteidigenden Burg überprüft die Daten im Formular mit den tatsächlichen Ankunftszeiten die er in der Einheitenübersicht der Burg sieht, und tippt noch einmal das Zeitintervall, und markiert es so grün. Wenn eine Zeit falsch eingetragen wurde, kann man das Intervall noch einmal tippen, dann wird es wieder rot.
 
-### Angriffszeit für Brücke sichern
+### Angriffszeit für Brücke sichern [Angriffszeit sichern]
 Eine übliche Angriffstechnik ist es, kurzfristig noch ein paar Einheiten loszuschicken, die kurz vor dem Rest der Angreifer ankommen. Dadurch verschiebt sich der *gesamte* Angriff ein paar Minuten vor, was für eine vorher gebaute Brücke fatal sein kann. Denn dadurch kann es passieren dass Verteidigungseinheiten, die eigentlich vor einer Kampfrunde ankommen sollten, nun *nach* der Kampfrunde ankommen, und die Burg fällt.
 
 Gegen diese Angriffstechnik kann man sich verteidigen, indem man sich von einem Mitspieler zu einem festgelegten Zeitpunkt vorher *angreifen* lässt.
 
 Beispiel: Angriffsmeldung für 11:37. Der Verteidiger lässt sich von einem Mitspieler zu 11:27 mit 110 Einheiten *angreifen*, und baut eine Brücke für diese Angriffszeit. Falls der Angreifer kurzfristig Einheiten zu 11:34 schickt, was normalerweise den ganzen Angriff auf 11:34 vorziehen würde, dann startet der Angriff trotzdem um 11:27, und die Brücke ist sicher. Natürlich könnte es nun noch sein, dass der Angreifer 110 Einheiten zu 11:24 schickt ... deshalb kann es besser sein sich vom Mitspieler zu 11:17 mit 110 Einheiten, und zu 11:27 mit 55 weiteren Einheiten angreifen zu lassen...
 
-### Brückenlöcher mit Gold stopfen
+### Brückenlöcher mit Gold stopfen [BrückenGold]
 Wenn es doch einmal passiert, und du ein Loch in deiner Brücke entdeckst, aber alle deine Einheiten zu lange brauchen um die Lücke stopfen zu können, dann gibt es häufig noch einen Ausweg: Gold.
 
 #### Truppen sofort zurück holen
@@ -239,7 +259,7 @@ Einheiten, die sich auf dem *Hinweg* zu einer Burg befinden, kann man nicht Besc
 #### Einheiten sofort rekrutieren
 Sofern genug Ressourcen in der Burg vorhanden sind, kann man 55 Einheiten mit 110 Gold sofort rekrutieren. Dazu starte den Bau von 55 Einheiten (am besten Speerträger, die brauchen am wenigsten Ressourcen), drückst den Beschleunigungsknopf einmal zum Halbieren der Zeit (55 Gold), und nocheinmal zur sofortigen Fertigstellung (55 Gold).
 
-### Alleine Brücken
+### Alleine Brücken [Alleine Brücken]
 
 Es gibt einige Techniken mit der man mit den Einheiten aus der angegriffenen Burg selbst effektiv Brücken bauen kann. Die meisten erfordern, dass man während des Angriffes zu bestimmten Zeiten online sein kann.
 
@@ -415,7 +435,7 @@ oder 55 ST zu 3 Felder entfernter Burg
 8. 55 PR zu 8 Felder entfernter Burg  
 oder 55 AS zu 4 Felder entfernter Burg
 
-### Brückenbriefe
+### Brückenbriefe [Brückenbriefe]
 
 #### 6 Felder Deff + Off Brücke (1 Stunde, wiederholbar)
 1. Einheiten auf 6 Felder entfernte Burg schicken (mindestens 110 in Burg belassen!)
