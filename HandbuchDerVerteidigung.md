@@ -7,16 +7,17 @@ Author: Ez
 
 Author: Ez
 
-v2:
+*v3:*
+Brücken retten mit Gold. Rohstoffbrücke.  
+*v2:*
 750ST+AS Faustregel.
 Spionage zur Fake-Erkennung.
 Brückentipp zu verschobenen Rundenzeiten.
 Brückenformular.
 Brückenbriefe.
 Interne Verlinkung.
-Inhaltsverzeichnis.
-
-v1:
+Inhaltsverzeichnis.  
+*v1:*
 Erster Entwurf :D
 
 ***
