@@ -5,3 +5,4 @@ h2 {
 }
 h3 { background-color: #eeeeee; }
 h4 { font-variant: small-caps; font-weight: bolder; }
+ul { list-style-type: disc; padding-left: 1.5em; }
