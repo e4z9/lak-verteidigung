@@ -49,6 +49,7 @@ Erster Entwurf :D
     * [Off-Truppen sichern][]
 * [Brücken][]
     * [Brückenformular][]
+    * [Wieviele Einheiten pro Intervall?][BrückenEinheiten]
     * [Angriffszeit für Brücke sichern][Angriffszeit sichern]
     * [Brückenlöcher mit Gold stopfen][BrückenGold]
     * [Alleine Brücken][]
@@ -240,6 +241,26 @@ Es gibt einige Internetseiten die Brückenformulare zur Verfügung stellen, zum 
 Dort trägt man die genaue Angriffszeit, das Datum, den Burgnamen, und den Burglink ein. Der Knopf "Liste erstellen" öffnet dann die persönliche Webseite für diese Brücke. Die Internetadresse kopiert man dann in die Angriffsmeldung.
 
 Die resultierende Liste hat eine Zeile pro Kampfrunde. In jeder Zeile steht rot hinterlegt ein Zeitintervall von 8 Minuten. Wer nun 55 oder mehr Einheiten geschickt hat, tippt oder klickt das Zeitintervall in dem die Einheiten in der Burg *ankommen*, und markiert es so grau. Der Besitzer der zu verteidigenden Burg überprüft die Daten im Formular mit den tatsächlichen Ankunftszeiten die er in der Einheitenübersicht der Burg sieht, und tippt noch einmal das Zeitintervall, und markiert es so grün. Wenn eine Zeit falsch eingetragen wurde, kann man das Intervall noch einmal tippen, dann wird es wieder rot.
+
+### Wieviele Einheiten pro Intervall? [BrückenEinheiten]
+Der aufmerksame Leser wird sich vielleicht wundern, weshalb oben die Rede davon ist, dass vor Beginn des Angriffs 110 Einheiten in der Burg verbleiben sollen, und weshalb 55 pro Runde nachgeschickt werden sollen: Eigentlich müssten 100 Einheiten am Anfang, und 50 Einheiten Nachschub doch reichen. Allerdings tun sie das in der Realität nicht, was mit der Art und Weise zu tun hat, in der die Verluste pro Kampfrunde berechnet werden. Exakte Details sind uns nicht bekannt. Klar ist, dass mathematische Rundungen auftreten: Die Hälfte von 17 ist 8,5, und das Spiel rundet solche Verluste noch oben auf. Auch werden die [Einheitengattungen][Gattungen] getrennt abgerechnet, und die Verluste werden auf die beteiligten Burgen verteilt, wobei sich mehrere Rundungsfehler addieren. Insgesamt führt dies dazu, dass man ein paar wenige Einheiten mehr als die Hälfte verlieren kann. 110 / 55 Einheiten haben sich dabei als sicheres Maß erwiesen.
+
+Wer schwache Nerven hat, kann auch 60 Einheiten pro Intervall schicken, um ganz ganz *ganz* sicher vor Rundungen zu sein. Oder normalerweise 55, und ab und zu mal ein paar mehr.
+
+Noch mehr Einheiten zu schicken lohnt sich allerdings nicht. Entgegen der Intuition sammeln sich mehr Einheiten *nicht* über die Zeit an, sondern die Anzahl Einheiten am Ende jeder Kampfrunde nähert sich langsam der Anzahl Einheiten die jede Runde nachgeschickt werden. Das veranschaulicht folgende Tabelle:
+
+| Rundenende = letzter Rundenbeginn / 2 | Nachschub | Rundenbeginn |
+|:-----|:-----|:-----|
+| 55 | 100 | 155 |
+| 77 | 100 | 177 |
+| 88 | 100 | 188 |
+| 94 | 100 | 194 |
+| 97 | 100 | 197 |
+| 98 | 100 | 198 |
+| 99 | 100 | 199 |
+| 99 | 100 | 199 |
+
+Nun kann man mehr als 100 Einheiten pro Runde schicken, um irgendwann zu einem Rundenende mehr als 100 Einheiten in der Burg zu haben. So, dass eine Lücke in der Brücke auftauchen dürfte, ohne dass die Burg fällt. Aber auch bei 110 Einheiten Nachschub pro Runde, dauert es drei Runden bis am Ende der Runde danach noch mehr als 100 Einheiten in der Burg übrig sind. Und dabei gilt: Wenn irgendwann nur einmal zwischendurch weniger als 110 Einheiten Nachschub ankommen, dann braucht es wieder 2-3 Runden, bis die Einheiten am Ende einer Kampfrunde wieder auf mehr als 100 aufgefüllt sind.
 
 ### Angriffszeit für Brücke sichern [Angriffszeit sichern]
 Eine übliche Angriffstechnik ist es, kurzfristig noch ein paar Einheiten loszuschicken, die kurz vor dem Rest der Angreifer ankommen. Dadurch verschiebt sich der *gesamte* Angriff ein paar Minuten vor, was für eine vorher gebaute Brücke fatal sein kann. Denn dadurch kann es passieren dass Verteidigungseinheiten, die eigentlich vor einer Kampfrunde ankommen sollten, nun *nach* der Kampfrunde ankommen, und die Burg fällt.
