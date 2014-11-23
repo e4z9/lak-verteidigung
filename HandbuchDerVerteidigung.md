@@ -7,6 +7,10 @@ Author: Ez
 
 Author: Ez
 
+*v4:*
+Einheiten pro Brückenintervall.
+Tipp zur Berechnung von Rohstoffbrücke.
+Offensivbrücken brechen.  
 *v3:*
 Brücken retten mit Gold. Rohstoffbrücke.  
 *v2:*
