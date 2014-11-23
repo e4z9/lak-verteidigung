@@ -59,7 +59,7 @@ Erster Entwurf :D
 ## Einheiten [Einheiten]
 
 ### Einheitentypen [Einheitentypen]
-Es gibt 3 Einheitentypen, die vor allem zur Verteidigung genutzt werden (deff-Truppen): Armbrustschütze (AS), Speerträger (ST) und Panzerreiter (PR). Die drei offensiven Einheitentypen (off-Truppen), Bogenschütze (BS), Schwertkämpfer (SK) und Lanzenreiter (LR), können teilweise auch effektiv für Verteidigungstechniken benutzt werden, wie wir später beim [Brückenbau][Brücken] sehen werden. Das sollte aber, wenn möglich, die Ausnahme sein.
+Es gibt 3 Einheitentypen, die vor allem zur Verteidigung genutzt werden (def-Truppen): Armbrustschütze (AS), Speerträger (ST) und Panzerreiter (PR). Die drei offensiven Einheitentypen (off-Truppen), Bogenschütze (BS), Schwertkämpfer (SK) und Lanzenreiter (LR), können teilweise auch effektiv für Verteidigungstechniken benutzt werden, wie wir später beim [Brückenbau][Brücken] sehen werden. Das sollte aber, wenn möglich, die Ausnahme sein.
 
 ### Gattungen [Gattungen]
 Die sechs Einheitentypen sind in drei Gattungen eingeteilt: Artillerie (AS, BS), Infanterie (ST, SK) und Kavallerie (PR, LR). Jeder Gattung ist also jeweils ein defensiver und ein offensiver Einheitentyp zugeordnet. Dabei ist es so, dass Artillerie am stärksten gegen Infanterie, Infanterie am stärksten gegen Kavallerie, und Kavallerie am stärksten gegen Artillerie ist.
@@ -124,11 +124,11 @@ Mit etwas Übung kann man auf der Kartenansicht sehr leicht sehen, wie weit Burg
 ### Kampfmechanik [Kampfmechanik]
 Ein Kampf ist in Runden gegliedert. Der Ablauf dabei ist wie folgt:
 
-1. Nach ankunft der ersten Einheiten des Angreifers beginnt eine 10-minütige Sammelphase. Alle Einheiten, die in dieser Zeit eintreffen, nehmen an der ersten Kampfrunde teil.
+1. Nach Ankunft der ersten Einheiten des Angreifers beginnt eine 10-minütige Sammelphase. Alle Einheiten, die in dieser Zeit eintreffen, nehmen an der ersten Kampfrunde teil.
 2. Die Kampfrunde wird durchgeführt: Die Truppenstärken werden verglichen und die Verluste auf beiden Seiten berechnet.
     1. Wenn beide Seiten diese Kampfrunde mit mindestens 100 Einheiten angetreten haben, verlieren beide Seiten nur die Hälfte der berechneten Verluste, und eine weitere 10-minütige Sammelphase beginnt. Alle Einheiten, die überlebt haben, und alle die in dieser Zeit eintreffen, nehmen an der nächsten Kampfrunde teil.
     2. Wenn eine oder beide Seiten die Kampfrunde mit weniger als 100 Einheiten angetreten haben, so verlieren beide Seiten die berechneten Verluste, und der Kampf ist beendet.
- 3. Wenn der Angreifer den Kampf gewinnt, und er zum Ende des Kampfes mindestens die von ihm benötigte Menge Silber bei der angegriffenen Burg hat, wird die Burg von ihm erobert. Ansonsten kehren überlebene Einheiten des Angreifers mit geplünderten Ressourcen nach Hause zurück.
+ 3. Wenn der Angreifer den Kampf gewinnt, und er zum Ende des Kampfes mindestens die von ihm benötigte Menge Silber bei der angegriffenen Burg hat, wird die Burg von ihm erobert. Ansonsten kehren überlebende Einheiten des Angreifers mit geplünderten Ressourcen nach Hause zurück.
 
 Die Verluste werden wie folgt berechnet: Die Angriffswerte der angreifenden Einheiten werden pro [Truppengattung][Gattungen] zusammen gezählt. Dazu kommen die Angriffsboni aus der [Bibliothek][] ihrer Heimatburg. Die Verteidigungswerte der verteidigenden Einheiten werden pro [Truppengattung][Gattungen] zusammen gezählt. dazu kommen die Verteidigungsboni aus der [Bibliothek][], der prozentuale und feste Bonus der [Wehranlage][], und eventuell der [Nachtbonus][] von 100%.
 
@@ -154,7 +154,7 @@ Um ein effektives Warnpostennetz aufzubauen, schickt jeder 1 Handkarren + 4 Spee
 3. 2 ST Verlust: Scharfer Angriff, die Burg wird ohne Verstärkung fallen
 4. 4 ST Verlust: Burg ist gefallen, und hatte weniger als 100 Verteidiger
 
-Es ist nicht sinnvoll Warnposten weiter als maximal 10 Felder entfernt zu plazieren, denn die Angriffsmeldung kommt erst nach der ersten Kampfrunde, und eine voll besetzte Burg mit etwa 3000 Einheiten fällt nach 6 Runden. Panzerreiter, die schnellste Einheit, brauchen aber schon 50 Minuten (= 5 Runden) um 10 Felder zurückzulegen.
+Es ist nicht sinnvoll Warnposten weiter als maximal 10 Felder entfernt zu platzieren, denn die Angriffsmeldung kommt erst nach der ersten Kampfrunde, und eine voll besetzte Burg mit etwa 3000 Einheiten fällt nach 6 Runden. Panzerreiter, die schnellste Einheit, brauchen aber schon 50 Minuten (= 5 Runden) um 10 Felder zurückzulegen.
 
 ## Erste Maßnahmen im Fall eines Angriffs [Erste Maßnahmen]
 
@@ -231,7 +231,7 @@ Beispiel: Angriffsmeldung für 11:37. Die ersten 10 Minuten ist Sammelzeit, die 
 Im folgenden werde ich verschiedene Techniken beschreiben, wie man dies mit möglichst wenig Aufwand realisieren kann. Hier erst noch ein paar allgemeine Tipps:
 
 1. Überprüfe in der Einheitenübersicht der Burg regelmäßig, dort wo man die ganzen Ankunftszeiten von Unterstützung etc sieht, ob deine Brücke klappt, oder ob irgendwo Lücken auftauchen.
-2. Überprüfe die tatsächen Rundenzeiten relativ kurz vor Beginn des Angriffs. Wenn der Angreifer noch Einheiten geschickt hat, die kurz vor den anderen Einheiten eintreffen, verschieben sich alle Rundenzeiten, und die Brücke kann Lücken bekommen!
+2. Überprüfe die tatsächlichen Rundenzeiten relativ kurz vor Beginn des Angriffs. Wenn der Angreifer noch Einheiten geschickt hat, die kurz vor den anderen Einheiten eintreffen, verschieben sich alle Rundenzeiten, und die Brücke kann Lücken bekommen!
 3. Schicke 55 oder 110 Panzerreiter (oder mehr) in eine direkt benachbarte Burg. Das ist deine Notfallreserve, falls dir kurzfristig Lücken auffallen, die gestopft werden müssen.
 
 ### Brückenformular [Brückenformular]
@@ -280,7 +280,7 @@ Einheiten, die sich auf dem *Hinweg* zu einer Burg befinden, kann man nicht Besc
 55 ST aus einer Entfernung von 6 Feldern sofort zurück holen kostet 17 Gold.
 
 #### Einheiten sofort rekrutieren
-Sofern genug Ressourcen in der Burg vorhanden sind, kann man 55 Einheiten mit 110 Gold sofort rekrutieren. Dazu starte den Bau von 55 Einheiten (am besten Speerträger, die brauchen am wenigsten Ressourcen), drückst den Beschleunigungsknopf einmal zum Halbieren der Zeit (55 Gold), und nocheinmal zur sofortigen Fertigstellung (55 Gold).
+Sofern genug Ressourcen in der Burg vorhanden sind, kann man 55 Einheiten mit 110 Gold sofort rekrutieren. Dazu starte den Bau von 55 Einheiten (am besten Speerträger, die brauchen am wenigsten Ressourcen), drückst den Beschleunigungsknopf einmal zum Halbieren der Zeit (55 Gold), und noch einmal zur sofortigen Fertigstellung (55 Gold).
 
 ### Offensivbrücken brechen [Offensivbrücken brechen]
 Wenn der Angreifer merkt, dass seine Truppen nicht ausreichen um die Burg zu erobern, baut er vielleicht eine Offensivbrücke (Offbrücke, Angriffsbrücke). Eine Offensivbrücke funktioniert genauso wie eine Defensivbrücke, und dient z.B. dazu den Kampf solange zu verlängern, bis weitere Angriffstruppen eintreffen. Eine weiterer Anwendungsfall ist den Angriff über den Nachtmodus hinweg zu brücken: Wenn der Verteidiger bis zum Nachtmodus gebrückt hat, schickt der Angreifer den Großteil seiner Truppen nach Hause, brückt selber über Nacht, schickt die Truppen zum Morgen wieder hin, und vermeidet somit den vergrößerten Schaden in der Nacht.
@@ -305,7 +305,7 @@ Man kann auch einen der im Internet verfügbaren Kampfrechner benutzen, zum Beis
 
 Es gibt einige Techniken mit der man mit den Einheiten aus der angegriffenen Burg selbst effektiv Brücken bauen kann. Die meisten erfordern, dass man während des Angriffes zu bestimmten Zeiten online sein kann.
 
-#### 6 Felder Deff + Off Brücke (1 Stunde, wiederholbar)
+#### 6 Felder Def + Off Brücke (1 Stunde, wiederholbar)
 
 Vorteile:
 
@@ -329,7 +329,7 @@ So wird’s gemacht:
 
 Wichtig ist, dass die Einheitentypen in getrennten Gruppen von 55 Einheiten losgeschickt werden. Nur dann haben sie unterschiedliche Laufzeiten, und kommen mit etwa 10 Minuten Abstand zurück zur Burg (mit erforschter Umgebungskarte verkürzen sich die Abstände).
 
-#### 3 Felder Deff Brücke (1/2 Stunde, wiederholbar)
+#### 3 Felder Def Brücke (1/2 Stunde, wiederholbar)
 
 Vorteile:
 
@@ -353,7 +353,7 @@ So wird’s gemacht:
 
 Die PR brauchen 15 Minuten, die AS 30 Minuten, die ST 35 Minuten (mit erforschter Umgebungskarte 5% weniger). Die Zeiten müssen deshalb sehr exakt eingehalten werden. Man kann die AS auch ein wenig früher und die ST ein wenig später zurückschicken, aber dann muss man länger am Stück online sein, und darf beim Warten nicht einschlafen 😉.
 
-#### 3 Felder Deff Brücke mit Off-Support (1/2 Stunde, wiederholbar)
+#### 3 Felder Def Brücke mit Off-Support (1/2 Stunde, wiederholbar)
 
 Vorteile:
 
@@ -378,7 +378,7 @@ So wird’s gemacht:
 
 Wichtig ist, dass die Einheitentypen exakt in den angegebenen Gruppen losgeschickt werden. Nur dann haben sie die richtigen Laufzeiten. Die PR mit dem LR brauchen 20 Minuten, die AS 30 Minuten, die ST mit dem SK 40 Minuten (mit erforschter Umgebungskarte 5% weniger).
 
-#### Deff + Off Marktbrücke (1 Stunde, einmalig)
+#### Def + Off Marktbrücke (1 Stunde, einmalig)
 
 Vorteile:
 
@@ -399,7 +399,7 @@ So wird’s gemacht:
 
 Der Markt hat auf Stufe 5 eine Entfernung von 6 Feldern, kann also einmalig für die oben beschriebene 6 Felder Brücke benutzt werden. Das kann nützlich sein, wenn man einen Angriff kurzfristig bemerkt, und keine Zeit hat die Einheiten erst wegzuschicken und dann zum Brücken wiederzuholen. Die gewonnene Stunde kann man nutzen um das weitere Brücken vorzubereiten.
 
-#### Deff + Off Burgfriedbrücke (4 Stunden, einmalig)
+#### Def + Off Burgfriedbrücke (4 Stunden, einmalig)
 
 Vorteile:
 
@@ -485,29 +485,29 @@ oder 55 AS zu 4 Felder entfernter Burg
 
 ### Brückenbriefe [Brückenbriefe]
 
-#### 6 Felder Deff + Off Brücke (1 Stunde, wiederholbar)
+#### 6 Felder Def + Off Brücke (1 Stunde, wiederholbar)
 1. Einheiten auf 6 Felder entfernte Burg schicken (mindestens 110 in Burg belassen!)
 2. 13 Minuten (Toleranz +-2) vor Eintreffen der gegnerischen Einheiten, Gruppen von jeweils 55 PR, 55 LR, 55 AS, 55 BS, 55 ST, 55 SK getrennt voneinander zur angegriffenen Burg zurück schicken.
 3. Jede Stunde nach Bedarf wiederholen.
 
-#### 3 Felder Deff Brücke (1/2 Stunde, wiederholbar)
+#### 3 Felder Def Brücke (1/2 Stunde, wiederholbar)
 1. Einheiten auf 3 Felder entfernte Burg schicken (mindestens 110 in Burg belassen!)
 2. 3 Minuten vor Eintreffen der gegnerischen Einheiten 55 AS, 1 Minute später 55 PR, und 1 weitere Minute später 55 ST zur angegriffenen Burg zurück schicken.  (Ohne erforschte Umgebungskarte mit Toleranz +-1, und die Staffelung ist nicht nötig.)
 3. Jede halbe Stunde nach Bedarf wiederholen.
 
-#### 3 Felder Deff Brücke mit Off-Support (1/2 Stunde, wiederholbar)
+#### 3 Felder Def Brücke mit Off-Support (1/2 Stunde, wiederholbar)
 1. Einheiten auf 3 Felder entfernte Burg schicken (mindestens 110 in Burg belassen!)
 2. 4 Minuten (Toleranz +-3) vor Eintreffen der gegnerischen Einheiten, Gruppen von jeweils 1 LR+55 PR, 55 AS, 1SK+55 ST zur angegriffenen Burg zurück schicken.
 3. Jede halbe Stunde nach Bedarf wiederholen.
 
-#### Deff + Off Marktbrücke (1 Stunde, einmalig)
-Vorraussetzung: Markt exakt auf Stufe 5 (aber wozu sollte man auch mehr haben 😁)
+#### Def + Off Marktbrücke (1 Stunde, einmalig)
+Voraussetzung: Markt exakt auf Stufe 5 (aber wozu sollte man auch mehr haben 😁)
 
 1. 13 Minuten (Toleranz +-2) vor Eintreffen der gegnerischen Einheiten, Gruppen von jeweils 55 PR, 55 LR, 55 AS, 55 BS, 55 ST, 55 SK getrennt voneinander auf deinen Markt zum Rohstoffe tauschen schicken.
 2. Das war’s schon. Nicht wiederholbar.
 
-#### Deff + Off Burgfriedbrücke (4 Stunden, einmalig)
-Vorraussetzung: Burgfried Stufe 10 und erforschte Umgebungskarte
+#### Def + Off Burgfriedbrücke (4 Stunden, einmalig)
+Voraussetzung: Burgfried Stufe 10 und erforschte Umgebungskarte
 
 1. 103 Minuten (Toleranz +-3) vor Eintreffen der gegnerischen Einheiten, Gruppen von jeweils 55 PR, 55 LR, 55 AS, 55 BS, 55 ST, 55 SK getrennt voneinander auf deinen Burgfried zum Kupfer oder Silber tauschen schicken.
 2. 93 Minuten, 83 Minuten und 73 Minuten vor Eintreffen der gegnerischen Einheiten wiederholen.
