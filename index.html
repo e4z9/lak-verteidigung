@@ -15,7 +15,11 @@
 
 <p>Author: Ez</p>
 
-<p><em>v3:</em>
+<p><em>v4:</em>
+Einheiten pro Brückenintervall.
+Tipp zur Berechnung von Rohstoffbrücke.
+Offensivbrücken brechen.<br/>
+<em>v3:</em>
 Brücken retten mit Gold. Rohstoffbrücke.<br/>
 <em>v2:</em>
 750ST+AS Faustregel.
@@ -75,8 +79,10 @@ Erster Entwurf :D</p>
 
 <ul>
 <li><a href="#brückenformular">Brückenformular</a></li>
+<li><a href="#brückeneinheiten">Wieviele Einheiten pro Intervall?</a></li>
 <li><a href="#angriffszeitsichern">Angriffszeit für Brücke sichern</a></li>
 <li><a href="#brückengold">Brückenlöcher mit Gold stopfen</a></li>
+<li><a href="#offensivbrückenbrechen">Offensivbrücken brechen</a></li>
 <li><a href="#alleinebrücken">Alleine Brücken</a></li>
 <li><a href="#brückenbriefe">Brückenbriefe</a></li>
 </ul></li>
@@ -86,7 +92,7 @@ Erster Entwurf :D</p>
 
 <h3 id="einheitentypen">Einheitentypen</h3>
 
-<p>Es gibt 3 Einheitentypen, die vor allem zur Verteidigung genutzt werden (deff-Truppen): Armbrustschütze (AS), Speerträger (ST) und Panzerreiter (PR). Die drei offensiven Einheitentypen (off-Truppen), Bogenschütze (BS), Schwertkämpfer (SK) und Lanzenreiter (LR), können teilweise auch effektiv für Verteidigungstechniken benutzt werden, wie wir später beim <a href="#brücken">Brückenbau</a> sehen werden. Das sollte aber, wenn möglich, die Ausnahme sein.</p>
+<p>Es gibt 3 Einheitentypen, die vor allem zur Verteidigung genutzt werden (def-Truppen): Armbrustschütze (AS), Speerträger (ST) und Panzerreiter (PR). Die drei offensiven Einheitentypen (off-Truppen), Bogenschütze (BS), Schwertkämpfer (SK) und Lanzenreiter (LR), können teilweise auch effektiv für Verteidigungstechniken benutzt werden, wie wir später beim <a href="#brücken">Brückenbau</a> sehen werden. Das sollte aber, wenn möglich, die Ausnahme sein.</p>
 
 <h3 id="gattungen">Gattungen</h3>
 
@@ -190,14 +196,14 @@ Auf Stufe 10 erlaubt die Bibliothek auch die Erforschung von &#8220;Umgebungskar
 <p>Ein Kampf ist in Runden gegliedert. Der Ablauf dabei ist wie folgt:</p>
 
 <ol>
-<li>Nach ankunft der ersten Einheiten des Angreifers beginnt eine 10-minütige Sammelphase. Alle Einheiten, die in dieser Zeit eintreffen, nehmen an der ersten Kampfrunde teil.</li>
+<li>Nach Ankunft der ersten Einheiten des Angreifers beginnt eine 10-minütige Sammelphase. Alle Einheiten, die in dieser Zeit eintreffen, nehmen an der ersten Kampfrunde teil.</li>
 <li>Die Kampfrunde wird durchgeführt: Die Truppenstärken werden verglichen und die Verluste auf beiden Seiten berechnet.
 
 <ol>
 <li>Wenn beide Seiten diese Kampfrunde mit mindestens 100 Einheiten angetreten haben, verlieren beide Seiten nur die Hälfte der berechneten Verluste, und eine weitere 10-minütige Sammelphase beginnt. Alle Einheiten, die überlebt haben, und alle die in dieser Zeit eintreffen, nehmen an der nächsten Kampfrunde teil.</li>
 <li>Wenn eine oder beide Seiten die Kampfrunde mit weniger als 100 Einheiten angetreten haben, so verlieren beide Seiten die berechneten Verluste, und der Kampf ist beendet.</li>
 </ol></li>
-<li>Wenn der Angreifer den Kampf gewinnt, und er zum Ende des Kampfes mindestens die von ihm benötigte Menge Silber bei der angegriffenen Burg hat, wird die Burg von ihm erobert. Ansonsten kehren überlebene Einheiten des Angreifers mit geplünderten Ressourcen nach Hause zurück.</li>
+<li>Wenn der Angreifer den Kampf gewinnt, und er zum Ende des Kampfes mindestens die von ihm benötigte Menge Silber bei der angegriffenen Burg hat, wird die Burg von ihm erobert. Ansonsten kehren überlebende Einheiten des Angreifers mit geplünderten Ressourcen nach Hause zurück.</li>
 </ol>
 
 <p>Die Verluste werden wie folgt berechnet: Die Angriffswerte der angreifenden Einheiten werden pro <a href="#gattungen">Truppengattung</a> zusammen gezählt. Dazu kommen die Angriffsboni aus der <a href="#bibliothek">Bibliothek</a> ihrer Heimatburg. Die Verteidigungswerte der verteidigenden Einheiten werden pro <a href="#gattungen">Truppengattung</a> zusammen gezählt. dazu kommen die Verteidigungsboni aus der <a href="#bibliothek">Bibliothek</a>, der prozentuale und feste Bonus der <a href="#wehranlage">Wehranlage</a>, und eventuell der [Nachtbonus][] von 100%.</p>
@@ -229,7 +235,7 @@ Auf Stufe 10 erlaubt die Bibliothek auch die Erforschung von &#8220;Umgebungskar
 <li>4 ST Verlust: Burg ist gefallen, und hatte weniger als 100 Verteidiger</li>
 </ol>
 
-<p>Es ist nicht sinnvoll Warnposten weiter als maximal 10 Felder entfernt zu plazieren, denn die Angriffsmeldung kommt erst nach der ersten Kampfrunde, und eine voll besetzte Burg mit etwa 3000 Einheiten fällt nach 6 Runden. Panzerreiter, die schnellste Einheit, brauchen aber schon 50 Minuten (= 5 Runden) um 10 Felder zurückzulegen.</p>
+<p>Es ist nicht sinnvoll Warnposten weiter als maximal 10 Felder entfernt zu platzieren, denn die Angriffsmeldung kommt erst nach der ersten Kampfrunde, und eine voll besetzte Burg mit etwa 3000 Einheiten fällt nach 6 Runden. Panzerreiter, die schnellste Einheit, brauchen aber schon 50 Minuten (= 5 Runden) um 10 Felder zurückzulegen.</p>
 
 <h2 id="erstemaßnahmen">Erste Maßnahmen im Fall eines Angriffs</h2>
 
@@ -324,7 +330,7 @@ Wenn der Angriff ernst ist, schickst du deine Einheiten in den Kampf. Denk an di
 
 <ol>
 <li>Überprüfe in der Einheitenübersicht der Burg regelmäßig, dort wo man die ganzen Ankunftszeiten von Unterstützung etc sieht, ob deine Brücke klappt, oder ob irgendwo Lücken auftauchen.</li>
-<li>Überprüfe die tatsächen Rundenzeiten relativ kurz vor Beginn des Angriffs. Wenn der Angreifer noch Einheiten geschickt hat, die kurz vor den anderen Einheiten eintreffen, verschieben sich alle Rundenzeiten, und die Brücke kann Lücken bekommen!</li>
+<li>Überprüfe die tatsächlichen Rundenzeiten relativ kurz vor Beginn des Angriffs. Wenn der Angreifer noch Einheiten geschickt hat, die kurz vor den anderen Einheiten eintreffen, verschieben sich alle Rundenzeiten, und die Brücke kann Lücken bekommen!</li>
 <li>Schicke 55 oder 110 Panzerreiter (oder mehr) in eine direkt benachbarte Burg. Das ist deine Notfallreserve, falls dir kurzfristig Lücken auffallen, die gestopft werden müssen.</li>
 </ol>
 
@@ -340,7 +346,72 @@ Wenn der Angriff ernst ist, schickst du deine Einheiten in den Kampf. Denk an di
 
 <h3 id="brückeneinheiten">Wieviele Einheiten pro Intervall?</h3>
 
-<p>Der aufmerksame Leser wird sich vielleicht wundern, weshalb oben die Rede davon ist, dass vor Beginn des Angriffs 110 Einheiten in der Burg verbleiben sollen, und weshalb 55 pro Runde nachgeschickt werden sollen: Eigentlich müssten 100 Einheiten am Anfang, und 50 Einheiten Nachschub doch reichen.</p>
+<p>Der aufmerksame Leser wird sich vielleicht wundern, weshalb oben die Rede davon ist, dass vor Beginn des Angriffs 110 Einheiten in der Burg verbleiben sollen, und weshalb 55 pro Runde nachgeschickt werden sollen: Eigentlich müssten 100 Einheiten am Anfang, und 50 Einheiten Nachschub doch reichen. Allerdings tun sie das in der Realität nicht, was mit der Art und Weise zu tun hat, in der die Verluste pro Kampfrunde berechnet werden. Exakte Details sind uns nicht bekannt. Klar ist, dass mathematische Rundungen auftreten: Die Hälfte von 17 ist 8,5, und das Spiel rundet solche Verluste noch oben auf. Auch werden die <a href="#gattungen">Einheitengattungen</a> getrennt abgerechnet, und die Verluste werden auf die beteiligten Burgen verteilt, wobei sich mehrere Rundungsfehler addieren. Insgesamt führt dies dazu, dass man ein paar wenige Einheiten mehr als die Hälfte verlieren kann. 110 / 55 Einheiten haben sich dabei als sicheres Maß erwiesen.</p>
+
+<p>Wer schwache Nerven hat, kann auch 60 Einheiten pro Intervall schicken, um ganz ganz <em>ganz</em> sicher vor Rundungen zu sein. Oder normalerweise 55, und ab und zu mal ein paar mehr.</p>
+
+<p>Noch mehr Einheiten zu schicken lohnt sich allerdings nicht. Entgegen der Intuition sammeln sich mehr Einheiten <em>nicht</em> über die Zeit an, sondern die Anzahl Einheiten am Ende jeder Kampfrunde nähert sich langsam der Anzahl Einheiten die jede Runde nachgeschickt werden. Das veranschaulicht folgende Tabelle:</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;"/>
+<col style="text-align:left;"/>
+<col style="text-align:left;"/>
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;">Rundenende = letzter Rundenbeginn / 2</th>
+	<th style="text-align:left;">Nachschub</th>
+	<th style="text-align:left;">Rundenbeginn</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;">55</td>
+	<td style="text-align:left;">100</td>
+	<td style="text-align:left;">155</td>
+</tr>
+<tr>
+	<td style="text-align:left;">77</td>
+	<td style="text-align:left;">100</td>
+	<td style="text-align:left;">177</td>
+</tr>
+<tr>
+	<td style="text-align:left;">88</td>
+	<td style="text-align:left;">100</td>
+	<td style="text-align:left;">188</td>
+</tr>
+<tr>
+	<td style="text-align:left;">94</td>
+	<td style="text-align:left;">100</td>
+	<td style="text-align:left;">194</td>
+</tr>
+<tr>
+	<td style="text-align:left;">97</td>
+	<td style="text-align:left;">100</td>
+	<td style="text-align:left;">197</td>
+</tr>
+<tr>
+	<td style="text-align:left;">98</td>
+	<td style="text-align:left;">100</td>
+	<td style="text-align:left;">198</td>
+</tr>
+<tr>
+	<td style="text-align:left;">99</td>
+	<td style="text-align:left;">100</td>
+	<td style="text-align:left;">199</td>
+</tr>
+<tr>
+	<td style="text-align:left;">99</td>
+	<td style="text-align:left;">100</td>
+	<td style="text-align:left;">199</td>
+</tr>
+</tbody>
+</table>
+
+<p>Nun kann man mehr als 100 Einheiten pro Runde schicken, um irgendwann zu einem Rundenende mehr als 100 Einheiten in der Burg zu haben. So, dass eine Lücke in der Brücke auftauchen dürfte, ohne dass die Burg fällt. Aber auch bei 110 Einheiten Nachschub pro Runde, dauert es drei Runden bis am Ende der Runde danach noch mehr als 100 Einheiten in der Burg übrig sind. Und dabei gilt: Wenn irgendwann nur einmal zwischendurch weniger als 110 Einheiten Nachschub ankommen, dann braucht es wieder 2&#8211;3 Runden, bis die Einheiten am Ende einer Kampfrunde wieder auf mehr als 100 aufgefüllt sind.</p>
 
 <h3 id="angriffszeitsichern">Angriffszeit für Brücke sichern</h3>
 
@@ -363,13 +434,66 @@ Einheiten, die sich auf dem <em>Hinweg</em> zu einer Burg befinden, kann man nic
 
 <h4 id="einheitensofortrekrutieren">Einheiten sofort rekrutieren</h4>
 
-<p>Sofern genug Ressourcen in der Burg vorhanden sind, kann man 55 Einheiten mit 110 Gold sofort rekrutieren. Dazu starte den Bau von 55 Einheiten (am besten Speerträger, die brauchen am wenigsten Ressourcen), drückst den Beschleunigungsknopf einmal zum Halbieren der Zeit (55 Gold), und nocheinmal zur sofortigen Fertigstellung (55 Gold).</p>
+<p>Sofern genug Ressourcen in der Burg vorhanden sind, kann man 55 Einheiten mit 110 Gold sofort rekrutieren. Dazu starte den Bau von 55 Einheiten (am besten Speerträger, die brauchen am wenigsten Ressourcen), drückst den Beschleunigungsknopf einmal zum Halbieren der Zeit (55 Gold), und noch einmal zur sofortigen Fertigstellung (55 Gold).</p>
+
+<h3 id="offensivbrückenbrechen">Offensivbrücken brechen</h3>
+
+<p>Wenn der Angreifer merkt, dass seine Truppen nicht ausreichen um die Burg zu erobern, baut er vielleicht eine Offensivbrücke (Offbrücke, Angriffsbrücke). Eine Offensivbrücke funktioniert genauso wie eine Defensivbrücke, und dient z.B. dazu den Kampf solange zu verlängern, bis weitere Angriffstruppen eintreffen. Eine weiterer Anwendungsfall ist den Angriff über den Nachtmodus hinweg zu brücken: Wenn der Verteidiger bis zum Nachtmodus gebrückt hat, schickt der Angreifer den Großteil seiner Truppen nach Hause, brückt selber über Nacht, schickt die Truppen zum Morgen wieder hin, und vermeidet somit den vergrößerten Schaden in der Nacht.</p>
+
+<p>Wenn man es schafft, mit weniger als 100 Einheiten die angreifenden Einheiten zu besiegen, dann ist die Offensivbrücke gebrochen. Der Angriff wird unterbrochen, und alles mitgeschickte Silber ist verloren. Die Einheiten der Offensivbrücke die in der Runde danach ankommen, starten einen neuen Angriff der ohne Silber ist, solange der Angreifer kein neues Silber nachschickt.</p>
+
+<p>In der Einheitenübersicht der Burg schaut man sich also an, welche Einheiten in der nächsten Runde angreifen, und versucht maximal 99 Defensiveinheiten zu finden, welche die Angreifer besiegen. Dazu rechnet man sich die Angriffswerte gegen Artillerie, Infanterie und Kavallerie der Angreifer aus, und vergleicht sie gegen die entsprechenden Verteidigungswerte der Verteidiger. Bei den Angreifern muss man den schlimmsten Fall annehmen, also dass alle Angreifer von allen Forschungen der Bibliothek profitieren:</p>
+
+<table>
+<colgroup>
+<col style="text-align:center;"/>
+<col style="text-align:center;"/>
+<col style="text-align:center;"/>
+<col style="text-align:center;"/>
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:center;">Einheit</th>
+	<th style="text-align:center;">gegen Artillerie</th>
+	<th style="text-align:center;">gegen Infanterie</th>
+	<th style="text-align:center;">gegen Kavallerie</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:center;">SK</td>
+	<td style="text-align:center;">26</td>
+	<td style="text-align:center;">43</td>
+	<td style="text-align:center;">62</td>
+</tr>
+<tr>
+	<td style="text-align:center;">BS</td>
+	<td style="text-align:center;">22</td>
+	<td style="text-align:center;">66</td>
+	<td style="text-align:center;">11</td>
+</tr>
+<tr>
+	<td style="text-align:center;">LR</td>
+	<td style="text-align:center;">109</td>
+	<td style="text-align:center;">36</td>
+	<td style="text-align:center;">62</td>
+</tr>
+</tbody>
+</table>
+
+<p>Wenn die Verteidiger alle aus der eigenen Burg stammen, kann man die Werte direkt aus den Angaben in der eigenen Kaserne nehmen. Diese enthalten schon alle prozentualen Boni aus Bibliothek und Wehranlage. Dazu kommt noch der feste Bonus der Wehranlage. In der Nacht auch noch 100% Nachtbonus. Dann berechnet man das Resultat der Kampfrunde nach den <a href="#kampfmechanik">Kampfregeln</a>.</p>
+
+<p>Wenn also z.B. 200 Schwertkämpfer angreifen (gegen Artillerie 5200, gegen Infanterie 8600), werden sie durch 99 Armbrustschützen mit allen Forschungen und ausgebauter Wehranlage (gegen Artillerie 14068, gegen Infanterie 20899) geschlagen.</p>
+
+<p>Man kann auch einen der im Internet verfügbaren Kampfrechner benutzen, zum Beispiel den von <a href="http://www.lakkt.de/lakkt_v2/php/kampfrechner/kampfrechner_eingabe.php">LaKKT</a>.</p>
 
 <h3 id="alleinebrücken">Alleine Brücken</h3>
 
 <p>Es gibt einige Techniken mit der man mit den Einheiten aus der angegriffenen Burg selbst effektiv Brücken bauen kann. Die meisten erfordern, dass man während des Angriffes zu bestimmten Zeiten online sein kann.</p>
 
-<h4 id="6felderdeffoffbrücke1stundewiederholbar">6 Felder Deff + Off Brücke (1 Stunde, wiederholbar)</h4>
+<h4 id="6felderdefoffbrücke1stundewiederholbar">6 Felder Def + Off Brücke (1 Stunde, wiederholbar)</h4>
 
 <p>Vorteile:</p>
 
@@ -399,7 +523,7 @@ Einheiten, die sich auf dem <em>Hinweg</em> zu einer Burg befinden, kann man nic
 
 <p>Wichtig ist, dass die Einheitentypen in getrennten Gruppen von 55 Einheiten losgeschickt werden. Nur dann haben sie unterschiedliche Laufzeiten, und kommen mit etwa 10 Minuten Abstand zurück zur Burg (mit erforschter Umgebungskarte verkürzen sich die Abstände).</p>
 
-<h4 id="3felderdeffbrücke12stundewiederholbar">3 Felder Deff Brücke (1/2 Stunde, wiederholbar)</h4>
+<h4 id="3felderdefbrücke12stundewiederholbar">3 Felder Def Brücke (1/2 Stunde, wiederholbar)</h4>
 
 <p>Vorteile:</p>
 
@@ -429,7 +553,7 @@ Einheiten, die sich auf dem <em>Hinweg</em> zu einer Burg befinden, kann man nic
 
 <p>Die PR brauchen 15 Minuten, die AS 30 Minuten, die ST 35 Minuten (mit erforschter Umgebungskarte 5% weniger). Die Zeiten müssen deshalb sehr exakt eingehalten werden. Man kann die AS auch ein wenig früher und die ST ein wenig später zurückschicken, aber dann muss man länger am Stück online sein, und darf beim Warten nicht einschlafen 😉.</p>
 
-<h4 id="3felderdeffbrückemitoff-support12stundewiederholbar">3 Felder Deff Brücke mit Off-Support (1/2 Stunde, wiederholbar)</h4>
+<h4 id="3felderdefbrückemitoff-support12stundewiederholbar">3 Felder Def Brücke mit Off-Support (1/2 Stunde, wiederholbar)</h4>
 
 <p>Vorteile:</p>
 
@@ -460,7 +584,7 @@ Einheiten, die sich auf dem <em>Hinweg</em> zu einer Burg befinden, kann man nic
 
 <p>Wichtig ist, dass die Einheitentypen exakt in den angegebenen Gruppen losgeschickt werden. Nur dann haben sie die richtigen Laufzeiten. Die PR mit dem LR brauchen 20 Minuten, die AS 30 Minuten, die ST mit dem SK 40 Minuten (mit erforschter Umgebungskarte 5% weniger).</p>
 
-<h4 id="deffoffmarktbrücke1stundeeinmalig">Deff + Off Marktbrücke (1 Stunde, einmalig)</h4>
+<h4 id="defoffmarktbrücke1stundeeinmalig">Def + Off Marktbrücke (1 Stunde, einmalig)</h4>
 
 <p>Vorteile:</p>
 
@@ -487,7 +611,7 @@ Einheiten, die sich auf dem <em>Hinweg</em> zu einer Burg befinden, kann man nic
 
 <p>Der Markt hat auf Stufe 5 eine Entfernung von 6 Feldern, kann also einmalig für die oben beschriebene 6 Felder Brücke benutzt werden. Das kann nützlich sein, wenn man einen Angriff kurzfristig bemerkt, und keine Zeit hat die Einheiten erst wegzuschicken und dann zum Brücken wiederzuholen. Die gewonnene Stunde kann man nutzen um das weitere Brücken vorzubereiten.</p>
 
-<h4 id="deffoffburgfriedbrücke4stundeneinmalig">Deff + Off Burgfriedbrücke (4 Stunden, einmalig)</h4>
+<h4 id="defoffburgfriedbrücke4stundeneinmalig">Def + Off Burgfriedbrücke (4 Stunden, einmalig)</h4>
 
 <p>Vorteile:</p>
 
@@ -548,6 +672,14 @@ Einheiten, die sich auf dem <em>Hinweg</em> zu einer Burg befinden, kann man nic
 
 <p>Wenn man also die erste Burg für einen <a href="#einheitentypen">Einheitentyp</a> gefunden hat, kann man besonders mit PR oder AS ohne &#8220;Umgebungskarte&#8221; sehr schnell und effektiv Brücken bauen. Leider kann man die Brücke erst ohne große Rechnerei auf Korrektheit überprüfen, wenn die Einheiten auf dem Rückweg sind. Vorher werden in der Einheitenübersicht der Burg nur die Ankunftszeiten bei der entfernten Burg angezeigt.</p>
 
+<p>Zur Bestimmung, wann die Einheiten wieder in der Heimatburg ankommen, wenn man sie zum Rohstoffe tauschen zu einer bestimmten Burg geschickt hat, kann man die Zeitanzeige im Rohstoffe senden Bildschirm nutzen (dort wo man die Einheiten und Rohstoffe zum senden auswählt):</p>
+
+<figure>
+<img src="rohstoffbrueckendetail.png" alt="Rohstoffe senden" />
+<figcaption>Rohstoffe senden</figcaption></figure>
+
+<p>Diese zeigt untereinander die Transportdauer (im Bild 1:20 h), und die Ankunftszeit (im Bild 23.11., 18:24 Uhr) an. Addiere einfach die Transportdauer zu der Ankunftszeit, um die Zeit der Rückkehr zu errechnen (im Bild 23.11., 18:24 Uhr + 1:20 h = 23.11., 19:44 Uhr). Wenn das Resultat größer als 24 Uhr ist, dann ziehe 24 Stunden ab und erhöhe das Datum. Beispiel: Ankunftszeit 23.11., 22:57 Uhr + Transportdauer 8:25 h = Rückkehr &#8220;23.11., 31:22 Uhr&#8221;, also 24.11., 7:22 Uhr.</p>
+
 <h4 id="rohstoffbrückenachangriffsbeginn112stundeneinmalig">Rohstoffbrücke nach Angriffsbeginn (1 1/2 Stunden, einmalig)</h4>
 
 <p>Vorteile:</p>
@@ -586,7 +718,7 @@ oder 55 AS zu 4 Felder entfernter Burg</li>
 
 <h3 id="brückenbriefe">Brückenbriefe</h3>
 
-<h4 id="6felderdeffoffbrücke1stundewiederholbar">6 Felder Deff + Off Brücke (1 Stunde, wiederholbar)</h4>
+<h4 id="6felderdefoffbrücke1stundewiederholbar">6 Felder Def + Off Brücke (1 Stunde, wiederholbar)</h4>
 
 <ol>
 <li>Einheiten auf 6 Felder entfernte Burg schicken (mindestens 110 in Burg belassen!)</li>
@@ -594,7 +726,7 @@ oder 55 AS zu 4 Felder entfernter Burg</li>
 <li>Jede Stunde nach Bedarf wiederholen.</li>
 </ol>
 
-<h4 id="3felderdeffbrücke12stundewiederholbar">3 Felder Deff Brücke (1/2 Stunde, wiederholbar)</h4>
+<h4 id="3felderdefbrücke12stundewiederholbar">3 Felder Def Brücke (1/2 Stunde, wiederholbar)</h4>
 
 <ol>
 <li>Einheiten auf 3 Felder entfernte Burg schicken (mindestens 110 in Burg belassen!)</li>
@@ -602,7 +734,7 @@ oder 55 AS zu 4 Felder entfernter Burg</li>
 <li>Jede halbe Stunde nach Bedarf wiederholen.</li>
 </ol>
 
-<h4 id="3felderdeffbrückemitoff-support12stundewiederholbar">3 Felder Deff Brücke mit Off-Support (1/2 Stunde, wiederholbar)</h4>
+<h4 id="3felderdefbrückemitoff-support12stundewiederholbar">3 Felder Def Brücke mit Off-Support (1/2 Stunde, wiederholbar)</h4>
 
 <ol>
 <li>Einheiten auf 3 Felder entfernte Burg schicken (mindestens 110 in Burg belassen!)</li>
@@ -610,18 +742,18 @@ oder 55 AS zu 4 Felder entfernter Burg</li>
 <li>Jede halbe Stunde nach Bedarf wiederholen.</li>
 </ol>
 
-<h4 id="deffoffmarktbrücke1stundeeinmalig">Deff + Off Marktbrücke (1 Stunde, einmalig)</h4>
+<h4 id="defoffmarktbrücke1stundeeinmalig">Def + Off Marktbrücke (1 Stunde, einmalig)</h4>
 
-<p>Vorraussetzung: Markt exakt auf Stufe 5 (aber wozu sollte man auch mehr haben 😁)</p>
+<p>Voraussetzung: Markt exakt auf Stufe 5 (aber wozu sollte man auch mehr haben 😁)</p>
 
 <ol>
 <li>13 Minuten (Toleranz +&#8211;2) vor Eintreffen der gegnerischen Einheiten, Gruppen von jeweils 55 PR, 55 LR, 55 AS, 55 BS, 55 ST, 55 SK getrennt voneinander auf deinen Markt zum Rohstoffe tauschen schicken.</li>
 <li>Das war’s schon. Nicht wiederholbar.</li>
 </ol>
 
-<h4 id="deffoffburgfriedbrücke4stundeneinmalig">Deff + Off Burgfriedbrücke (4 Stunden, einmalig)</h4>
+<h4 id="defoffburgfriedbrücke4stundeneinmalig">Def + Off Burgfriedbrücke (4 Stunden, einmalig)</h4>
 
-<p>Vorraussetzung: Burgfried Stufe 10 und erforschte Umgebungskarte</p>
+<p>Voraussetzung: Burgfried Stufe 10 und erforschte Umgebungskarte</p>
 
 <ol>
 <li>103 Minuten (Toleranz +&#8211;3) vor Eintreffen der gegnerischen Einheiten, Gruppen von jeweils 55 PR, 55 LR, 55 AS, 55 BS, 55 ST, 55 SK getrennt voneinander auf deinen Burgfried zum Kupfer oder Silber tauschen schicken.</li>
