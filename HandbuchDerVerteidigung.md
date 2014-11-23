@@ -52,6 +52,7 @@ Erster Entwurf :D
     * [Wieviele Einheiten pro Intervall?][BrückenEinheiten]
     * [Angriffszeit für Brücke sichern][Angriffszeit sichern]
     * [Brückenlöcher mit Gold stopfen][BrückenGold]
+    * [Offensivbrücken brechen][]
     * [Alleine Brücken][]
     * [Brückenbriefe][]
 
@@ -280,6 +281,25 @@ Einheiten, die sich auf dem *Hinweg* zu einer Burg befinden, kann man nicht Besc
 
 #### Einheiten sofort rekrutieren
 Sofern genug Ressourcen in der Burg vorhanden sind, kann man 55 Einheiten mit 110 Gold sofort rekrutieren. Dazu starte den Bau von 55 Einheiten (am besten Speerträger, die brauchen am wenigsten Ressourcen), drückst den Beschleunigungsknopf einmal zum Halbieren der Zeit (55 Gold), und nocheinmal zur sofortigen Fertigstellung (55 Gold).
+
+### Offensivbrücken brechen [Offensivbrücken brechen]
+Wenn der Angreifer merkt, dass seine Truppen nicht ausreichen um die Burg zu erobern, baut er vielleicht eine Offensivbrücke (Offbrücke, Angriffsbrücke). Eine Offensivbrücke funktioniert genauso wie eine Defensivbrücke, und dient z.B. dazu den Kampf solange zu verlängern, bis weitere Angriffstruppen eintreffen. Eine weiterer Anwendungsfall ist den Angriff über den Nachtmodus hinweg zu brücken: Wenn der Verteidiger bis zum Nachtmodus gebrückt hat, schickt der Angreifer den Großteil seiner Truppen nach Hause, brückt selber über Nacht, schickt die Truppen zum Morgen wieder hin, und vermeidet somit den vergrößerten Schaden in der Nacht.
+
+Wenn man es schafft, mit weniger als 100 Einheiten die angreifenden Einheiten zu besiegen, dann ist die Offensivbrücke gebrochen. Der Angriff wird unterbrochen, und alles mitgeschickte Silber ist verloren. Die Einheiten der Offensivbrücke die in der Runde danach ankommen, starten einen neuen Angriff der ohne Silber ist, solange der Angreifer kein neues Silber nachschickt.
+
+In der Einheitenübersicht der Burg schaut man sich also an, welche Einheiten in der nächsten Runde angreifen, und versucht maximal 99 Defensiveinheiten zu finden, welche die Angreifer besiegen. Dazu rechnet man sich die Angriffswerte gegen Artillerie, Infanterie und Kavallerie der Angreifer aus, und vergleicht sie gegen die entsprechenden Verteidigungswerte der Verteidiger. Bei den Angreifern muss man den schlimmsten Fall annehmen, also dass alle Angreifer von allen Forschungen der Bibliothek profitieren:
+
+| Einheit | gegen Artillerie | gegen Infanterie | gegen Kavallerie |
+|:---:|:---:|:---:|:---:|
+| SK | 26 | 43 | 62 |
+| BS | 22 | 66 | 11 |
+| LR | 109 | 36 | 62 |
+
+Wenn die Verteidiger alle aus der eigenen Burg stammen, kann man die Werte direkt aus den Angaben in der eigenen Kaserne nehmen. Diese enthalten schon alle prozentualen Boni aus Bibliothek und Wehranlage. Dazu kommt noch der feste Bonus der Wehranlage. In der Nacht auch noch 100% Nachtbonus. Dann berechnet man das Resultat der Kampfrunde nach den [Kampfregeln][Kampfmechanik].
+
+Wenn also z.B. 200 Schwertkämpfer angreifen (gegen Artillerie 5200, gegen Infanterie 8600), werden sie durch 99 Armbrustschützen mit allen Forschungen und ausgebauter Wehranlage (gegen Artillerie 14068, gegen Infanterie 20899) geschlagen.
+
+Man kann auch einen der im Internet verfügbaren Kampfrechner benutzen, zum Beispiel den von [LaKKT](http://www.lakkt.de/lakkt_v2/php/kampfrechner/kampfrechner_eingabe.php).
 
 ### Alleine Brücken [Alleine Brücken]
 
