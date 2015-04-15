@@ -7,6 +7,8 @@ Author: Ez
 
 Author: Ez
 
+*v6:*
+Informationen zu Festungen  
 *v5:*
 Rohstoffbrücke an den Anfang der Brückentechniken verschoben.  
 *v4:*
@@ -61,6 +63,11 @@ Erster Entwurf :D
     * [Offensivbrücken brechen][]
     * [Alleine Brücken][]
     * [Brückenbriefe][]
+* [Festungen][]
+	* [Neue Festungen][]
+	* [Ausgebaute Festungen][]
+	* [Kampfmechanik von Festungen][]
+	* [Festungen Brücken][]
 
 ## Einheiten [Einheiten]
 
@@ -132,8 +139,8 @@ Ein Kampf ist in Runden gegliedert. Der Ablauf dabei ist wie folgt:
 
 1. Nach Ankunft der ersten Einheiten des Angreifers beginnt eine 10-minütige Sammelphase. Alle Einheiten, die in dieser Zeit eintreffen, nehmen an der ersten Kampfrunde teil.
 2. Die Kampfrunde wird durchgeführt: Die Truppenstärken werden verglichen und die Verluste auf beiden Seiten berechnet.
-    1. Wenn beide Seiten diese Kampfrunde mit mindestens 100 Einheiten angetreten haben, verlieren beide Seiten nur die Hälfte der berechneten Verluste, und eine weitere 10-minütige Sammelphase beginnt. Alle Einheiten, die überlebt haben, und alle die in dieser Zeit eintreffen, nehmen an der nächsten Kampfrunde teil.
-    2. Wenn eine oder beide Seiten die Kampfrunde mit weniger als 100 Einheiten angetreten haben, so verlieren beide Seiten die berechneten Verluste, und der Kampf ist beendet.
+    1. Wenn beide Seiten diese Kampfrunde mit mindestens 100 Einheiten angetreten haben (bei [Festungen][] 500 Einheiten), verlieren beide Seiten nur die Hälfte der berechneten Verluste, und eine weitere 10-minütige Sammelphase beginnt. Alle Einheiten, die überlebt haben, und alle die in dieser Zeit eintreffen, nehmen an der nächsten Kampfrunde teil.
+    2. Wenn eine oder beide Seiten die Kampfrunde mit weniger als 100 Einheiten angetreten haben (bei [Festungen][] 500 Einheiten), so verlieren beide Seiten die berechneten Verluste, und der Kampf ist beendet.
  3. Wenn der Angreifer den Kampf gewinnt, und er zum Ende des Kampfes mindestens die von ihm benötigte Menge Silber bei der angegriffenen Burg hat, wird die Burg von ihm erobert. Ansonsten kehren überlebende Einheiten des Angreifers mit geplünderten Ressourcen nach Hause zurück.
 
 Die Verluste werden wie folgt berechnet: Die Angriffswerte der angreifenden Einheiten werden pro [Truppengattung][Gattungen] zusammen gezählt. Dazu kommen die Angriffsboni aus der [Bibliothek][] ihrer Heimatburg. Die Verteidigungswerte der verteidigenden Einheiten werden pro [Truppengattung][Gattungen] zusammen gezählt. dazu kommen die Verteidigungsboni aus der [Bibliothek][], der prozentuale und feste Bonus der [Wehranlage][], und eventuell der [Nachtbonus][] von 100%.
@@ -227,10 +234,10 @@ Brücken ist *die* Verteidigungstechnik in L&K schlechthin. Es ist eine Technik 
 
 Die wesentlichen Nachteile sind der Aufwand, dass man zu passenden Zeiten online sein muss (je nach angewendeter Technik), und dass man bei einem einzigen kleinen Fehler den man übersieht, oder nicht mehr schafft auszugleichen, die Burg im wesentlichen kampflos verlieren kann.
 
-Beim Brücken nutzt man aus, dass ein [Kampf][Kampfmechanik] erst dann beendet ist, nachdem eine der Seiten mit weniger als 100 Einheiten in eine Kampfrunde geht. Die allgemeine Beschreibung ist ganz einfach:
+Beim Brücken nutzt man aus, dass ein [Kampf][Kampfmechanik] erst dann beendet ist, nachdem eine der Seiten mit weniger als 100 Einheiten in eine Kampfrunde geht (bei [Festungen][] 500 Einheiten). Die allgemeine Beschreibung ist ganz einfach:
 
-1. Stelle sicher, dass mindestens 110 Einheiten in der angegriffenen Burg sind, wenn der Kampf beginnt.
-2. Schicke so Einheiten in die Burg, dass vor Beginn jeder Kampfrunde 55 Einheiten in der Burg ankommen.
+1. Stelle sicher, dass mindestens 110 Einheiten in der angegriffenen Burg sind, wenn der Kampf beginnt (bei [Festungen][] 510 Einheiten).
+2. Schicke so Einheiten in die Burg, dass vor Beginn jeder Kampfrunde 55 Einheiten in der Burg ankommen (bei [Festungen][] 260 Einheiten).
 
 Beispiel: Angriffsmeldung für 11:37. Die ersten 10 Minuten ist Sammelzeit, die erste Kampfrunde fängt 11:47 an, danach alle 10 Minuten. Schicke je 55 Einheiten so dass sie z.B. 11:45, 11:55, 12:05, 12:15, und so weiter in der Burg eintreffen. Die Einheiten dürfen frühestens 11:38, 11:48, 11:58 etc eintreffen damit sie nicht noch an der vorherigen Runde teilnehmen, und sie müssen spätestens 11:46, 11:56, 12:06 etc eintreffen, damit sie noch an der richtigen Kampfrunde teilnehmen.
 
@@ -238,7 +245,7 @@ Im folgenden werde ich verschiedene Techniken beschreiben, wie man dies mit mög
 
 1. Überprüfe in der Einheitenübersicht der Burg regelmäßig, dort wo man die ganzen Ankunftszeiten von Unterstützung etc sieht, ob deine Brücke klappt, oder ob irgendwo Lücken auftauchen.
 2. Überprüfe die tatsächlichen Rundenzeiten relativ kurz vor Beginn des Angriffs. Wenn der Angreifer noch Einheiten geschickt hat, die kurz vor den anderen Einheiten eintreffen, verschieben sich alle Rundenzeiten, und die Brücke kann Lücken bekommen!
-3. Schicke 55 oder 110 Panzerreiter (oder mehr) in eine direkt benachbarte Burg. Das ist deine Notfallreserve, falls dir kurzfristig Lücken auffallen, die gestopft werden müssen.
+3. Schicke 55 oder 110 Panzerreiter (oder mehr) in eine direkt benachbarte Burg  (bei [Festungen][] 260 oder 520 oder mehr). Das ist deine Notfallreserve, falls dir kurzfristig Lücken auffallen, die gestopft werden müssen.
 
 ### Brückenformular [Brückenformular]
 Da Brücken bauen sehr aufwändig und unübersichtlich ist, macht es Sinn sich Tools zu bedienen. Das Brückenformular ist eine interaktive Webseite, auf der man markiert, welche Kampfrunden durch genügend Einheiten abgedeckt sind. Das ist auch unersetzlich, wenn man sich untereinander beim Brückenbau helfen will.
@@ -247,12 +254,12 @@ Es gibt einige Internetseiten die Brückenformulare zur Verfügung stellen, zum 
 
 Dort trägt man die genaue Angriffszeit, das Datum, den Burgnamen, und den Burglink ein. Der Knopf "Liste erstellen" öffnet dann die persönliche Webseite für diese Brücke. Die Internetadresse kopiert man dann in die Angriffsmeldung.
 
-Die resultierende Liste hat eine Zeile pro Kampfrunde. In jeder Zeile steht rot hinterlegt ein Zeitintervall von 8 Minuten. Wer nun 55 oder mehr Einheiten geschickt hat, tippt oder klickt das Zeitintervall in dem die Einheiten in der Burg *ankommen*, und markiert es so grau. Der Besitzer der zu verteidigenden Burg überprüft die Daten im Formular mit den tatsächlichen Ankunftszeiten die er in der Einheitenübersicht der Burg sieht, und tippt noch einmal das Zeitintervall, und markiert es so grün. Wenn eine Zeit falsch eingetragen wurde, kann man das Intervall noch einmal tippen, dann wird es wieder rot.
+Die resultierende Liste hat eine Zeile pro Kampfrunde. In jeder Zeile steht rot hinterlegt ein Zeitintervall von 8 Minuten. Wer nun 55 oder mehr Einheiten geschickt hat (bei [Festungen][] 260 Einheiten), tippt oder klickt das Zeitintervall in dem die Einheiten in der Burg *ankommen*, und markiert es so grau. Der Besitzer der zu verteidigenden Burg überprüft die Daten im Formular mit den tatsächlichen Ankunftszeiten die er in der Einheitenübersicht der Burg sieht, und tippt noch einmal das Zeitintervall, und markiert es so grün. Wenn eine Zeit falsch eingetragen wurde, kann man das Intervall noch einmal tippen, dann wird es wieder rot.
 
 ### Wieviele Einheiten pro Intervall? [BrückenEinheiten]
-Der aufmerksame Leser wird sich vielleicht wundern, weshalb oben die Rede davon ist, dass vor Beginn des Angriffs 110 Einheiten in der Burg verbleiben sollen, und weshalb 55 pro Runde nachgeschickt werden sollen: Eigentlich müssten 100 Einheiten am Anfang, und 50 Einheiten Nachschub doch reichen. Allerdings tun sie das in der Realität nicht, was mit der Art und Weise zu tun hat, in der die Verluste pro Kampfrunde berechnet werden. Exakte Details sind uns nicht bekannt. Klar ist, dass mathematische Rundungen auftreten: Die Hälfte von 17 ist 8,5, und das Spiel rundet solche Verluste noch oben auf. Auch werden die [Einheitengattungen][Gattungen] getrennt abgerechnet, und die Verluste werden auf die beteiligten Burgen verteilt, wobei sich mehrere Rundungsfehler addieren. Insgesamt führt dies dazu, dass man ein paar wenige Einheiten mehr als die Hälfte verlieren kann. 110 / 55 Einheiten haben sich dabei als sicheres Maß erwiesen.
+Der aufmerksame Leser wird sich vielleicht wundern, weshalb oben die Rede davon ist, dass vor Beginn des Angriffs 110 Einheiten in der Burg verbleiben sollen, und weshalb 55 pro Runde nachgeschickt werden sollen: Eigentlich müssten 100 Einheiten am Anfang, und 50 Einheiten Nachschub doch bei normalen Burgen reichen. Allerdings tun sie das in der Realität nicht, was mit der Art und Weise zu tun hat, in der die Verluste pro Kampfrunde berechnet werden. Exakte Details sind uns nicht bekannt. Klar ist, dass mathematische Rundungen auftreten: Die Hälfte von 17 ist 8,5, und das Spiel rundet solche Verluste noch oben auf. Auch werden die [Einheitengattungen][Gattungen] getrennt abgerechnet, und die Verluste werden auf die beteiligten Burgen verteilt, wobei sich mehrere Rundungsfehler addieren. Insgesamt führt dies dazu, dass man ein paar wenige Einheiten mehr als die Hälfte verlieren kann. 110 / 55 Einheiten (bei [Festungen][] 510 / 260 Einheiten) haben sich dabei als sicheres Maß erwiesen.
 
-Wer schwache Nerven hat, kann auch 60 Einheiten pro Intervall schicken, um ganz ganz *ganz* sicher vor Rundungen zu sein. Oder normalerweise 55, und ab und zu mal ein paar mehr.
+Wer schwache Nerven hat, kann bei normalen Burgen auch 60 Einheiten pro Intervall schicken, um ganz ganz *ganz* sicher vor Rundungen zu sein. Oder normalerweise 55, und ab und zu mal ein paar mehr.
 
 Noch mehr Einheiten zu schicken lohnt sich allerdings nicht. Entgegen der Intuition sammeln sich mehr Einheiten *nicht* über die Zeit an, sondern die Anzahl Einheiten am Ende jeder Kampfrunde nähert sich langsam der Anzahl Einheiten die jede Runde nachgeschickt werden. Das veranschaulicht folgende Tabelle:
 
@@ -274,7 +281,7 @@ Eine übliche Angriffstechnik ist es, kurzfristig noch ein paar Einheiten loszus
 
 Gegen diese Angriffstechnik kann man sich verteidigen, indem man sich von einem Mitspieler zu einem festgelegten Zeitpunkt vorher *angreifen* lässt.
 
-Beispiel: Angriffsmeldung für 11:37. Der Verteidiger lässt sich von einem Mitspieler zu 11:27 mit 110 Einheiten *angreifen*, und baut eine Brücke für diese Angriffszeit. Falls der Angreifer kurzfristig Einheiten zu 11:34 schickt, was normalerweise den ganzen Angriff auf 11:34 vorziehen würde, dann startet der Angriff trotzdem um 11:27, und die Brücke ist sicher. Natürlich könnte es nun noch sein, dass der Angreifer 110 Einheiten zu 11:24 schickt ... deshalb kann es besser sein sich vom Mitspieler zu 11:17 mit 110 Einheiten, und zu 11:27 mit 55 weiteren Einheiten angreifen zu lassen...
+Beispiel: Angriffsmeldung für 11:37. Der Verteidiger lässt sich von einem Mitspieler zu 11:27 mit 110 Einheiten *angreifen*  (bei [Festungen][] 510 Einheiten), und baut eine Brücke für diese Angriffszeit. Falls der Angreifer kurzfristig Einheiten zu 11:34 schickt, was normalerweise den ganzen Angriff auf 11:34 vorziehen würde, dann startet der Angriff trotzdem um 11:27, und die Brücke ist sicher. Natürlich könnte es nun noch sein, dass der Angreifer 110 Einheiten zu 11:24 schickt ... deshalb kann es besser sein sich vom Mitspieler zu 11:17 mit 110 Einheiten, und zu 11:27 mit 55 weiteren Einheiten angreifen zu lassen...
 
 ### Brückenlöcher mit Gold stopfen [BrückenGold]
 Wenn es doch einmal passiert, und du ein Loch in deiner Brücke entdeckst, aber alle deine Einheiten zu lange brauchen um die Lücke stopfen zu können, dann gibt es häufig noch einen Ausweg: Gold.
@@ -286,20 +293,20 @@ Einheiten, die sich auf dem *Hinweg* zu einer Burg befinden, kann man nicht Besc
 55 ST aus einer Entfernung von 6 Feldern sofort zurück holen kostet 17 Gold.
 
 #### Einheiten sofort rekrutieren
-Sofern genug Ressourcen in der Burg vorhanden sind, kann man 55 Einheiten mit 110 Gold sofort rekrutieren. Dazu starte den Bau von 55 Einheiten (am besten Speerträger, die brauchen am wenigsten Ressourcen), drückst den Beschleunigungsknopf einmal zum Halbieren der Zeit (55 Gold), und noch einmal zur sofortigen Fertigstellung (55 Gold).
+Sofern genug Ressourcen in der Burg vorhanden sind, kann man 55 Einheiten mit 110 Gold sofort rekrutieren. Dazu starte den Bau von 55 Einheiten (am besten Speerträger, die brauchen am wenigsten Ressourcen), drücke den Beschleunigungsknopf einmal zum Halbieren der Zeit (55 Gold), und noch einmal zur sofortigen Fertigstellung (55 Gold).
 
 ### Offensivbrücken brechen [Offensivbrücken brechen]
 Wenn der Angreifer merkt, dass seine Truppen nicht ausreichen um die Burg zu erobern, baut er vielleicht eine Offensivbrücke (Offbrücke, Angriffsbrücke). Eine Offensivbrücke funktioniert genauso wie eine Defensivbrücke, und dient z.B. dazu den Kampf solange zu verlängern, bis weitere Angriffstruppen eintreffen. Eine weiterer Anwendungsfall ist den Angriff über den Nachtmodus hinweg zu brücken: Wenn der Verteidiger bis zum Nachtmodus gebrückt hat, schickt der Angreifer den Großteil seiner Truppen nach Hause, brückt selber über Nacht, schickt die Truppen zum Morgen wieder hin, und vermeidet somit den vergrößerten Schaden in der Nacht.
 
 Wenn man es schafft, mit weniger als 100 Einheiten die angreifenden Einheiten zu besiegen, dann ist die Offensivbrücke gebrochen. Der Angriff wird unterbrochen, und alles mitgeschickte Silber ist verloren. Die Einheiten der Offensivbrücke die in der Runde danach ankommen, starten einen neuen Angriff der ohne Silber ist, solange der Angreifer kein neues Silber nachschickt.
 
-In der Einheitenübersicht der Burg schaut man sich also an, welche Einheiten in der nächsten Runde angreifen, und versucht maximal 99 Defensiveinheiten zu finden, welche die Angreifer besiegen. Dazu rechnet man sich die Angriffswerte gegen Artillerie, Infanterie und Kavallerie der Angreifer aus, und vergleicht sie gegen die entsprechenden Verteidigungswerte der Verteidiger. Bei den Angreifern muss man den schlimmsten Fall annehmen, also dass alle Angreifer von allen Forschungen der Bibliothek profitieren:
+In der Einheitenübersicht der Burg schaut man sich also an, welche Einheiten in der nächsten Runde angreifen, und versucht maximal 99 Defensiveinheiten zu finden, welche die Angreifer besiegen. Dazu rechnet man sich die Angriffswerte gegen Artillerie, Infanterie und Kavallerie der Angreifer aus, und vergleicht sie gegen die entsprechenden Verteidigungswerte der Verteidiger. Bei den Angreifern muss man den schlimmsten Fall annehmen, also dass alle Angreifer von allen Forschungen der Bibliothek profitieren (und Kaserne bei [Festungen][]):
 
-| Einheit | gegen Artillerie | gegen Infanterie | gegen Kavallerie |
+| Einheit | gegen Artillerie (Festung) | gegen Infanterie (Festung) | gegen Kavallerie (Festung) |
 |:---:|:---:|:---:|:---:|
-| SK | 26 | 43 | 62 |
-| BS | 22 | 66 | 11 |
-| LR | 109 | 36 | 62 |
+| SK | 26 (32) | 43 (52) | 62 (75) |
+| BS | 22 (27) | 66 (80) | 11 (14) |
+| LR | 109 (131) | 36 (44) | 62 (75) |
 
 Wenn die Verteidiger alle aus der eigenen Burg stammen, kann man die Werte direkt aus den Angaben in der eigenen Kaserne nehmen. Diese enthalten schon alle prozentualen Boni aus Bibliothek und Wehranlage. Dazu kommt noch der feste Bonus der Wehranlage. In der Nacht auch noch 100% Nachtbonus. Dann berechnet man das Resultat der Kampfrunde nach den [Kampfregeln][Kampfmechanik].
 
@@ -310,6 +317,8 @@ Man kann auch einen der im Internet verfügbaren Kampfrechner benutzen, zum Beis
 ### Alleine Brücken [Alleine Brücken]
 
 Es gibt einige Techniken mit der man mit den Einheiten aus der angegriffenen Burg selbst effektiv Brücken bauen kann. Die meisten erfordern, dass man während des Angriffes zu bestimmten Zeiten online sein kann.
+
+Alle folgenden Beschreibungen von Brücken gehen davon aus, dass eine normale Burg gebrückt werden soll. Bei [Festungen][] müssen immer 260 statt 55 Einheiten geschickt werden.
 
 #### Rohstoffbrücke Allgemein
 Bei der Rohstoffbrücke schickt man Einheiten mit der Funktion "Rohstoffe senden" aus der Burg, so dass sie zum gewünschten Zeitpunkt wieder in der Burg eintreffen.
@@ -546,3 +555,39 @@ oder 55 ST zu 3 Felder entfernter Burg
 8. 55 PR zu 8 Felder entfernter Burg  
 oder 55 AS zu 4 Felder entfernter Burg
 
+## Festungen [Festungen]
+
+Fünf nahe beieinander liegende Burgen können zu einer Festung zusammen geschlossen werden. Dabei werden 4 der Burgen wieder zu freien Burgen.
+
+Festungen sind ein zweischneidiges Schwert, und eine Festung am falschen Ort kann eine Bürde für ein Bündnis sein. Voll ausgebaute Festungen haben eine etwas größere Verteidigungs- und Angriffskraft als 5 Burgen, und eine deutlich höhere Rohstoffproduktion und bessere Tauschkurse für Silber und Kupfer. Frisch errichtete Festungen sind allerdings in allen Belangen schlechter aufgestellt, als die 5 ursprünglichen Burgen.
+
+Festungen zu verlieren ist ein harter Schlag. [Festungen zu brücken][Festungen Brücken] ist sehr aufwändig, und Festungen vollstellen benötigt viele Truppen. Das macht sie zu attraktiven Zielen, und auch besonders zu Fake-Zielen. Festungen erhöhen also das Risiko, aber auch den potentiellen Gewinn. Somit verschieben sie in einem Konflikt generell gesprochen das Kräfteverhältnis in Richtung des Stärkeren, denn der Stärkere kann sich das Risiko eher leisten, und ist besser aufgestellt die Festungen auch zu verteidigen.
+
+Festungen sollten nur von Spieler/innen gebaut werden, die ansonsten schon viele unterstützende Burgen besitzen (z.B. 1 Festung auf 30 normalen Burgen), und nur in relativ "sicheren" Gebieten, zum Beispiel im Bündniszentrum.
+
+### Neue Festungen [Neue Festungen]
+
+Wenn eine Festung gebaut wird, werden die 4 Burgen die an die Festung angeschlossen wurden wieder zu freien Burgen. Es ist wichtig, dass diese schnell wieder eingenommen werden, denn sonst könnte sich ein anderes Bündnis dort einnisten.
+
+Eine neu erschaffene Festung ist ein wenig schwächer als die 5 ursprünglichen Burgen, besonders die Rekrutierungsgeschwindigkeit ist nur 25% der Gesamtrekrutierungsgeschwindigkeit der ursprünglichen Burgen (da die fünf Burgen parallel produzieren konnten). Nachdem man die Truppen der [Festung zum Brücken][Festungen Brücken] oder einfach zum Verteidigen benutzt hat, braucht man also sehr lange, bis wieder genug Eigendef in der Burg steht.
+
+### Ausgebaute Festungen [Ausgebaute Festungen]
+
+Der größte Vorteil einer voll ausgebauten Festung ist die weitaus höhere Rohstoff- und Silberproduktion gegenüber der 5 ursprünglichen Burgen. Im Gegenzug sind Angriffs- und Verteidigungswerte nur marginal erhöht. Man braucht also zu jeder Festung noch genug normale Burgen, um die Verteidigung der Festung zu unterstützen.
+
+Ausgebaute Festungen haben einen zusätzlichen Bonus von 35% auf Verteidigungswerte der Truppen (5% Forschung für jede [Einheitengattung][Gattungen] und 30% von der Stadtmauer für alle) und 8000 Punkte gegen jede [Einheitengattung][Gattungen] von der Festungsmauer, welche die ehemalige Wehranlage ersetzt.
+
+Die Angriffswerte der Truppen werden durch eine voll ausgebaute Kaserne um weitere 20% erhöht.
+
+Voll ausgebaute Produktionsstätten führen zu einer 80%-igen Erhöhung der Rohstoffproduktion verglichen mit den ursprünglichen 5 Burgen.
+
+Das Rathaus (ehemals Bergfried) fasst 200.000 Kupfer und verbessert die Tauschkurse für Silber und Kupfer auf 1:3.
+Die größere Kupfermenge heisst auch, dass man von einer Festung normale Burgen entdeckungsfrei spionieren kann, indem man mit 20.001 Kupfer spioniert.
+
+### Kampfmechanik von Festungen [Kampfmechanik von Festungen]
+
+Die [Kampfmechanik][] bei Kämpfen in Festungen ist prinzipiell dieselbe wie in normalen Burgen, allerdings wird der Kampf schon beendet, wenn eine der Seiten mit weniger als 500 Einheiten in eine Kampfrunde geht.
+
+### Festungen Brücken [Festungen Brücken]
+
+Da der Kampf in Festungen schon beendet wird, wenn eine der Seiten mit weniger als 500 Einheiten in eine Kampfrunde geht, müssen für [Brücken][] für jede Runde entsprechend mehr Einheiten geschickt werden. Jede Runde müssen etwa 260 Einheiten in der Festung ankommen, damit die Brücke hält.
