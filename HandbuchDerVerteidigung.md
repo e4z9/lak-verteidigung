@@ -312,7 +312,7 @@ Wenn die Verteidiger alle aus der eigenen Burg stammen, kann man die Werte direk
 
 Wenn also z.B. 200 Schwertkämpfer angreifen (gegen Artillerie 5200, gegen Infanterie 8600), werden sie durch 99 Armbrustschützen mit allen Forschungen und ausgebauter Wehranlage (gegen Artillerie 14068, gegen Infanterie 20899) geschlagen.
 
-Man kann auch einen der im Internet verfügbaren Kampfrechner benutzen, zum Beispiel den von [LaKKT](http://www.lakkt.de/lakkt_v2/php/kampfrechner/kampfrechner_eingabe.php).
+Man kann auch einen der im Internet verfügbaren Kampfrechner benutzen, zum Beispiel den von [lktools](http://www.lktools.de/index.php?page=rechner).
 
 ### Alleine Brücken [Alleine Brücken]
 
