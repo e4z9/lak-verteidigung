@@ -64,10 +64,10 @@ Erster Entwurf :D
     * [Alleine Brücken][]
     * [Brückenbriefe][]
 * [Festungen][]
-	* [Neue Festungen][]
-	* [Ausgebaute Festungen][]
 	* [Kampfmechanik von Festungen][]
 	* [Festungen Brücken][]
+	* [Neue Festungen][]
+	* [Ausgebaute Festungen][]
 
 ## Einheiten [Einheiten]
 
@@ -559,30 +559,13 @@ oder 55 AS zu 4 Felder entfernter Burg
 
 Fünf nahe beieinander liegende Burgen können zu einer Festung zusammen geschlossen werden. Dabei werden 4 der Burgen wieder zu freien Burgen.
 
-Festungen sind ein zweischneidiges Schwert, und eine Festung am falschen Ort kann eine Bürde für ein Bündnis sein. Voll ausgebaute Festungen haben eine etwas größere Verteidigungs- und Angriffskraft als 5 Burgen, und eine deutlich höhere Rohstoffproduktion und bessere Tauschkurse für Silber und Kupfer. Frisch errichtete Festungen sind allerdings in allen Belangen schlechter aufgestellt, als die 5 ursprünglichen Burgen.
+Festungen sind ein zweischneidiges Schwert, und eine Festung am falschen Ort kann eine Bürde für ein Bündnis sein. Voll ausgebaute Festungen haben etwas größere Verteidigungs- und Angriffsboni als 5 Burgen, und eine deutlich höhere Rohstoffproduktion und bessere Tauschkurse für Silber und Kupfer. Frisch errichtete Festungen sind allerdings in allen Belangen schlechter aufgestellt, als die 5 ursprünglichen Burgen.
 
-Festungen zu verlieren ist ein harter Schlag. [Festungen zu brücken][Festungen Brücken] ist sehr aufwändig, und Festungen vollstellen benötigt viele Truppen. Das macht sie zu attraktiven Zielen, und auch besonders zu Fake-Zielen. Festungen erhöhen also das Risiko, aber auch den potentiellen Gewinn. Somit verschieben sie in einem Konflikt generell gesprochen das Kräfteverhältnis in Richtung des Stärkeren, denn der Stärkere kann sich das Risiko eher leisten, und ist besser aufgestellt die Festungen auch zu verteidigen.
+Eine Festung erfolgreich anzugreifen benötigt Silber wie für 5 normale Burgen gleichzeitig. Bei 5 Burgen wäre ein Angriff allerdings auch ein Erfolg, wenn man ein paar von ihnen bei dem Angriff nicht einnimmt -- man kann aber nicht nur Teile einer Festung erobern.
 
-Festungen sollten nur von Spieler/innen gebaut werden, die ansonsten schon viele unterstützende Burgen besitzen (z.B. 1 Festung auf 30 normalen Burgen), und nur in relativ "sicheren" Gebieten, zum Beispiel im Bündniszentrum.
+Auf der anderen Seite ist eine Festung zu verlieren ein harter Schlag, und man kann auch nicht nur Teile einer Festung verlieren. [Festungen zu brücken][Festungen Brücken] ist von normalen Burgen aus sehr aufwändig, und Festungen vollstellen benötigt viele Truppen. Das macht sie zu besonders attraktiven Fake-Zielen. Festungen erhöhen also das Risiko, aber auch den potentiellen Gewinn. Somit verschieben sie in einem Konflikt generell gesprochen das Kräfteverhältnis in Richtung des Stärkeren, denn der Stärkere kann sich das Risiko eher leisten, und ist besser aufgestellt die Festungen auch zu verteidigen.
 
-### Neue Festungen [Neue Festungen]
-
-Wenn eine Festung gebaut wird, werden die 4 Burgen die an die Festung angeschlossen wurden wieder zu freien Burgen. Es ist wichtig, dass diese schnell wieder eingenommen werden, denn sonst könnte sich ein anderes Bündnis dort einnisten.
-
-Eine neu erschaffene Festung ist ein wenig schwächer als die 5 ursprünglichen Burgen, besonders die Rekrutierungsgeschwindigkeit ist nur 25% der Gesamtrekrutierungsgeschwindigkeit der ursprünglichen Burgen (da die fünf Burgen parallel produzieren konnten). Nachdem man die Truppen der [Festung zum Brücken][Festungen Brücken] oder einfach zum Verteidigen benutzt hat, braucht man also sehr lange, bis wieder genug Eigendef in der Burg steht.
-
-### Ausgebaute Festungen [Ausgebaute Festungen]
-
-Der größte Vorteil einer voll ausgebauten Festung ist die weitaus höhere Rohstoff- und Silberproduktion gegenüber der 5 ursprünglichen Burgen. Im Gegenzug sind Angriffs- und Verteidigungswerte nur marginal erhöht. Man braucht also zu jeder Festung noch genug normale Burgen, um die Verteidigung der Festung zu unterstützen.
-
-Ausgebaute Festungen haben einen zusätzlichen Bonus von 35% auf Verteidigungswerte der Truppen (5% Forschung für jede [Einheitengattung][Gattungen] und 30% von der Stadtmauer für alle) und 8000 Punkte gegen jede [Einheitengattung][Gattungen] von der Festungsmauer, welche die ehemalige Wehranlage ersetzt.
-
-Die Angriffswerte der Truppen werden durch eine voll ausgebaute Kaserne um weitere 20% erhöht.
-
-Voll ausgebaute Produktionsstätten führen zu einer 80%-igen Erhöhung der Rohstoffproduktion verglichen mit den ursprünglichen 5 Burgen.
-
-Das Rathaus (ehemals Bergfried) fasst 200.000 Kupfer und verbessert die Tauschkurse für Silber und Kupfer auf 1:3.
-Die größere Kupfermenge heisst auch, dass man von einer Festung normale Burgen entdeckungsfrei spionieren kann, indem man mit 20.001 Kupfer spioniert.
+Festungen sollten nur von Spieler/innen gebaut werden, die ansonsten schon viele unterstützende Burgen besitzen (z.B. 1 Festung auf 20-30 normalen Burgen), und möglichst nur in relativ "sicheren" Gebieten, zum Beispiel im Bündniszentrum.
 
 ### Kampfmechanik von Festungen [Kampfmechanik von Festungen]
 
@@ -591,3 +574,17 @@ Die [Kampfmechanik][] bei Kämpfen in Festungen ist prinzipiell dieselbe wie in 
 ### Festungen Brücken [Festungen Brücken]
 
 Da der Kampf in Festungen schon beendet wird, wenn eine der Seiten mit weniger als 500 Einheiten in eine Kampfrunde geht, müssen für [Brücken][] für jede Runde entsprechend mehr Einheiten geschickt werden. Jede Runde müssen etwa 260 Einheiten in der Festung ankommen, damit die Brücke hält.
+
+### Neue Festungen [Neue Festungen]
+
+Wenn eine Festung gebaut wird, werden die 4 Burgen die an die Festung angeschlossen wurden wieder zu freien Burgen. Es ist wichtig, dass diese schnell wieder eingenommen werden, denn sonst könnte sich ein anderes Bündnis dort einnisten.
+
+Eine neu erschaffene Festung ist ein wenig schwächer als die 5 ursprünglichen Burgen, besonders die Rekrutierungsgeschwindigkeit ist nur 25% der Gesamtrekrutierungsgeschwindigkeit der ursprünglichen Burgen (da die fünf Burgen parallel produzieren konnten). Nachdem man die Truppen der [Festung zum Brücken][Festungen Brücken] oder einfach zum Verteidigen benutzt hat, braucht man also sehr lange, bis wieder genug Eigendef in der Burg steht. Also sollte man genug normale Burgen besitzen, um die Festung mit Fremddef vollstellen oder [brücken][Festungen Brücken] zu können.
+
+### Ausgebaute Festungen [Ausgebaute Festungen]
+
+Der größte Vorteil einer voll ausgebauten Festung ist die weitaus höhere Rohstoff-, Silber- und Kupferproduktion gegenüber der 5 ursprünglichen Burgen (+80% Rohstoffe, 1:3 Tauschkurs für Silber und Kupfer). Das Rathaus (ehemals Bergfried) fasst auch 200.000 Kupfer, und kann damit normale Burgen entdeckungsfrei mit 20.001 Kupfer spionieren.
+
+Die Angriffs- und Verteidigungswerte sind im Vergleich dazu relativ wenig erhöht (+35% Verteidigungsbonus, 8000 Punkte Festungsmauer statt 5000 Punkte von 5 Wehranlagen, +20% Angriffsbonus).
+
+Eine voll ausgebaute Festung kann auch 150% der Truppen von 5 Burgen halten. Allerdings entspricht die Rekrutierungsgeschwindigkeit der von 5 Burgen, es dauert also lange bis eine Festung Truppen nachrekrutiert hat. Obwohl sich eine voll besetzte Festung gut erst einmal selber sichern kann, braucht man also trotzdem zu jeder Festung noch genug normale Burgen, um die Verteidigung der Festung zu unterstützen.
