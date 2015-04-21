@@ -239,7 +239,9 @@ Beim Brücken nutzt man aus, dass ein [Kampf][Kampfmechanik] erst dann beendet i
 1. Stelle sicher, dass mindestens 110 Einheiten in der angegriffenen Burg sind, wenn der Kampf beginnt (bei [Festungen][] 510 Einheiten).
 2. Schicke so Einheiten in die Burg, dass vor Beginn jeder Kampfrunde 55 Einheiten in der Burg ankommen (bei [Festungen][] 260 Einheiten).
 
-Beispiel: Angriffsmeldung für 11:37. Die ersten 10 Minuten ist Sammelzeit, die erste Kampfrunde fängt 11:47 an, danach alle 10 Minuten. Schicke je 55 Einheiten so dass sie z.B. 11:45, 11:55, 12:05, 12:15, und so weiter in der Burg eintreffen. Die Einheiten dürfen frühestens 11:38, 11:48, 11:58 etc eintreffen damit sie nicht noch an der vorherigen Runde teilnehmen, und sie müssen spätestens 11:46, 11:56, 12:06 etc eintreffen, damit sie noch an der richtigen Kampfrunde teilnehmen.
+Damit Truppen auf jeden Fall an der geplanten Kampfrunde teilnehmen, müssen sie frühestens in der Minute *nach* der vorherigen Kampfrunde, und spätestens in der Minute *vor* der geplanten Kampfrunde ankommen. Da man nicht die genaue Sekundenzeit des Angriffes sehen kann, könnten die Einheiten sonst zur falschen Runde ankommen.
+
+Beispiel: Angriffsmeldung für 11:37. Die ersten 10 Minuten sind Sammelzeit, die erste Kampfrunde findet 11:47 statt, danach alle 10 Minuten. Schicke je 55 Einheiten so dass sie z.B. 11:45, 11:55, 12:05, 12:15, und so weiter in der Burg eintreffen. Die Einheiten dürfen frühestens 11:38, 11:48, 11:58 etc eintreffen damit sie nicht noch an der vorherigen Runde teilnehmen, und sie müssen spätestens 11:46, 11:56, 12:06 etc eintreffen, damit sie noch an der richtigen Kampfrunde teilnehmen. Wenn sonst z.B. die zweite Kampfrunde um 11:57 und 10 Sekunden stattfinden, und die Truppen 11:57 und 22 Sekunden eintreffen, dann nehmen sie erst an der dritten Kampfrunde teil.
 
 Im folgenden werde ich verschiedene Techniken beschreiben, wie man dies mit möglichst wenig Aufwand realisieren kann. Hier erst noch ein paar allgemeine Tipps:
 
@@ -351,6 +353,8 @@ Zur Bestimmung, wann die Einheiten wieder in der Heimatburg ankommen, wenn man s
 ![Rohstoffe senden](rohstoffbrueckendetail.png)
 
 Diese zeigt untereinander die Transportdauer (im Bild 1:20 h), und die Ankunftszeit (im Bild 23.11., 18:24 Uhr) an. Addiere einfach die Transportdauer zu der Ankunftszeit, um die Zeit der Rückkehr zu errechnen (im Bild 23.11., 18:24 Uhr + 1:20 h = 23.11., 19:44 Uhr). Wenn das Resultat größer als 24 Uhr ist, dann ziehe 24 Stunden ab und erhöhe das Datum. Beispiel: Ankunftszeit 23.11., 22:57 Uhr + Transportdauer 8:25 h = Rückkehr "23.11., 31:22 Uhr", also 24.11., 7:22 Uhr.
+
+*Da bei der Ankunftszeit keine Sekunden angezeigt werden, musst du einrechnen, dass die Truppen eventuell bis zu einer Minute später zurückkehren als gedacht. Zum Beispiel Transportdauer 1:13:20, Ankunftszeit 10:00 (nicht angezeigt sind 53 Sekunden), dann kommen die Truppen 11:14 (:13), nicht 11:13 zurück.*
 
 #### Rohstoffbrücke nach Angriffsbeginn (1 1/2 Stunden, einmalig)
 
