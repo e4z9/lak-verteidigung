@@ -17,15 +17,22 @@
 	<label for="spielerName" class="control-label">Spielername:</label>
 	<input type="text" class="form-control" id="spielerName" ng-model="appCtrl.spielerName"/>
 </div>
+<div class="form-group">
+    <label for="burgSelektion" class="control-label">Burg:</label>
+    <select id="burgSelektion" class="form-control" ng-model="appCtrl.burg" ng-options="burg.name for burg in appCtrl.burgen">
+    </select>
+	<button class="btn btn-primary" ng-click="appCtrl.neueBurg()">Weitere Burg Hinzufügen</button>
+</div>
 </p>
+<hr/>
 <p>
 <div class="form-group">
 	<label for="burgName" class="control-label">Burgname:</label>
-	<input type="text" class="form-control" id="burgName" ng-model="appCtrl.burgName"/>
+	<input type="text" class="form-control" id="burgName" ng-model="appCtrl.burg.name"/>
 </div>
 <div class="form-group">
 	<label for="burgLink" class="control-label">Burglink:</label>
-	<input type="text" class="form-control" id="burgLink" ng-model="appCtrl.burgLink"/>
+	<input type="text" class="form-control" id="burgLink" ng-model="appCtrl.burg.link"/>
 </div>
 <div class="form-group">
 	<label for="datum" class="control-label">Datum:</label>
@@ -41,9 +48,9 @@
 	<form target="_blank" method="post" action="https://lakkt.de/de/function/createDefList.php">
 		<input type="hidden" name="time" value="{{appCtrl.zeit | date:'medium'}}">
 		<input type="hidden" name="date" value="{{appCtrl.datum | date:'medium'}}">
-		<input type="hidden" name="link" value="{{appCtrl.burgLink}}">
-		<input type="hidden" name="name" value="{{appCtrl.burgName}}">
-		<button class="btn btn-lg btn-primary btn-block center-block" type="submit">Erstelle Lakkt Link</button>
+		<input type="hidden" name="link" value="{{appCtrl.burg.link}}">
+		<input type="hidden" name="name" value="{{appCtrl.burg.name}}">
+		<button class="btn btn-success" type="submit">Erstelle Lakkt Link</button>
 	</form>
 </div>
 <div class="form-group">
@@ -55,9 +62,9 @@
 <h3>Angriffsmeldung</h3><br/>
 <div><b>🔴 Angriff auf {{appCtrl.spielerName}}</b></div>
 <br/>
-<div>Burg: {{appCtrl.burgName}} <a href="{{appCtrl.burgLink}}">{{appCtrl.burgLink}}</a></div>
+<div>Burg: {{appCtrl.burg.name}} <a href="{{appCtrl.burg.link}}">{{appCtrl.burg.link}}</a></div>
 <div>Zeit: {{appCtrl.datum | date:'d.M.'}}, {{appCtrl.zeit | date:'H:mm'}}</div>
-<div>Brücke: {{appCtrl.brueckenLink}}</div>
+<div>Brücke: <a href="{{appCtrl.brueckenLink}}">{{appCtrl.brueckenLink}}</a></div>
 <div ng-if="appCtrl.angreifer !== ''">Angreifer: {{appCtrl.angreifer}}</div>
 </p>
 </div>
