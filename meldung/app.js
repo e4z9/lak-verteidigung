@@ -55,6 +55,15 @@ angular.module('lakmeldung', [])
             }
         };
 
+        this.angriffsInfoLoeschen = function() {
+            that.burgen.forEach(function(burg) {
+                burg.datum = new Date();
+                burg.zeit = new Date();
+                burg.brueckenLink = '';
+                burg.angreifer = '';
+            });
+        };
+
         $scope.$watch(function() { return that.spielerName; }, function(newValue) {
             localStorage['e4z9.lak.spielerName'] = newValue;
         });
