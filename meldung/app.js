@@ -32,6 +32,7 @@ angular.module('lakmeldung', [])
 
         ladeBurgen();
         this.burg = this.burgen[0];
+        this.instructionsVisible = false;
 
         var sortiere = function() {
             that.burgen.sort(function(a, b) {
