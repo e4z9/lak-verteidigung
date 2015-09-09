@@ -15,6 +15,13 @@ angular.module('lakmeldung', [])
                 var burgSettings = JSON.parse(localStorage['e4z9.lak.burgen']);
                 if (burgSettings !== undefined && burgSettings['burgen'] !== undefined)
                     that.burgen = burgSettings.burgen;
+                // fix Date values which are converted to string and not parsed back as Date
+				that.burgen.forEach(function(burg) {
+					if (typeof burg.datum === 'string')
+                        burg.datum = new Date(burg.datum);
+                    if (typeof burg.zeit === 'string')
+                        burg.zeit = new Date(burg.zeit);
+                });
             } catch(e) {
             }
             if (that.burgen.length <= 0)
