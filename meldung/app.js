@@ -2,6 +2,8 @@
 angular.module('lakmeldung', [])
     .controller('appController', function($scope) {
         this.spielerName = localStorage['e4z9.lak.spielerName'];
+        if (this.spielerName === undefined)
+            this.spielerName = '';
 
         try {
 			this.burgen = JSON.parse(localStorage['e4z9.lak.burgen']);
@@ -28,6 +30,16 @@ angular.module('lakmeldung', [])
             that.burgen.push({name: 'Neue Burg', link: ''});
             that.burg = that.burgen[that.burgen.length-1];
             sortiere();
+        }
+
+        this.burgEntfernen = function() {
+            if (that.burgen.length <= 1)
+                return;
+            var index = that.burgen.indexOf(that.burg);
+            if (index >= 0) {
+                that.burgen.splice(index, 1);
+                that.burg = that.burgen[Math.min(that.burgen.length-1, index)];
+            }
         }
 
         $scope.$watch(function() { return that.spielerName; }, function(newValue) {

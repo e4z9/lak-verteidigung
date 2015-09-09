@@ -21,8 +21,9 @@
     <label for="burgSelektion" class="control-label">Burg:</label>
     <select id="burgSelektion" class="form-control" ng-model="appCtrl.burg" ng-options="burg.name for burg in appCtrl.burgen">
     </select>
-	<button class="btn btn-primary" ng-click="appCtrl.neueBurg()">Weitere Burg Hinzufügen</button>
 </div>
+<button class="btn btn-primary" ng-click="appCtrl.neueBurg()">Weitere Burg Hinzufügen</button>
+<button class="btn btn-danger" ng-if="appCtrl.burgen.length > 1" ng-click="appCtrl.burgEntfernen()">Burg Entfernen</button>
 </p>
 <hr/>
 <p>
