@@ -101,7 +101,7 @@
 <div>Burg: {{appCtrl.burg.name}} <a href="{{appCtrl.burg.link}}">{{appCtrl.burg.link}}</a></div>
 <div>Zeit: {{appCtrl.burg.datum | date:'d.M.'}}, {{appCtrl.burg.zeit | date:'H:mm'}}</div>
 <div>Brücke: <a href="{{appCtrl.burg.brueckenLink}}">{{appCtrl.burg.brueckenLink}}</a></div>
-<div ng-if="appCtrl.burg.angreifer !== ''">Angreifer: {{appCtrl.burg.angreifer}}</div>
+<div ng-if="appCtrl.burg.angreifer">Angreifer: {{appCtrl.burg.angreifer}}</div>
 </p>
 </div>
 

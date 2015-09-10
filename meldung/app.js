@@ -34,7 +34,7 @@ angular.module('lakmeldung', [])
         };
 
         this.spielerName = localStorage['e4z9.lak.spielerName'];
-        if (this.spielerName === undefined)
+        if (typeof this.spielerName !== 'string')
             this.spielerName = '';
 
         ladeBurgen();
