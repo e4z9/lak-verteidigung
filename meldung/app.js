@@ -10,6 +10,13 @@ angular.module('lakmeldung', [])
                      brueckenLink: '', angreifer: '' };
         };
 
+        var resetBurg = function(burg) {
+			burg.datum = undefined;
+			burg.zeit = undefined;
+			burg.brueckenLink = '';
+			burg.angreifer = '';
+        };
+
         var ladeBurgen = function() {
             try {
                 var burgSettings = JSON.parse(localStorage['e4z9.lak.burgen']);
@@ -64,12 +71,11 @@ angular.module('lakmeldung', [])
         };
 
         this.angriffsInfoLoeschen = function() {
-            that.burgen.forEach(function(burg) {
-                burg.datum = undefined;
-                burg.zeit = undefined;
-                burg.brueckenLink = '';
-                burg.angreifer = '';
-            });
+            that.burgen.forEach(resetBurg);
+        };
+
+        this.burgAngriffsInfoLoeschen = function() {
+            resetBurg(that.burg);
         };
 
         this.now = function() {
