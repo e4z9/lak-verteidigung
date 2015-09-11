@@ -5,16 +5,26 @@ angular.module('lakmeldung', [])
         this.burgen = [];
 
         var createBurg = function() {
-            return { name: 'Neue Burg', link: '',
+            return { displayName: 'Neue Burg', name: 'Neue Burg', link: '',
                      datum: undefined, zeit: undefined,
                      brueckenLink: '', angreifer: '' };
         };
 
         var resetBurg = function(burg) {
+            burg.displayName = burg.name;
 			burg.datum = undefined;
 			burg.zeit = undefined;
 			burg.brueckenLink = '';
 			burg.angreifer = '';
+        };
+
+        var markiere = function() {
+            that.burgen.forEach(function(burg) {
+                if (burg.datum && burg.zeit)
+                    burg.displayName = '🔴' + burg.name;
+                else
+                    burg.displayName = burg.name;
+            });
         };
 
         var ladeBurgen = function() {
@@ -33,6 +43,7 @@ angular.module('lakmeldung', [])
             }
             if (that.burgen.length <= 0)
                 that.burgen = [createBurg()];
+            markiere();
         };
         var speicherBurgen = function() {
             var burgSettings = { version: 1,
@@ -86,6 +97,7 @@ angular.module('lakmeldung', [])
             localStorage['e4z9.lak.spielerName'] = newValue;
         });
         $scope.$watch(function() { return that.burgen; }, function(newValue) {
+            markiere();
             sortiere();
             speicherBurgen();
         }, true /*object equality*/);
