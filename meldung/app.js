@@ -89,4 +89,8 @@ angular.module('lakmeldung', [])
             sortiere();
             speicherBurgen();
         }, true /*object equality*/);
-    });
+    })
+    .config(['$compileProvider', function($compileProvider) {
+        // allow l+k:// links
+        $compileProvider.aHrefSanitizationWhitelist(/^\s*(https?|ftp|mailto|tel|file|l\+k):/);
+    }]);
