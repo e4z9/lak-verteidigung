@@ -89,6 +89,15 @@ angular.module('lakmeldung', [])
             resetBurg(that.burg);
         };
 
+        this.hatAngriffe = function() {
+            var hatAngriffe = false;
+            that.burgen.forEach(function(burg) {
+                if (burg.datum && burg.zeit)
+                    hatAngriffe = true;
+            });
+            return hatAngriffe;
+        };
+
         this.now = function() {
             return new Date();
         };
@@ -101,6 +110,15 @@ angular.module('lakmeldung', [])
             sortiere();
             speicherBurgen();
         }, true /*object equality*/);
+    })
+    .directive('ezBurg', function() {
+        return {
+            restrict: 'E',
+            scope: {
+                burg: '='
+            },
+            templateUrl: 'burg-template.html'
+        };
     })
     .config(['$compileProvider', function($compileProvider) {
         // allow l+k:// links

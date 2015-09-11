@@ -97,14 +97,27 @@
 <button class="btn btn-warning" ng-click="appCtrl.burgAngriffsInfoLoeschen()">Angriffsinformation Entfernen</button>
 </p>
 <p>
-<h3>Angriffsmeldung</h3><br/>
+<h3>Angriffsmeldung</h3>
+<br/>
 <div><b>🔴 Angriff auf {{appCtrl.spielerName}}</b></div>
 <br/>
-<div>Burg: {{appCtrl.burg.name}} <a href="{{appCtrl.burg.link}}">{{appCtrl.burg.link}}</a></div>
-<div>Zeit: {{appCtrl.burg.datum | date:'d.M.'}}, {{appCtrl.burg.zeit | date:'H:mm'}}</div>
-<div>Brücke: <a href="{{appCtrl.burg.brueckenLink}}">{{appCtrl.burg.brueckenLink}}</a></div>
-<div ng-if="appCtrl.burg.angreifer">Angreifer: {{appCtrl.burg.angreifer}}</div>
+<ez-burg burg="appCtrl.burg"></ez-burg>
 </p>
+<p>
+    <h3>Zusammenfassung</h3>
+    <br/>
+    <div ng-if="appCtrl.hatAngriffe()">
+        <div><b>🔴 Angriff auf {{appCtrl.spielerName}}</b></div>
+        <br/>
+        <div ng-repeat="burg in appCtrl.burgen">
+            <div ng-if="burg.zeit">
+                <ez-burg burg="burg"></ez-burg>
+                <br/>
+            </div>
+        </div>
+    </div>
+</p> <!-- Zusammenfassung -->
+</p> <!-- App -->
 </div>
 
 </body>
