@@ -6,7 +6,7 @@ angular.module('lakmeldung', [])
 
         var createBurg = function() {
             return { name: 'Neue Burg', link: '',
-                     datum: new Date(), zeit: new Date(),
+                     datum: undefined, zeit: undefined,
                      brueckenLink: '', angreifer: '' };
         };
 
@@ -16,8 +16,8 @@ angular.module('lakmeldung', [])
                 if (burgSettings !== undefined && burgSettings['burgen'] !== undefined)
                     that.burgen = burgSettings.burgen;
                 // fix Date values which are converted to string and not parsed back as Date
-				that.burgen.forEach(function(burg) {
-					if (typeof burg.datum === 'string')
+                that.burgen.forEach(function(burg) {
+                    if (typeof burg.datum === 'string')
                         burg.datum = new Date(burg.datum);
                     if (typeof burg.zeit === 'string')
                         burg.zeit = new Date(burg.zeit);
@@ -65,11 +65,15 @@ angular.module('lakmeldung', [])
 
         this.angriffsInfoLoeschen = function() {
             that.burgen.forEach(function(burg) {
-                burg.datum = new Date();
-                burg.zeit = new Date();
+                burg.datum = undefined;
+                burg.zeit = undefined;
                 burg.brueckenLink = '';
                 burg.angreifer = '';
             });
+        };
+
+        this.now = function() {
+            return new Date();
         };
 
         $scope.$watch(function() { return that.spielerName; }, function(newValue) {
