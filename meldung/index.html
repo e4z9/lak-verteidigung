@@ -1,123 +1,120 @@
 <!DOCTYPE html>
 <html ng-app="lakmeldung">
-<head lang="en">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <title>L&K Angriffsmeldungstool</title>
-</head>
-<body style="margin: 1em">
-<script type="text/javascript" src="angular/angular.min.js"></script>
-<script type="text/javascript" src="app.js"></script>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <title>L&K Angriffsmeldungstool</title>
+    </head>
+    <body style="margin: 1em">
+        <script type="text/javascript" src="angular/angular.min.js"></script>
+        <script type="text/javascript" src="app.js"></script>
 
-<div ng-controller="appController as appCtrl">
-<p>
-    <div class="alert alert-info" role="alert" style="position: relative">
-        <button class="btn btn-default btn-xs"
-                style="position: absolute; margin-top: -1px; margin-right: -1px; top: 0; right: 0; z-index: 10; border-radius: 0 4px 0 4px;"
-                ng-click="appCtrl.instructionsVisible = !appCtrl.instructionsVisible">
-            Anleitung {{appCtrl.instructionsVisible ? 'verstecken' : 'anzeigen'}}
-        </button>
-        <div ng-show="appCtrl.instructionsVisible">
-            <br/>
-            <b>Tool zum Verwalten von Angriffsmeldungen</b><br/>
-            <br/>
-            Setze deine <b>Spielernamen</b>, füge irgendwann deine Burgen hinzu, und setze deren
-            <b>Burgname</b> und <b>Burglink</b>. Die Daten werden im Browser persistent gespeichert.<br/>
-            <br/>
-            Im Angriffsfall wähle die angegriffenen Burgen aus der Liste aus,
-            und setze <b>Datum</b> und <b>Zeit</b> des Angriffs.<br/>
-            Wenn du das L&K-interne Brückentool benutzen willst, kopiere den Link in das
-            Feld <b>Brückenlink</b>.<br/>
-            Wenn du LaKKT benutzen willst, kannst du mit dem Knopf <b>Erstelle LaKKT Link</b>
-            eine LaKKT Brücke mit den davor eingegebenen Daten (Burgname, Link, Datum, Zeit)
-            in einem neuen Browsertab/-fenster öffnen. Kopiere dann den öffentlichen
-            Link von der Adresszeile des Browsers in das Feld <b>Brückenlink</b>.<br/>
-            Du kannst optional <b>Angreiferinformation</b> hinzufügen.<br/>
-            <br/>
-            Kopiere von ganz unten auf dieser Seite die Angriffsmeldung und veröffentliche
-            sie im Forum. "🔴 Angriff auf &lt;Spielername&gt;" ist der vorgeschlagene Titel für
-            den Forumthread.<br/>
-            <br/>
-            Wenn der Angriff vorbei ist, kannst du die angriffsspezifischen Daten aller Burgen
-            (Datum, Zeit, Brückenlink, Angreiferinformation) mit <b>Alle Angriffsinformationen Entfernen</b>
-            entfernen. Burgnamen und Links bleiben erhalten.
-        </div>
-    </div>
-</p>
-<p>
-<div class="form-group">
-	<label for="spielerName" class="control-label">Spielername:</label>
-	<input type="text" class="form-control" id="spielerName" ng-model="appCtrl.spielerName"/>
-</div>
-<div class="form-group">
-    <label for="burgSelektion" class="control-label">Burg:</label>
-    <select id="burgSelektion" class="form-control" ng-model="appCtrl.burg" ng-options="burg.displayName for burg in appCtrl.burgen">
-    </select>
-</div>
-<button class="btn btn-primary" ng-click="appCtrl.neueBurg()">Weitere Burg Hinzufügen</button>
-<button class="btn btn-danger" ng-if="appCtrl.burgen.length > 1" ng-click="appCtrl.burgEntfernen()">Burg Entfernen</button>
-<button class="btn btn-warning" ng-click="appCtrl.angriffsInfoLoeschen()">Alle Angriffsinformation Entfernen</button>
-</p>
-<hr/>
-<p>
-<h3>Burg</h3>
-<div class="form-group">
-	<label for="burgName" class="control-label">Burgname:</label>
-	<input type="text" class="form-control" id="burgName" ng-model="appCtrl.burg.name"/>
-</div>
-<div class="form-group">
-	<label for="burgLink" class="control-label">Burglink:</label>
-	<input type="text" class="form-control" id="burgLink" ng-model="appCtrl.burg.link"/>
-</div>
-<div class="form-group">
-	<label for="datum" class="control-label">Datum:</label>
-	<input type="date" class="form-control" id="datum" ng-model="appCtrl.burg.datum" placeholder="Format: {{appCtrl.now() | date:'yyyy-MM-dd'}}"/>
-</div>
-<div class="form-group">
-	<label for="Zeit" class="control-label">Zeit:</label>
-	<input type="time" class="form-control" id="zeit" ng-model="appCtrl.burg.zeit" placeholder="Format: {{appCtrl.now() | date:'H:mm'}}"/>
-</div>
-<div class="form-group">
-	<label for="brueckenLink" class="control-label">Brückenlink:</label>
-	<input type="text" class="form-control" id="brueckenLink" ng-model="appCtrl.burg.brueckenLink"/>
-	<form target="_blank" method="post" action="https://lakkt.de/de/function/createDefList.php">
-		<input type="hidden" name="time" value="{{appCtrl.burg.zeit | date:'medium'}}">
-		<input type="hidden" name="date" value="{{appCtrl.burg.datum | date:'medium'}}">
-		<input type="hidden" name="link" value="{{appCtrl.burg.link}}">
-		<input type="hidden" name="name" value="{{appCtrl.burg.name}}">
-		<button class="btn btn-success" type="submit">Erstelle LaKKT Link</button>
-	</form>
-</div>
-<div class="form-group">
-	<label for="angreifer" class="control-label">Angreiferinformation:</label>
-	<input type="text" class="form-control" id="angreifer" ng-model="appCtrl.burg.angreifer"/>
-</div>
-<button class="btn btn-warning" ng-click="appCtrl.burgAngriffsInfoLoeschen()">Angriffsinformation Entfernen</button>
-</p>
-<p>
-<h3>Angriffsmeldung</h3>
-<br/>
-<div><b>🔴 Angriff auf {{appCtrl.spielerName}}</b></div>
-<br/>
-<ez-burg burg="appCtrl.burg"></ez-burg>
-</p>
-<p>
-    <h3>Zusammenfassung</h3>
-    <br/>
-    <div ng-if="appCtrl.hatAngriffe()">
-        <div><b>🔴 Angriff auf {{appCtrl.spielerName}}</b></div>
-        <br/>
-        <div ng-repeat="burg in appCtrl.burgen">
-            <div ng-if="burg.zeit">
-                <ez-burg burg="burg"></ez-burg>
-                <br/>
+        <div ng-controller="appController as appCtrl">
+            <div class="alert alert-info" role="alert" style="position: relative">
+                <button class="btn btn-default btn-xs"
+                        style="position: absolute; margin-top: -1px; margin-right: -1px; top: 0; right: 0; z-index: 10; border-radius: 0 4px 0 4px;"
+                        ng-click="appCtrl.instructionsVisible = !appCtrl.instructionsVisible">
+                    Anleitung {{appCtrl.instructionsVisible ? 'verstecken' : 'anzeigen'}}
+                </button>
+                <div ng-show="appCtrl.instructionsVisible">
+                    <br/>
+                    <b>Tool zum Verwalten von Angriffsmeldungen</b><br/>
+                    <br/>
+                    Setze deine <b>Spielernamen</b>, füge irgendwann deine Burgen hinzu, und setze deren
+                    <b>Burgname</b> und <b>Burglink</b>. Die Daten werden im Browser persistent gespeichert.<br/>
+                    <br/>
+                    Im Angriffsfall wähle die angegriffenen Burgen aus der Liste aus,
+                    und setze <b>Datum</b> und <b>Zeit</b> des Angriffs.<br/>
+                    Wenn du das L&K-interne Brückentool benutzen willst, kopiere den Link in das
+                    Feld <b>Brückenlink</b>.<br/>
+                    Wenn du LaKKT benutzen willst, kannst du mit dem Knopf <b>Erstelle LaKKT Link</b>
+                    eine LaKKT Brücke mit den davor eingegebenen Daten (Burgname, Link, Datum, Zeit)
+                    in einem neuen Browsertab/-fenster öffnen. Kopiere dann den öffentlichen
+                    Link von der Adresszeile des Browsers in das Feld <b>Brückenlink</b>.<br/>
+                    Du kannst optional <b>Angreiferinformation</b> hinzufügen.<br/>
+                    <br/>
+                    Kopiere von ganz unten auf dieser Seite die Angriffsmeldung und veröffentliche
+                    sie im Forum. "🔴 Angriff auf &lt;Spielername&gt;" ist der vorgeschlagene Titel für
+                    den Forumthread.<br/>
+                    <br/>
+                    Wenn der Angriff vorbei ist, kannst du die angriffsspezifischen Daten aller Burgen
+                    (Datum, Zeit, Brückenlink, Angreiferinformation) mit <b>Alle Angriffsinformationen Entfernen</b>
+                    entfernen. Burgnamen und Links bleiben erhalten.
+                </div>
             </div>
-        </div>
-    </div>
-</p> <!-- Zusammenfassung -->
-</p> <!-- App -->
-</div>
-
-</body>
+            <p>
+                <div class="form-group">
+                    <label for="spielerName" class="control-label">Spielername:</label>
+                    <input type="text" class="form-control" id="spielerName" ng-model="appCtrl.spielerName"/>
+                </div>
+                <div class="form-group">
+                    <label for="burgSelektion" class="control-label">Burg:</label>
+                    <select id="burgSelektion" class="form-control" ng-model="appCtrl.burg" ng-options="burg.displayName for burg in appCtrl.burgen">
+                    </select>
+                </div>
+                <button class="btn btn-primary" ng-click="appCtrl.neueBurg()">Weitere Burg Hinzufügen</button>
+                <button class="btn btn-danger" ng-if="appCtrl.burgen.length > 1" ng-click="appCtrl.burgEntfernen()">Burg Entfernen</button>
+                <button class="btn btn-warning" ng-click="appCtrl.angriffsInfoLoeschen()">Alle Angriffsinformation Entfernen</button>
+            </p>
+            <hr/>
+            <p>
+                <h3>Burg</h3>
+                <div class="form-group">
+                    <label for="burgName" class="control-label">Burgname:</label>
+                    <input type="text" class="form-control" id="burgName" ng-model="appCtrl.burg.name"/>
+                </div>
+                <div class="form-group">
+                    <label for="burgLink" class="control-label">Burglink:</label>
+                    <input type="text" class="form-control" id="burgLink" ng-model="appCtrl.burg.link"/>
+                </div>
+                <div class="form-group">
+                    <label for="datum" class="control-label">Datum:</label>
+                    <input type="date" class="form-control" id="datum" ng-model="appCtrl.burg.datum" placeholder="Format: {{appCtrl.now() | date:'yyyy-MM-dd'}}"/>
+                </div>
+                <div class="form-group">
+                    <label for="Zeit" class="control-label">Zeit:</label>
+                    <input type="time" class="form-control" id="zeit" ng-model="appCtrl.burg.zeit" placeholder="Format: {{appCtrl.now() | date:'H:mm'}}"/>
+                </div>
+                <div class="form-group">
+                    <label for="brueckenLink" class="control-label">Brückenlink:</label>
+                    <input type="text" class="form-control" id="brueckenLink" ng-model="appCtrl.burg.brueckenLink"/>
+                    <form target="_blank" method="post" action="https://lakkt.de/de/function/createDefList.php">
+                        <input type="hidden" name="time" value="{{appCtrl.burg.zeit | date:'medium'}}"/>
+                        <input type="hidden" name="date" value="{{appCtrl.burg.datum | date:'medium'}}"/>
+                        <input type="hidden" name="link" value="{{appCtrl.burg.link}}"/>
+                        <input type="hidden" name="name" value="{{appCtrl.burg.name}}"/>
+                        <button class="btn btn-success" type="submit">Erstelle LaKKT Link</button>
+                    </form>
+                </div>
+                <div class="form-group">
+                    <label for="angreifer" class="control-label">Angreiferinformation:</label>
+                    <input type="text" class="form-control" id="angreifer" ng-model="appCtrl.burg.angreifer"/>
+                </div>
+                <button class="btn btn-warning" ng-click="appCtrl.burgAngriffsInfoLoeschen()">Angriffsinformation Entfernen</button>
+            </p>
+            <p>
+                <h3>Angriffsmeldung</h3>
+                <br/>
+                <div><b>🔴 Angriff auf {{appCtrl.spielerName}}</b></div>
+                <br/>
+                <ez-burg burg="appCtrl.burg"></ez-burg>
+            </p>
+            <p>
+                <h3>Zusammenfassung</h3>
+                <br/>
+                <div ng-if="appCtrl.hatAngriffe()">
+                    <div><b>🔴 Angriff auf {{appCtrl.spielerName}}</b></div>
+                    <br/>
+                    <div ng-repeat="burg in appCtrl.burgen">
+                        <div ng-if="burg.zeit">
+                            <ez-burg burg="burg"></ez-burg>
+                            <br/>
+                        </div>
+                    </div>
+                </div>
+            </p>
+        </div> <!-- App -->
+    </body>
+</html>
