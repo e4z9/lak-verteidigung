@@ -3,6 +3,55 @@ angular.module('lakmeldung', [])
     .controller('appController', function($scope) {
         var that = this;
         this.burgen = [];
+        this.meldungen = [];
+
+        this.sortierungen = [
+            { name: 'Zeitpunkt',
+              fun: function(a, b) {
+                  function compareDates(d1, d2) {
+                      if (d1 === d2) return 0;
+                      if (d1 === undefined) return 1;
+                      if (d2 === undefined) return -1;
+                      return d1.getTime() - d2.getTime();
+                  };
+                  var dateComp = compareDates(a.datum, b.datum);
+                  if (dateComp !== 0)
+                      return dateComp;
+                  return compareDates(a.zeit, b.zeit);
+              }
+            },
+            { name: 'Name',
+              fun: function(a, b) {
+                  return a.name.localeCompare(b.name);
+              }
+            }
+        ];
+
+        var sortierungsIndex = 0;
+        try {
+            sortierungsIndex = JSON.parse(localStorage['e4z9.lak.meldungsSortierung']);
+        } catch (e) {
+        }
+        if (typeof sortierungsIndex !== 'number' || sortierungsIndex < 0
+                || sortierungsIndex > this.sortierungen.length)
+            sortierungsIndex = 0;
+        this.meldungsSortierung = this.sortierungen[sortierungsIndex];
+
+        var sortiereMeldungen = function() {
+            // meldungen kopieren
+            var nextIndex = 0;
+            that.burgen.forEach(function(burg) {
+                if (burg.datum && burg.zeit) {
+					that.meldungen[nextIndex] = burg;
+					++nextIndex;
+				}
+            });
+            // rest abschneiden
+            if (that.meldungen.length > nextIndex)
+                that.meldungen.splice(nextIndex);
+            // sortieren
+            that.meldungen.sort(that.meldungsSortierung.fun);
+        };
 
         var createBurg = function() {
             return { displayName: 'Neue Burg', name: 'Neue Burg', link: '',
@@ -44,6 +93,7 @@ angular.module('lakmeldung', [])
             if (that.burgen.length <= 0)
                 that.burgen = [createBurg()];
             markiere();
+            sortiereMeldungen();
         };
         var speicherBurgen = function() {
             var burgSettings = { version: 1,
@@ -108,8 +158,13 @@ angular.module('lakmeldung', [])
         $scope.$watch(function() { return that.burgen; }, function(newValue) {
             markiere();
             sortiere();
+            sortiereMeldungen();
             speicherBurgen();
         }, true /*object equality*/);
+        $scope.$watch(function() { return that.meldungsSortierung; }, function(newValue) {
+            sortiereMeldungen();
+            localStorage['e4z9.lak.meldungsSortierung'] = JSON.stringify(that.sortierungen.indexOf(newValue));
+        });
     })
     .directive('ezBurg', function() {
         return {

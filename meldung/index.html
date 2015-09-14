@@ -103,11 +103,15 @@
             </p>
             <p>
                 <h3>Zusammenfassung</h3>
+                <div class="form-group-sm">
+                    <label for="sortierung" class="control-label">Sortieren nach:</label>
+                    <select id="sortierung" class="form-control" ng-model="appCtrl.meldungsSortierung" ng-options="val.name for val in appCtrl.sortierungen"></select>
+                </div>
                 <br/>
                 <div ng-if="appCtrl.hatAngriffe()">
                     <div><b>🔴 Angriff auf {{appCtrl.spielerName}}</b></div>
                     <br/>
-                    <div ng-repeat="burg in appCtrl.burgen">
+                    <div ng-repeat="burg in appCtrl.meldungen">
                         <div ng-if="burg.zeit">
                             <ez-burg burg="burg"></ez-burg>
                             <br/>
