@@ -82,7 +82,7 @@ Die sechs Einheitentypen sind in drei Gattungen eingeteilt: Artillerie (AS, BS),
 
 Das heißt, dass Panzerreiter “nur" rekrutiert werden, weil sie die mobilsten Einheiten sind, und weil sie zum [Brücken][] bauen sehr praktisch sind.
 
-Bei einer voll ausgebauten Burg für die man 2400 Untertanen für Verteidigungseinheiten reserviert, sind meiner Meinung nach 600 AS, 600 ST und 600 PR eine gute Wahl. Es ist wegen der Möglichkeit [Brücken][] zu bauen günstig, diese in Schritten von je 55 Einheiten zu rekrutieren.
+Bei einer voll ausgebauten Burg für die man 2400 Untertanen für Verteidigungseinheiten reserviert, sind meiner Meinung nach 600 AS, 600 ST und 600 PR eine gute Wahl. Es ist wegen der Möglichkeit [Brücken][] zu bauen günstig, diese in Schritten von je 60 Einheiten zu rekrutieren.
 
 ### Bewegungsgeschwindigkeiten [Bewegungsgeschwindigkeiten]
 Die Einheitentypen haben unterschiedliche Bewegungsgeschwindigkeiten. Eine Gruppe von Einheiten ist dabei immer so schnell, wie die langsamste Einheit. Wenn es auf die genauen Reisezeiten ankommt, ist es also wichtig, immer alle Einheiten eines Typs getrennt von anderen Einheitentypen loszuschicken. Also zum Beispiel erst alle PR zusammen, dann alle AS zusammen, dann alle ST zusammen. Man kann auch zum Beispiel PR auf die Geschwindigkeit von AS reduzieren, indem man einen einzelnen AS mitschickt.
@@ -237,17 +237,17 @@ Die wesentlichen Nachteile sind der Aufwand, dass man zu passenden Zeiten online
 Beim Brücken nutzt man aus, dass ein [Kampf][Kampfmechanik] erst dann beendet ist, nachdem eine der Seiten mit weniger als 100 Einheiten in eine Kampfrunde geht (bei [Festungen][] 500 Einheiten). Die allgemeine Beschreibung ist ganz einfach:
 
 1. Stelle sicher, dass mindestens 110 Einheiten in der angegriffenen Burg sind, wenn der Kampf beginnt (bei [Festungen][] 510 Einheiten).
-2. Schicke so Einheiten in die Burg, dass vor Beginn jeder Kampfrunde 55 Einheiten in der Burg ankommen (bei [Festungen][] 260 Einheiten).
+2. Schicke so Einheiten in die Burg, dass vor Beginn jeder Kampfrunde 60 Einheiten in der Burg ankommen (bei [Festungen][] 260 Einheiten).
 
 Damit Truppen auf jeden Fall an der geplanten Kampfrunde teilnehmen, müssen sie frühestens in der Minute *nach* der vorherigen Kampfrunde, und spätestens in der Minute *vor* der geplanten Kampfrunde ankommen. Da man nicht die genaue Sekundenzeit des Angriffes sehen kann, könnten die Einheiten sonst zur falschen Runde ankommen.
 
-Beispiel: Angriffsmeldung für 11:37. Die ersten 10 Minuten sind Sammelzeit, die erste Kampfrunde findet 11:47 statt, danach alle 10 Minuten. Schicke je 55 Einheiten so dass sie z.B. 11:45, 11:55, 12:05, 12:15, und so weiter in der Burg eintreffen. Die Einheiten dürfen frühestens 11:38, 11:48, 11:58 etc eintreffen damit sie nicht noch an der vorherigen Runde teilnehmen, und sie müssen spätestens 11:46, 11:56, 12:06 etc eintreffen, damit sie noch an der richtigen Kampfrunde teilnehmen. Wenn sonst z.B. die zweite Kampfrunde um 11:57 und 10 Sekunden stattfinden, und die Truppen 11:57 und 22 Sekunden eintreffen, dann nehmen sie erst an der dritten Kampfrunde teil.
+Beispiel: Angriffsmeldung für 11:37. Die ersten 10 Minuten sind Sammelzeit, die erste Kampfrunde findet 11:47 statt, danach alle 10 Minuten. Schicke je 60 Einheiten so dass sie z.B. 11:45, 11:55, 12:05, 12:15, und so weiter in der Burg eintreffen. Die Einheiten dürfen frühestens 11:38, 11:48, 11:58 etc eintreffen damit sie nicht noch an der vorherigen Runde teilnehmen, und sie müssen spätestens 11:46, 11:56, 12:06 etc eintreffen, damit sie noch an der richtigen Kampfrunde teilnehmen. Wenn sonst z.B. die zweite Kampfrunde um 11:57 und 10 Sekunden stattfinden, und die Truppen 11:57 und 22 Sekunden eintreffen, dann nehmen sie erst an der dritten Kampfrunde teil.
 
 Im folgenden werde ich verschiedene Techniken beschreiben, wie man dies mit möglichst wenig Aufwand realisieren kann. Hier erst noch ein paar allgemeine Tipps:
 
 1. Überprüfe in der Einheitenübersicht der Burg regelmäßig, dort wo man die ganzen Ankunftszeiten von Unterstützung etc sieht, ob deine Brücke klappt, oder ob irgendwo Lücken auftauchen.
 2. Überprüfe die tatsächlichen Rundenzeiten relativ kurz vor Beginn des Angriffs. Wenn der Angreifer noch Einheiten geschickt hat, die kurz vor den anderen Einheiten eintreffen, verschieben sich alle Rundenzeiten, und die Brücke kann Lücken bekommen!
-3. Schicke 55 oder 110 Panzerreiter (oder mehr) in eine direkt benachbarte Burg  (bei [Festungen][] 260 oder 520 oder mehr). Das ist deine Notfallreserve, falls dir kurzfristig Lücken auffallen, die gestopft werden müssen.
+3. Schicke 60 oder 120 Panzerreiter (oder mehr) in eine direkt benachbarte Burg  (bei [Festungen][] 260 oder 520 oder mehr). Das ist deine Notfallreserve, falls dir kurzfristig Lücken auffallen, die gestopft werden müssen.
 
 ### Brückenformular [Brückenformular]
 Da Brücken bauen sehr aufwändig und unübersichtlich ist, macht es Sinn sich Tools zu bedienen. Das Brückenformular ist eine interaktive Webseite, auf der man markiert, welche Kampfrunden durch genügend Einheiten abgedeckt sind. Das ist auch unersetzlich, wenn man sich untereinander beim Brückenbau helfen will.
@@ -256,12 +256,10 @@ Es gibt einige Internetseiten die Brückenformulare zur Verfügung stellen, zum 
 
 Dort trägt man die genaue Angriffszeit, das Datum, den Burgnamen, und den Burglink ein. Der Knopf "Liste erstellen" öffnet dann die persönliche Webseite für diese Brücke. Die Internetadresse kopiert man dann in die Angriffsmeldung.
 
-Die resultierende Liste hat eine Zeile pro Kampfrunde. In jeder Zeile steht rot hinterlegt ein Zeitintervall von 8 Minuten. Wer nun 55 oder mehr Einheiten geschickt hat (bei [Festungen][] 260 Einheiten), tippt oder klickt das Zeitintervall in dem die Einheiten in der Burg *ankommen*, und markiert es so grau. Der Besitzer der zu verteidigenden Burg überprüft die Daten im Formular mit den tatsächlichen Ankunftszeiten die er in der Einheitenübersicht der Burg sieht, und tippt noch einmal das Zeitintervall, und markiert es so grün. Wenn eine Zeit falsch eingetragen wurde, kann man das Intervall noch einmal tippen, dann wird es wieder rot.
+Die resultierende Liste hat eine Zeile pro Kampfrunde. In jeder Zeile steht rot hinterlegt ein Zeitintervall von 8 Minuten. Wer nun 60 oder mehr Einheiten geschickt hat (bei [Festungen][] 260 Einheiten), tippt oder klickt das Zeitintervall in dem die Einheiten in der Burg *ankommen*, und markiert es so grau. Der Besitzer der zu verteidigenden Burg überprüft die Daten im Formular mit den tatsächlichen Ankunftszeiten die er in der Einheitenübersicht der Burg sieht, und tippt noch einmal das Zeitintervall, und markiert es so grün. Wenn eine Zeit falsch eingetragen wurde, kann man das Intervall noch einmal tippen, dann wird es wieder rot.
 
 ### Wieviele Einheiten pro Intervall? [BrückenEinheiten]
-Der aufmerksame Leser wird sich vielleicht wundern, weshalb oben die Rede davon ist, dass vor Beginn des Angriffs 110 Einheiten in der Burg verbleiben sollen, und weshalb 55 pro Runde nachgeschickt werden sollen: Eigentlich müssten 100 Einheiten am Anfang, und 50 Einheiten Nachschub doch bei normalen Burgen reichen. Allerdings tun sie das in der Realität nicht, was mit der Art und Weise zu tun hat, in der die Verluste pro Kampfrunde berechnet werden. Exakte Details sind uns nicht bekannt. Klar ist, dass mathematische Rundungen auftreten: Die Hälfte von 17 ist 8,5, und das Spiel rundet solche Verluste noch oben auf. Auch werden die [Einheitengattungen][Gattungen] getrennt abgerechnet, und die Verluste werden auf die beteiligten Burgen verteilt, wobei sich mehrere Rundungsfehler addieren. Insgesamt führt dies dazu, dass man ein paar wenige Einheiten mehr als die Hälfte verlieren kann. 110 / 55 Einheiten (bei [Festungen][] 510 / 260 Einheiten) haben sich dabei als sicheres Maß erwiesen.
-
-Wer schwache Nerven hat, kann bei normalen Burgen auch 60 Einheiten pro Intervall schicken, um ganz ganz *ganz* sicher vor Rundungen zu sein. Oder normalerweise 55, und ab und zu mal ein paar mehr.
+Der aufmerksame Leser wird sich vielleicht wundern, weshalb oben die Rede davon ist, dass vor Beginn des Angriffs 110 Einheiten in der Burg verbleiben sollen, und weshalb 60 pro Runde nachgeschickt werden sollen: Eigentlich müssten 100 Einheiten am Anfang, und 50 Einheiten Nachschub doch bei normalen Burgen reichen. Allerdings tun sie das in der Realität nicht, was mit der Art und Weise zu tun hat, in der die Verluste pro Kampfrunde berechnet werden. Exakte Details sind uns nicht bekannt. Klar ist, dass mathematische Rundungen auftreten: Die Hälfte von 17 ist 8,5, und das Spiel rundet solche Verluste noch oben auf. Auch werden die [Einheitengattungen][Gattungen] getrennt abgerechnet, und die Verluste werden auf die beteiligten Burgen verteilt, wobei sich mehrere Rundungsfehler addieren. Insgesamt führt dies dazu, dass man ein paar wenige Einheiten mehr als die Hälfte verlieren kann. 110 / 60 Einheiten (bei [Festungen][] 510 / 260 Einheiten) haben sich dabei als sicheres Maß erwiesen.
 
 Noch mehr Einheiten zu schicken lohnt sich allerdings nicht. Entgegen der Intuition sammeln sich mehr Einheiten *nicht* über die Zeit an, sondern die Anzahl Einheiten am Ende jeder Kampfrunde nähert sich langsam der Anzahl Einheiten die jede Runde nachgeschickt werden. Das veranschaulicht folgende Tabelle:
 
@@ -278,24 +276,31 @@ Noch mehr Einheiten zu schicken lohnt sich allerdings nicht. Entgegen der Intuit
 
 Nun kann man mehr als 100 Einheiten pro Runde schicken, um irgendwann zu einem Rundenende mehr als 100 Einheiten in der Burg zu haben. So, dass eine Lücke in der Brücke auftauchen dürfte, ohne dass die Burg fällt. Aber auch bei 110 Einheiten Nachschub pro Runde, dauert es drei Runden bis am Ende der Runde danach noch mehr als 100 Einheiten in der Burg übrig sind. Und dabei gilt: Wenn irgendwann nur einmal zwischendurch weniger als 110 Einheiten Nachschub ankommen, dann braucht es wieder 2-3 Runden, bis die Einheiten am Ende einer Kampfrunde wieder auf mehr als 100 aufgefüllt sind.
 
+### Mehrere Runden gleichzeitig sichern[Mehrere Runden gleichzeitig sichern]
+Wenn genug Truppen in einer Runde ankommen, kann man damit auch mehr als eine Runde der Brücke absichern.
+
+Bei normalen Burgen:  
+180 Truppen = 2 Runden  
+400 Truppen = 3 Runden
+
 ### Angriffszeit für Brücke sichern [Angriffszeit sichern]
 Eine übliche Angriffstechnik ist es, kurzfristig noch ein paar Einheiten loszuschicken, die kurz vor dem Rest der Angreifer ankommen. Dadurch verschiebt sich der *gesamte* Angriff ein paar Minuten vor, was für eine vorher gebaute Brücke fatal sein kann. Denn dadurch kann es passieren dass Verteidigungseinheiten, die eigentlich vor einer Kampfrunde ankommen sollten, nun *nach* der Kampfrunde ankommen, und die Burg fällt.
 
 Gegen diese Angriffstechnik kann man sich verteidigen, indem man sich von einem Mitspieler zu einem festgelegten Zeitpunkt vorher *angreifen* lässt.
 
-Beispiel: Angriffsmeldung für 11:37. Der Verteidiger lässt sich von einem Mitspieler zu 11:27 mit 110 Einheiten *angreifen*  (bei [Festungen][] 510 Einheiten), und baut eine Brücke für diese Angriffszeit. Falls der Angreifer kurzfristig Einheiten zu 11:34 schickt, was normalerweise den ganzen Angriff auf 11:34 vorziehen würde, dann startet der Angriff trotzdem um 11:27, und die Brücke ist sicher. Natürlich könnte es nun noch sein, dass der Angreifer 110 Einheiten zu 11:24 schickt ... deshalb kann es besser sein sich vom Mitspieler zu 11:17 mit 110 Einheiten, und zu 11:27 mit 55 weiteren Einheiten angreifen zu lassen...
+Beispiel: Angriffsmeldung für 11:37. Der Verteidiger lässt sich von einem Mitspieler zu 11:27 mit 110 Einheiten *angreifen*  (bei [Festungen][] 510 Einheiten), und baut eine Brücke für diese Angriffszeit. Falls der Angreifer kurzfristig Einheiten zu 11:34 schickt, was normalerweise den ganzen Angriff auf 11:34 vorziehen würde, dann startet der Angriff trotzdem um 11:27, und die Brücke ist sicher. Natürlich könnte es nun noch sein, dass der Angreifer 110 Einheiten zu 11:24 schickt ... deshalb kann es besser sein sich vom Mitspieler zu 11:17 mit 110 Einheiten, und zu 11:27 mit 60 weiteren Einheiten angreifen zu lassen...
 
 ### Brückenlöcher mit Gold stopfen [BrückenGold]
 Wenn es doch einmal passiert, und du ein Loch in deiner Brücke entdeckst, aber alle deine Einheiten zu lange brauchen um die Lücke stopfen zu können, dann gibt es häufig noch einen Ausweg: Gold.
 
 #### Truppen sofort zurück holen
-Man kann mit Gold Einheiten, die sich auf dem Rückweg zu ihrer Burg befinden, sofort zurück holen. Schicke also z.B. 55 ST auf den Rückweg, und drücke in der Einheitenübersicht der Burg für sie den Beschleunigungsknopf.
+Man kann mit Gold Einheiten, die sich auf dem Rückweg zu ihrer Burg befinden, sofort zurück holen. Schicke also z.B. 60 ST auf den Rückweg, und drücke in der Einheitenübersicht der Burg für sie den Beschleunigungsknopf.
 Einheiten, die sich auf dem *Hinweg* zu einer Burg befinden, kann man nicht Beschleunigen.
 
-55 ST aus einer Entfernung von 6 Feldern sofort zurück holen kostet 17 Gold.
+60 ST aus einer Entfernung von 6 Feldern sofort zurück holen kostet 17 Gold.
 
 #### Einheiten sofort rekrutieren
-Sofern genug Ressourcen in der Burg vorhanden sind, kann man 55 Einheiten mit 110 Gold sofort rekrutieren. Dazu starte den Bau von 55 Einheiten (am besten Speerträger, die brauchen am wenigsten Ressourcen), drücke den Beschleunigungsknopf einmal zum Halbieren der Zeit (55 Gold), und noch einmal zur sofortigen Fertigstellung (55 Gold).
+Sofern genug Ressourcen in der Burg vorhanden sind, kann man 60 Einheiten mit 120 Gold sofort rekrutieren. Dazu starte den Bau von 60 Einheiten (am besten Speerträger, die brauchen am wenigsten Ressourcen), drücke den Beschleunigungsknopf einmal zum Halbieren der Zeit (60 Gold), und noch einmal zur sofortigen Fertigstellung (60 Gold).
 
 ### Offensivbrücken brechen [Offensivbrücken brechen]
 Wenn der Angreifer merkt, dass seine Truppen nicht ausreichen um die Burg zu erobern, baut er vielleicht eine Offensivbrücke (Offbrücke, Angriffsbrücke). Eine Offensivbrücke funktioniert genauso wie eine Defensivbrücke, und dient z.B. dazu den Kampf solange zu verlängern, bis weitere Angriffstruppen eintreffen. Eine weiterer Anwendungsfall ist den Angriff über den Nachtmodus hinweg zu brücken: Wenn der Verteidiger bis zum Nachtmodus gebrückt hat, schickt der Angreifer den Großteil seiner Truppen nach Hause, brückt selber über Nacht, schickt die Truppen zum Morgen wieder hin, und vermeidet somit den vergrößerten Schaden in der Nacht.
@@ -320,7 +325,7 @@ Man kann auch einen der im Internet verfügbaren Kampfrechner benutzen, zum Beis
 
 Es gibt einige Techniken mit der man mit den Einheiten aus der angegriffenen Burg selbst effektiv Brücken bauen kann. Die meisten erfordern, dass man während des Angriffes zu bestimmten Zeiten online sein kann.
 
-Alle folgenden Beschreibungen von Brücken gehen davon aus, dass eine normale Burg gebrückt werden soll. Bei [Festungen][] müssen immer 260 statt 55 Einheiten geschickt werden.
+Alle folgenden Beschreibungen von Brücken gehen davon aus, dass eine normale Burg gebrückt werden soll. Bei [Festungen][] müssen immer 260 statt 60 Einheiten geschickt werden.
 
 #### Rohstoffbrücke Allgemein
 Bei der Rohstoffbrücke schickt man Einheiten mit der Funktion "Rohstoffe senden" aus der Burg, so dass sie zum gewünschten Zeitpunkt wieder in der Burg eintreffen.
@@ -341,9 +346,9 @@ So wird’s gemacht:
 1. Rechne aus wieviel Zeit bis zum Beginn des Zeitfensters vor der Kampfrunde ist, zu der die Verteidigungseinheiten ankommen sollen (siehe [Brückenformular][]), und *halbiere* diese Zeit.
 2. Suche eine Burg, die exakt so weit entfernt ist, dass z.B. Panzerreiter oder Armbrustschützen von der angegriffenen Burg die oben ausgerechnete Zeit dorthin brauchen.
 3. Bevor du Einheiten dorthin schickst, überprüfe die Zeiten noch einmal, denn deine Suche hat die Zeiten verändert!
-4. Schicke 55 Einheiten mit "Rohstoffe senden" und einer Rohstoffeinheit zu der Burg.
-5. Wenn du *keine* "Umgebungskarte" erforscht hast und Panzerreiter schickst, kannst du gleich weitere 55 PR zu einer Burg schicken, die 1 Feld weiter entfernt ist (diese kommen dann 10 Minuten = 1 Kampfrunde später zurück), weitere zu einer Burg, die 2 Felder weiter entfernt als die erste ist (diese kommen dann 20 Minuten = 2 Kampfrunden später zurück), und so weiter.
-6. Wenn du *keine* "Umgebungskarte" erforscht hast und Armbrustschützen schickst, kannst du gleich weitere 55 AS zu einer Burg schicken, die 1 Feld weiter entfernt ist (diese kommen dann 20 Minuten = 2 Kampfrunden später zurück), weitere zu einer Burg, die 2 Felder weiter entfernt als die erste ist (diese kommen dann 40 Minuten = 4 Kampfrunden später zurück), und so weiter.
+4. Schicke 60 Einheiten mit "Rohstoffe senden" und einer Rohstoffeinheit zu der Burg.
+5. Wenn du *keine* "Umgebungskarte" erforscht hast und Panzerreiter schickst, kannst du gleich weitere 60 PR zu einer Burg schicken, die 1 Feld weiter entfernt ist (diese kommen dann 10 Minuten = 1 Kampfrunde später zurück), weitere zu einer Burg, die 2 Felder weiter entfernt als die erste ist (diese kommen dann 20 Minuten = 2 Kampfrunden später zurück), und so weiter.
+6. Wenn du *keine* "Umgebungskarte" erforscht hast und Armbrustschützen schickst, kannst du gleich weitere 60 AS zu einer Burg schicken, die 1 Feld weiter entfernt ist (diese kommen dann 20 Minuten = 2 Kampfrunden später zurück), weitere zu einer Burg, die 2 Felder weiter entfernt als die erste ist (diese kommen dann 40 Minuten = 4 Kampfrunden später zurück), und so weiter.
 7. Alle 10 Minuten nachdem du in 4. die ersten Einheiten losgeschickt hast, kannst du dieselbe(n) Burg(en) wieder benutzen. Die Einheiten kommen dann auch 10 Minuten später zurück.
 
 Wenn man also die erste Burg für einen [Einheitentyp][Einheitentypen] gefunden hat, kann man besonders mit PR oder AS ohne "Umgebungskarte" sehr schnell und effektiv Brücken bauen. Leider kann man die Brücke erst ohne große Rechnerei auf Korrektheit überprüfen, wenn die Einheiten auf dem Rückweg sind. Vorher werden in der Einheitenübersicht der Burg nur die Ankunftszeiten bei der entfernten Burg angezeigt.
@@ -372,19 +377,19 @@ So wird’s gemacht:
 
 Schicke 1-8 Minuten (mit "Umgebungskarte" 5-8 Minuten) *nach* Eintreffen der feindlichen Einheiten folgende Einheiten mit der Funktion "Rohstoffe senden" zu den folgenden Burgen im angegebenen Abstand zu deiner Burg (auf jeden Fall müssen 110 Einheiten für die erste Kampfrunde in der Burg verbleiben!):
 
-1. 55 PR zu 1 Feld entfernter Burg
-2. 55 PR zu 2 Felder entfernter Burg  
-oder 55 AS zu 1 Feld entfernter Burg
-3. 55 PR zu 3 Felder entfernter Burg
-4. 55 PR zu 4 Felder entfernter Burg  
-oder 55 AS zu 2 Felder entfernter Burg
-5. 55 PR zu 5 Felder entfernter Burg
-6. 55 PR zu 6 Felder entfernter Burg  
-oder 55 AS zu 3 Felder entfernter Burg
-7. 55 PR zu 7 Felder entfernter Burg  
-oder 55 ST zu 3 Felder entfernter Burg
-8. 55 PR zu 8 Felder entfernter Burg  
-oder 55 AS zu 4 Felder entfernter Burg
+1. 60 PR zu 1 Feld entfernter Burg
+2. 60 PR zu 2 Felder entfernter Burg  
+oder 60 AS zu 1 Feld entfernter Burg
+3. 60 PR zu 3 Felder entfernter Burg
+4. 60 PR zu 4 Felder entfernter Burg  
+oder 60 AS zu 2 Felder entfernter Burg
+5. 60 PR zu 5 Felder entfernter Burg
+6. 60 PR zu 6 Felder entfernter Burg  
+oder 60 AS zu 3 Felder entfernter Burg
+7. 60 PR zu 7 Felder entfernter Burg  
+oder 60 ST zu 3 Felder entfernter Burg
+8. 60 PR zu 8 Felder entfernter Burg  
+oder 60 AS zu 4 Felder entfernter Burg
 
 #### 6 Felder Def + Off Brücke (1 Stunde, wiederholbar)
 
@@ -405,10 +410,10 @@ So wird’s gemacht:
 
 1. Suche eine vertrauenswürdige externe Burg in 6 Feldern Abstand (vertrauenswürdig = die Truppen die du dort hinschickst dürfen nicht vom Besitzer zurück geschickt werden. Gut sind kleine inaktive. Bei Verbündeten aktiven solltest du beim Besitzer bescheid geben.)
 2. Schicke bis auf 110 Einheiten alle Einheiten in die Burg aus 1. (Diese müssen spätestens 100 Minuten vor Eintreffen der gegnerischen Einheiten dorthin losgeschickt werden.)
-3. Schicke 13 Minuten (Toleranz +-2) vor Eintreffen der gegnerischen Einheiten, Gruppen von jeweils 55 PR, 55 LR, 55 AS, 55 BS, 55 ST, 55 SK getrennt voneinander zu deiner Burg zurück. Das baut eine Brücke für 1 Stunde nach der ersten Kampfrunde.
+3. Schicke 13 Minuten (Toleranz +-2) vor Eintreffen der gegnerischen Einheiten, Gruppen von jeweils 60 PR, 60 LR, 60 AS, 60 BS, 60 ST, 60 SK getrennt voneinander zu deiner Burg zurück. Das baut eine Brücke für 1 Stunde nach der ersten Kampfrunde.
 4. Wiederhole 3. jede Stunde.
 
-Wichtig ist, dass die Einheitentypen in getrennten Gruppen von 55 Einheiten losgeschickt werden. Nur dann haben sie unterschiedliche Laufzeiten, und kommen mit etwa 10 Minuten Abstand zurück zur Burg (mit erforschter Umgebungskarte verkürzen sich die Abstände).
+Wichtig ist, dass die Einheitentypen in getrennten Gruppen von 60 Einheiten losgeschickt werden. Nur dann haben sie unterschiedliche Laufzeiten, und kommen mit etwa 10 Minuten Abstand zurück zur Burg (mit erforschter Umgebungskarte verkürzen sich die Abstände).
 
 #### 3 Felder Def Brücke (1/2 Stunde, wiederholbar)
 
@@ -429,7 +434,7 @@ So wird’s gemacht:
 
 1. Suche eine vertrauenswürdige externe Burg in 3 Feldern Abstand (vertrauenswürdig = die Truppen die du dort hinschickst dürfen nicht vom Besitzer zurück geschickt werden. Gut sind kleine inaktive. Bei Verbündeten aktiven solltest du beim Besitzer bescheid geben.)
 2. Schicke bis auf 110 Einheiten alle Einheiten in die Burg aus 1. (Diese müssen spätestens 45 Minuten vor Eintreffen der gegnerischen Einheiten dorthin losgeschickt werden.)
-3. Schicke 3 Minuten vor Eintreffen der gegnerischen Einheiten 55 AS, 1 Minute später 55 PR, und 1 weitere Minute später 55 ST zu deiner Burg zurück.  (Ohne erforschte Umgebungskarte mit Toleranz +-1, und die Staffelung ist nicht nötig.) Das baut eine Brücke für 1/2 Stunde nach der ersten Kampfrunde.
+3. Schicke 3 Minuten vor Eintreffen der gegnerischen Einheiten 60 AS, 1 Minute später 60 PR, und 1 weitere Minute später 60 ST zu deiner Burg zurück.  (Ohne erforschte Umgebungskarte mit Toleranz +-1, und die Staffelung ist nicht nötig.) Das baut eine Brücke für 1/2 Stunde nach der ersten Kampfrunde.
 4. Wiederhole 3. alle 1/2 Stunden.
 
 Die PR brauchen 15 Minuten, die AS 30 Minuten, die ST 35 Minuten (mit erforschter Umgebungskarte 5% weniger). Die Zeiten müssen deshalb sehr exakt eingehalten werden. Man kann die AS auch ein wenig früher und die ST ein wenig später zurückschicken, aber dann muss man länger am Stück online sein, und darf beim Warten nicht einschlafen 😉.
@@ -454,7 +459,7 @@ So wird’s gemacht:
 
 1. Suche eine vertrauenswürdige externe Burg in 3 Feldern Abstand (vertrauenswürdig = die Truppen die du dort hinschickst dürfen nicht vom Besitzer zurück geschickt werden. Gut sind kleine inaktive. Bei Verbündeten aktiven solltest du beim Besitzer bescheid geben.)
 2. Schicke bis auf 110 Einheiten alle Einheiten in die Burg aus 1. (Diese müssen spätestens 50 Minuten vor Eintreffen der gegnerischen Einheiten dorthin losgeschickt werden.)
-3. Schicke 4 Minuten (Toleranz +-3) vor Eintreffen der gegnerischen Einheiten, Gruppen von jeweils 1 LR+55 PR, 55 AS, 1SK+55 ST zu deiner Burg zurück. Das baut eine Brücke für 1/2 Stunde nach der ersten Kampfrunde.
+3. Schicke 4 Minuten (Toleranz +-3) vor Eintreffen der gegnerischen Einheiten, Gruppen von jeweils 1 LR+60 PR, 60 AS, 1SK+60 ST zu deiner Burg zurück. Das baut eine Brücke für 1/2 Stunde nach der ersten Kampfrunde.
 4. Wiederhole 3. alle 1/2 Stunden.
 
 Wichtig ist, dass die Einheitentypen exakt in den angegebenen Gruppen losgeschickt werden. Nur dann haben sie die richtigen Laufzeiten. Die PR mit dem LR brauchen 20 Minuten, die AS 30 Minuten, die ST mit dem SK 40 Minuten (mit erforschter Umgebungskarte 5% weniger).
@@ -475,7 +480,7 @@ Nachteile:
 So wird’s gemacht:
 
 1. Habe den Markt auf Stufe 5. Nicht 4. Nicht 6. Genau 5!
-2. Schicke 13 Minuten (Toleranz +-2) vor Eintreffen der gegnerischen Einheiten, Gruppen von jeweils 55 PR, 55 LR, 55 AS, 55 BS, 55 ST, 55 SK getrennt voneinander auf deinen Markt zum Rohstoffe tauschen. Das baut eine Brücke für 1 Stunde nach der ersten Kampfrunde.
+2. Schicke 13 Minuten (Toleranz +-2) vor Eintreffen der gegnerischen Einheiten, Gruppen von jeweils 60 PR, 60 LR, 60 AS, 60 BS, 60 ST, 60 SK getrennt voneinander auf deinen Markt zum Rohstoffe tauschen. Das baut eine Brücke für 1 Stunde nach der ersten Kampfrunde.
 3. Schicke bis auf 110 Einheiten alle restlichen Einheiten in eine Nachbarburg.
 
 Der Markt hat auf Stufe 5 eine Entfernung von 6 Feldern, kann also einmalig für die oben beschriebene 6 Felder Brücke benutzt werden. Das kann nützlich sein, wenn man einen Angriff kurzfristig bemerkt, und keine Zeit hat die Einheiten erst wegzuschicken und dann zum Brücken wiederzuholen. Die gewonnene Stunde kann man nutzen um das weitere Brücken vorzubereiten.
@@ -489,7 +494,7 @@ Vorteile:
 
 Nachteile:
 
-* Braucht 220 Einheiten jedes Typs, inklusive off-Einheiten
+* Braucht 240 Einheiten jedes Typs, inklusive off-Einheiten
 * Muss vollständig gebaut werden, kann nicht verkürzt oder abgebrochen werden
 * Braucht Burgfried Stufe 10 und erforschte Umgebungskarte
 
@@ -497,38 +502,38 @@ So wird’s gemacht:
 
 1. Habe Bergfried auf Stufe 10.
 2. Habe Umgebungskarte in der Bibliothek der Burg erforscht.
-3. Schicke 103 Minuten (Toleranz +-3) vor Eintreffen der gegnerischen Einheiten, Gruppen von jeweils 55 PR, 55 LR, 55 AS, 55 BS, 55 ST, 55 SK getrennt voneinander auf deinen Burgfried zum Kupfer oder Silber tauschen.
+3. Schicke 103 Minuten (Toleranz +-3) vor Eintreffen der gegnerischen Einheiten, Gruppen von jeweils 60 PR, 60 LR, 60 AS, 60 BS, 60 ST, 60 SK getrennt voneinander auf deinen Burgfried zum Kupfer oder Silber tauschen.
 4. Wiederhole 3. 93 Minuten, 83 Minuten und 73 Minuten vor Eintreffen der gegnerischen Einheiten.
 
-Der Burgfried hat auf Stufe 10 eine Entfernung von 25 Feldern. Wenn man einmal 55 von jedem Einheitentyp tauschen schickt, dann kommen sie im Abstand von 39,5 Minuten zurück. Wenn man das noch 3 weitere mal im Abstand von 10 Minuten wiederholt, dann ist die Brücke komplett. Wenn nicht, dann klaffen große Lücken in der Brücke 😀.
+Der Burgfried hat auf Stufe 10 eine Entfernung von 25 Feldern. Wenn man einmal 60 von jedem Einheitentyp tauschen schickt, dann kommen sie im Abstand von 39,5 Minuten zurück. Wenn man das noch 3 weitere mal im Abstand von 10 Minuten wiederholt, dann ist die Brücke komplett. Wenn nicht, dann klaffen große Lücken in der Brücke 😀.
 
 ### Brückenbriefe [Brückenbriefe]
 
 #### 6 Felder Def + Off Brücke (1 Stunde, wiederholbar)
 1. Einheiten auf 6 Felder entfernte Burg schicken (mindestens 110 in Burg belassen!)
-2. 13 Minuten (Toleranz +-2) vor Eintreffen der gegnerischen Einheiten, Gruppen von jeweils 55 PR, 55 LR, 55 AS, 55 BS, 55 ST, 55 SK getrennt voneinander zur angegriffenen Burg zurück schicken.
+2. 13 Minuten (Toleranz +-2) vor Eintreffen der gegnerischen Einheiten, Gruppen von jeweils 60 PR, 60 LR, 60 AS, 60 BS, 60 ST, 60 SK getrennt voneinander zur angegriffenen Burg zurück schicken.
 3. Jede Stunde nach Bedarf wiederholen.
 
 #### 3 Felder Def Brücke (1/2 Stunde, wiederholbar)
 1. Einheiten auf 3 Felder entfernte Burg schicken (mindestens 110 in Burg belassen!)
-2. 3 Minuten vor Eintreffen der gegnerischen Einheiten 55 AS, 1 Minute später 55 PR, und 1 weitere Minute später 55 ST zur angegriffenen Burg zurück schicken.  (Ohne erforschte Umgebungskarte mit Toleranz +-1, und die Staffelung ist nicht nötig.)
+2. 3 Minuten vor Eintreffen der gegnerischen Einheiten 60 AS, 1 Minute später 60 PR, und 1 weitere Minute später 60 ST zur angegriffenen Burg zurück schicken.  (Ohne erforschte Umgebungskarte mit Toleranz +-1, und die Staffelung ist nicht nötig.)
 3. Jede halbe Stunde nach Bedarf wiederholen.
 
 #### 3 Felder Def Brücke mit Off-Support (1/2 Stunde, wiederholbar)
 1. Einheiten auf 3 Felder entfernte Burg schicken (mindestens 110 in Burg belassen!)
-2. 4 Minuten (Toleranz +-3) vor Eintreffen der gegnerischen Einheiten, Gruppen von jeweils 1 LR+55 PR, 55 AS, 1SK+55 ST zur angegriffenen Burg zurück schicken.
+2. 4 Minuten (Toleranz +-3) vor Eintreffen der gegnerischen Einheiten, Gruppen von jeweils 1 LR+60 PR, 60 AS, 1SK+60 ST zur angegriffenen Burg zurück schicken.
 3. Jede halbe Stunde nach Bedarf wiederholen.
 
 #### Def + Off Marktbrücke (1 Stunde, einmalig)
 Voraussetzung: Markt exakt auf Stufe 5 (aber wozu sollte man auch mehr haben 😁)
 
-1. 13 Minuten (Toleranz +-2) vor Eintreffen der gegnerischen Einheiten, Gruppen von jeweils 55 PR, 55 LR, 55 AS, 55 BS, 55 ST, 55 SK getrennt voneinander auf deinen Markt zum Rohstoffe tauschen schicken.
+1. 13 Minuten (Toleranz +-2) vor Eintreffen der gegnerischen Einheiten, Gruppen von jeweils 60 PR, 60 LR, 60 AS, 60 BS, 60 ST, 60 SK getrennt voneinander auf deinen Markt zum Rohstoffe tauschen schicken.
 2. Das war’s schon. Nicht wiederholbar.
 
 #### Def + Off Burgfriedbrücke (4 Stunden, einmalig)
 Voraussetzung: Burgfried Stufe 10 und erforschte Umgebungskarte
 
-1. 103 Minuten (Toleranz +-3) vor Eintreffen der gegnerischen Einheiten, Gruppen von jeweils 55 PR, 55 LR, 55 AS, 55 BS, 55 ST, 55 SK getrennt voneinander auf deinen Burgfried zum Kupfer oder Silber tauschen schicken.
+1. 103 Minuten (Toleranz +-3) vor Eintreffen der gegnerischen Einheiten, Gruppen von jeweils 60 PR, 60 LR, 60 AS, 60 BS, 60 ST, 60 SK getrennt voneinander auf deinen Burgfried zum Kupfer oder Silber tauschen schicken.
 2. 93 Minuten, 83 Minuten und 73 Minuten vor Eintreffen der gegnerischen Einheiten wiederholen.
 3. Erst jetzt ist die Brücke gebaut, vorher klaffen große Lücken!
 
@@ -537,27 +542,27 @@ Voraussetzung: Burgfried Stufe 10 und erforschte Umgebungskarte
 1. Rechne aus wieviel Zeit bis zum Beginn des Zeitfensters vor der Kampfrunde ist, zu der die Verteidigungseinheiten ankommen sollen, und *halbiere* diese Zeit.
 2. Suche eine Burg, die exakt so weit entfernt ist, dass z.B. Panzerreiter oder Armbrustschützen von der angegriffenen Burg die oben ausgerechnete Zeit dorthin brauchen.
 3. Bevor du Einheiten dorthin schickst, überprüfe die Zeiten noch einmal, denn deine Suche hat die Zeiten verändert!
-4. Schicke 55 Einheiten mit "Rohstoffe senden" und einer Rohstoffeinheit zu der Burg.
-5. Wenn du *keine* "Umgebungskarte" erforscht hast und Panzerreiter schickst, kannst du gleich weitere 55 PR zu einer Burg schicken, die 1 Feld weiter entfernt ist (diese kommen dann 10 Minuten = 1 Kampfrunde später zurück), weitere zu einer Burg, die 2 Felder weiter entfernt als die erste ist (diese kommen dann 20 Minuten = 2 Kampfrunden später zurück), und so weiter.
-6. Wenn du *keine* "Umgebungskarte" erforscht hast und Armbrustschützen schickst, kannst du gleich weitere 55 AS zu einer Burg schicken, die 1 Feld weiter entfernt ist (diese kommen dann 20 Minuten = 2 Kampfrunden später zurück), weitere zu einer Burg, die 2 Felder weiter entfernt als die erste ist (diese kommen dann 40 Minuten = 4 Kampfrunden später zurück), und so weiter.
+4. Schicke 60 Einheiten mit "Rohstoffe senden" und einer Rohstoffeinheit zu der Burg.
+5. Wenn du *keine* "Umgebungskarte" erforscht hast und Panzerreiter schickst, kannst du gleich weitere 60 PR zu einer Burg schicken, die 1 Feld weiter entfernt ist (diese kommen dann 10 Minuten = 1 Kampfrunde später zurück), weitere zu einer Burg, die 2 Felder weiter entfernt als die erste ist (diese kommen dann 20 Minuten = 2 Kampfrunden später zurück), und so weiter.
+6. Wenn du *keine* "Umgebungskarte" erforscht hast und Armbrustschützen schickst, kannst du gleich weitere 60 AS zu einer Burg schicken, die 1 Feld weiter entfernt ist (diese kommen dann 20 Minuten = 2 Kampfrunden später zurück), weitere zu einer Burg, die 2 Felder weiter entfernt als die erste ist (diese kommen dann 40 Minuten = 4 Kampfrunden später zurück), und so weiter.
 7. Alle 10 Minuten nachdem du in 4. die ersten Einheiten losgeschickt hast, kannst du dieselbe(n) Burg(en) wieder benutzen. Die Einheiten kommen dann auch 10 Minuten später zurück.
 
 #### Rohstoffbrücke nach Angriffsbeginn (1 1/2 Stunden, einmalig)
 Schicke 1-8 Minuten (mit "Umgebungskarte" 5-8 Minuten) *nach* Eintreffen der feindlichen Einheiten folgende Einheiten mit der Funktion "Rohstoffe senden" zu den folgenden Burgen im angegebenen Abstand zu deiner Burg (mindestens 110 Einheiten in Burg belassen!):
 
-1. 55 PR zu 1 Feld entfernter Burg
-2. 55 PR zu 2 Felder entfernter Burg  
-oder 55 AS zu 1 Feld entfernter Burg
-3. 55 PR zu 3 Felder entfernter Burg
-4. 55 PR zu 4 Felder entfernter Burg  
-oder 55 AS zu 2 Felder entfernter Burg
-5. 55 PR zu 5 Felder entfernter Burg
-6. 55 PR zu 6 Felder entfernter Burg  
-oder 55 AS zu 3 Felder entfernter Burg
-7. 55 PR zu 7 Felder entfernter Burg  
-oder 55 ST zu 3 Felder entfernter Burg
-8. 55 PR zu 8 Felder entfernter Burg  
-oder 55 AS zu 4 Felder entfernter Burg
+1. 60 PR zu 1 Feld entfernter Burg
+2. 60 PR zu 2 Felder entfernter Burg  
+oder 60 AS zu 1 Feld entfernter Burg
+3. 60 PR zu 3 Felder entfernter Burg
+4. 60 PR zu 4 Felder entfernter Burg  
+oder 60 AS zu 2 Felder entfernter Burg
+5. 60 PR zu 5 Felder entfernter Burg
+6. 60 PR zu 6 Felder entfernter Burg  
+oder 60 AS zu 3 Felder entfernter Burg
+7. 60 PR zu 7 Felder entfernter Burg  
+oder 60 ST zu 3 Felder entfernter Burg
+8. 60 PR zu 8 Felder entfernter Burg  
+oder 60 AS zu 4 Felder entfernter Burg
 
 ## Festungen [Festungen]
 
