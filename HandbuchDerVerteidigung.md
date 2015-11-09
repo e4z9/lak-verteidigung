@@ -181,7 +181,7 @@ Zuerst solltest du dir ein paar Gedanken darüber machen, in welcher Lage du dic
 In der „Einheiten“ Übersicht der angegriffenen Burg kannst du gut sehen, wann die ersten feindlichen Einheiten eintreffen. Beginnt der Angriff in der [Nacht][Nachtmodus], dann haben die Verteidiger einen großen Bonus. Beginnt der Angriff gegen Abend, dann ist es vielleicht möglich den Angriff durch [Brücken][] bis in die Nacht zu strecken, um dann vom [Nachtbonus][Nachtmodus] zu profitieren.
 
 #### Anzahl der Burgen aus denen angegriffen wird
-Kannst du gut in den Angriffsmeldungen in den „Berichten“ sehen. Eine voll ausgebaute Burg voller Einheiten die von einer Burg angegriffen wird, ist nicht in Gefahr, denn aus einer Burg können nicht genug Angriffseinheiten kommen. 
+Kannst du gut in den Angriffsmeldungen in den „Berichten“ sehen. Eine voll ausgebaute Burg voller Einheiten die von einer Burg angegriffen wird, ist nicht in Gefahr, denn aus einer Burg können nicht genug Angriffseinheiten kommen.
 
 Eine Faustregel ist: *Wenn die verteidigende Burg eine ausgebaute [Wehranlage][] hat, dann verteidigen 750 Speerträger + 750 Armbrustschützen erfolgreich gegen die Offensivtruppen einer Burg, 1500 ST + 1500 AS gegen zwei Burgen, und so weiter.*
 
@@ -410,7 +410,7 @@ So wird’s gemacht:
 
 1. Suche eine vertrauenswürdige externe Burg in 6 Feldern Abstand (vertrauenswürdig = die Truppen die du dort hinschickst dürfen nicht vom Besitzer zurück geschickt werden. Gut sind kleine inaktive. Bei Verbündeten aktiven solltest du beim Besitzer bescheid geben.)
 2. Schicke bis auf 110 Einheiten alle Einheiten in die Burg aus 1. (Diese müssen spätestens 100 Minuten vor Eintreffen der gegnerischen Einheiten dorthin losgeschickt werden.)
-3. Schicke 13 Minuten (Toleranz +-2) vor Eintreffen der gegnerischen Einheiten, Gruppen von jeweils 60 PR, 60 LR, 60 AS, 60 BS, 60 ST, 60 SK getrennt voneinander zu deiner Burg zurück. Das baut eine Brücke für 1 Stunde nach der ersten Kampfrunde.
+3. Schicke 12-19 Minuten (mit "Umgebungskarte" 11-15 Minuten) vor Eintreffen der gegnerischen Einheiten, Gruppen von jeweils 60 PR, 60 LR, 60 AS, 60 BS, 60 ST, 60 SK getrennt voneinander zu deiner Burg zurück. Das baut eine Brücke für 1 Stunde nach der ersten Kampfrunde.
 4. Wiederhole 3. jede Stunde.
 
 Wichtig ist, dass die Einheitentypen in getrennten Gruppen von 60 Einheiten losgeschickt werden. Nur dann haben sie unterschiedliche Laufzeiten, und kommen mit etwa 10 Minuten Abstand zurück zur Burg (mit erforschter Umgebungskarte verkürzen sich die Abstände).
@@ -434,7 +434,7 @@ So wird’s gemacht:
 
 1. Suche eine vertrauenswürdige externe Burg in 3 Feldern Abstand (vertrauenswürdig = die Truppen die du dort hinschickst dürfen nicht vom Besitzer zurück geschickt werden. Gut sind kleine inaktive. Bei Verbündeten aktiven solltest du beim Besitzer bescheid geben.)
 2. Schicke bis auf 110 Einheiten alle Einheiten in die Burg aus 1. (Diese müssen spätestens 45 Minuten vor Eintreffen der gegnerischen Einheiten dorthin losgeschickt werden.)
-3. Schicke 3 Minuten vor Eintreffen der gegnerischen Einheiten 60 AS, 1 Minute später 60 PR, und 1 weitere Minute später 60 ST zu deiner Burg zurück.  (Ohne erforschte Umgebungskarte mit Toleranz +-1, und die Staffelung ist nicht nötig.) Das baut eine Brücke für 1/2 Stunde nach der ersten Kampfrunde.
+3. Schicke 3 Minuten vor Eintreffen der gegnerischen Einheiten 60 AS, 1 Minute später 60 PR, und 1 weitere Minute später 60 ST zu deiner Burg zurück. (Ohne erforschte Umgebungskarte 2-4 Minuten vor Eintreffen der gegnerischen Einheiten, und die Staffelung ist nicht nötig.) Das baut eine Brücke für 1/2 Stunde nach der ersten Kampfrunde.
 4. Wiederhole 3. alle 1/2 Stunden.
 
 Die PR brauchen 15 Minuten, die AS 30 Minuten, die ST 35 Minuten (mit erforschter Umgebungskarte 5% weniger). Die Zeiten müssen deshalb sehr exakt eingehalten werden. Man kann die AS auch ein wenig früher und die ST ein wenig später zurückschicken, aber dann muss man länger am Stück online sein, und darf beim Warten nicht einschlafen 😉.
@@ -459,7 +459,7 @@ So wird’s gemacht:
 
 1. Suche eine vertrauenswürdige externe Burg in 3 Feldern Abstand (vertrauenswürdig = die Truppen die du dort hinschickst dürfen nicht vom Besitzer zurück geschickt werden. Gut sind kleine inaktive. Bei Verbündeten aktiven solltest du beim Besitzer bescheid geben.)
 2. Schicke bis auf 110 Einheiten alle Einheiten in die Burg aus 1. (Diese müssen spätestens 50 Minuten vor Eintreffen der gegnerischen Einheiten dorthin losgeschickt werden.)
-3. Schicke 4 Minuten (Toleranz +-3) vor Eintreffen der gegnerischen Einheiten, Gruppen von jeweils 1 LR+60 PR, 60 AS, 1SK+60 ST zu deiner Burg zurück. Das baut eine Brücke für 1/2 Stunde nach der ersten Kampfrunde.
+3. Schicke 2-9 Minuten (mit "Umgebungskarte" 1-7 Minuten) vor Eintreffen der gegnerischen Einheiten, Gruppen von jeweils 1 LR+60 PR, 60 AS, 1SK+60 ST zu deiner Burg zurück. Das baut eine Brücke für 1/2 Stunde nach der ersten Kampfrunde.
 4. Wiederhole 3. alle 1/2 Stunden.
 
 Wichtig ist, dass die Einheitentypen exakt in den angegebenen Gruppen losgeschickt werden. Nur dann haben sie die richtigen Laufzeiten. Die PR mit dem LR brauchen 20 Minuten, die AS 30 Minuten, die ST mit dem SK 40 Minuten (mit erforschter Umgebungskarte 5% weniger).
@@ -480,7 +480,7 @@ Nachteile:
 So wird’s gemacht:
 
 1. Habe den Markt auf Stufe 5. Nicht 4. Nicht 6. Genau 5!
-2. Schicke 13 Minuten (Toleranz +-2) vor Eintreffen der gegnerischen Einheiten, Gruppen von jeweils 60 PR, 60 LR, 60 AS, 60 BS, 60 ST, 60 SK getrennt voneinander auf deinen Markt zum Rohstoffe tauschen. Das baut eine Brücke für 1 Stunde nach der ersten Kampfrunde.
+2. Schicke 12-19 Minuten (mit "Umgebungskarte" 11-15 Minuten) vor Eintreffen der gegnerischen Einheiten, Gruppen von jeweils 60 PR, 60 LR, 60 AS, 60 BS, 60 ST, 60 SK getrennt voneinander auf deinen Markt zum Rohstoffe tauschen. Das baut eine Brücke für 1 Stunde nach der ersten Kampfrunde.
 3. Schicke bis auf 110 Einheiten alle restlichen Einheiten in eine Nachbarburg.
 
 Der Markt hat auf Stufe 5 eine Entfernung von 6 Feldern, kann also einmalig für die oben beschriebene 6 Felder Brücke benutzt werden. Das kann nützlich sein, wenn man einen Angriff kurzfristig bemerkt, und keine Zeit hat die Einheiten erst wegzuschicken und dann zum Brücken wiederzuholen. Die gewonnene Stunde kann man nutzen um das weitere Brücken vorzubereiten.
@@ -502,8 +502,8 @@ So wird’s gemacht:
 
 1. Habe Bergfried auf Stufe 10.
 2. Habe Umgebungskarte in der Bibliothek der Burg erforscht.
-3. Schicke 103 Minuten (Toleranz +-3) vor Eintreffen der gegnerischen Einheiten, Gruppen von jeweils 60 PR, 60 LR, 60 AS, 60 BS, 60 ST, 60 SK getrennt voneinander auf deinen Burgfried zum Kupfer oder Silber tauschen.
-4. Wiederhole 3. 93 Minuten, 83 Minuten und 73 Minuten vor Eintreffen der gegnerischen Einheiten.
+3. Schicke 100-106 Minuten vor Eintreffen der gegnerischen Einheiten, Gruppen von jeweils 60 PR, 60 LR, 60 AS, 60 BS, 60 ST, 60 SK getrennt voneinander auf deinen Burgfried zum Kupfer oder Silber tauschen.
+4. Wiederhole 3. 93 Minuten, 83 Minuten und 73 Minuten vor Eintreffen der gegnerischen Einheiten (also alle 10 Minuten).
 
 Der Burgfried hat auf Stufe 10 eine Entfernung von 25 Feldern. Wenn man einmal 60 von jedem Einheitentyp tauschen schickt, dann kommen sie im Abstand von 39,5 Minuten zurück. Wenn man das noch 3 weitere mal im Abstand von 10 Minuten wiederholt, dann ist die Brücke komplett. Wenn nicht, dann klaffen große Lücken in der Brücke 😀.
 
@@ -511,30 +511,30 @@ Der Burgfried hat auf Stufe 10 eine Entfernung von 25 Feldern. Wenn man einmal 6
 
 #### 6 Felder Def + Off Brücke (1 Stunde, wiederholbar)
 1. Einheiten auf 6 Felder entfernte Burg schicken (mindestens 110 in Burg belassen!)
-2. 13 Minuten (Toleranz +-2) vor Eintreffen der gegnerischen Einheiten, Gruppen von jeweils 60 PR, 60 LR, 60 AS, 60 BS, 60 ST, 60 SK getrennt voneinander zur angegriffenen Burg zurück schicken.
+2. 11-18 Minuten (mit "Umgebungskarte" 11-15 Minuten) vor Eintreffen der gegnerischen Einheiten, Gruppen von jeweils 60 PR, 60 LR, 60 AS, 60 BS, 60 ST, 60 SK getrennt voneinander zur angegriffenen Burg zurück schicken.
 3. Jede Stunde nach Bedarf wiederholen.
 
 #### 3 Felder Def Brücke (1/2 Stunde, wiederholbar)
 1. Einheiten auf 3 Felder entfernte Burg schicken (mindestens 110 in Burg belassen!)
-2. 3 Minuten vor Eintreffen der gegnerischen Einheiten 60 AS, 1 Minute später 60 PR, und 1 weitere Minute später 60 ST zur angegriffenen Burg zurück schicken.  (Ohne erforschte Umgebungskarte mit Toleranz +-1, und die Staffelung ist nicht nötig.)
+2. 3 Minuten vor Eintreffen der gegnerischen Einheiten 60 AS, 1 Minute später 60 PR, und 1 weitere Minute später 60 ST zur angegriffenen Burg zurück schicken. (Ohne erforschte Umgebungskarte 2-4 Minuten vor Eintreffen der gegnerischen Einheiten, und die Staffelung ist nicht nötig.)
 3. Jede halbe Stunde nach Bedarf wiederholen.
 
 #### 3 Felder Def Brücke mit Off-Support (1/2 Stunde, wiederholbar)
 1. Einheiten auf 3 Felder entfernte Burg schicken (mindestens 110 in Burg belassen!)
-2. 4 Minuten (Toleranz +-3) vor Eintreffen der gegnerischen Einheiten, Gruppen von jeweils 1 LR+60 PR, 60 AS, 1SK+60 ST zur angegriffenen Burg zurück schicken.
+2. 2-9 Minuten (mit "Umgebungskarte" 1-7 Minuten) vor Eintreffen der gegnerischen Einheiten, Gruppen von jeweils 1 LR+60 PR, 60 AS, 1SK+60 ST zur angegriffenen Burg zurück schicken.
 3. Jede halbe Stunde nach Bedarf wiederholen.
 
 #### Def + Off Marktbrücke (1 Stunde, einmalig)
 Voraussetzung: Markt exakt auf Stufe 5 (aber wozu sollte man auch mehr haben 😁)
 
-1. 13 Minuten (Toleranz +-2) vor Eintreffen der gegnerischen Einheiten, Gruppen von jeweils 60 PR, 60 LR, 60 AS, 60 BS, 60 ST, 60 SK getrennt voneinander auf deinen Markt zum Rohstoffe tauschen schicken.
+1. 12-19 Minuten (mit "Umgebungskarte" 11-15 Minuten) vor Eintreffen der gegnerischen Einheiten, Gruppen von jeweils 60 PR, 60 LR, 60 AS, 60 BS, 60 ST, 60 SK getrennt voneinander auf deinen Markt zum Rohstoffe tauschen schicken.
 2. Das war’s schon. Nicht wiederholbar.
 
 #### Def + Off Burgfriedbrücke (4 Stunden, einmalig)
 Voraussetzung: Burgfried Stufe 10 und erforschte Umgebungskarte
 
-1. 103 Minuten (Toleranz +-3) vor Eintreffen der gegnerischen Einheiten, Gruppen von jeweils 60 PR, 60 LR, 60 AS, 60 BS, 60 ST, 60 SK getrennt voneinander auf deinen Burgfried zum Kupfer oder Silber tauschen schicken.
-2. 93 Minuten, 83 Minuten und 73 Minuten vor Eintreffen der gegnerischen Einheiten wiederholen.
+1. 100-106 Minuten vor Eintreffen der gegnerischen Einheiten, Gruppen von jeweils 60 PR, 60 LR, 60 AS, 60 BS, 60 ST, 60 SK getrennt voneinander auf deinen Burgfried zum Kupfer oder Silber tauschen schicken.
+2. 93 Minuten, 83 Minuten und 73 Minuten vor Eintreffen der gegnerischen Einheiten wiederholen (also alle 10 Minuten).
 3. Erst jetzt ist die Brücke gebaut, vorher klaffen große Lücken!
 
 #### Rohstoffbrücke Allgemein (solange der Vorrat reicht)
