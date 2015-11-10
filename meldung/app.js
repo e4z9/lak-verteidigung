@@ -42,9 +42,9 @@ angular.module('lakmeldung', [])
             var nextIndex = 0;
             that.burgen.forEach(function(burg) {
                 if (burg.datum && burg.zeit) {
-					that.meldungen[nextIndex] = burg;
-					++nextIndex;
-				}
+                    that.meldungen[nextIndex] = burg;
+                    ++nextIndex;
+                }
             });
             // rest abschneiden
             if (that.meldungen.length > nextIndex)
@@ -61,10 +61,10 @@ angular.module('lakmeldung', [])
 
         var resetBurg = function(burg) {
             burg.displayName = burg.name;
-			burg.datum = undefined;
-			burg.zeit = undefined;
-			burg.brueckenLink = '';
-			burg.angreifer = '';
+            burg.datum = undefined;
+            burg.zeit = undefined;
+            burg.brueckenLink = '';
+            burg.angreifer = '';
         };
 
         var markiere = function() {
@@ -108,6 +108,7 @@ angular.module('lakmeldung', [])
         ladeBurgen();
         this.burg = this.burgen[0];
         this.instructionsVisible = false;
+        this.importVisible = true;
 
         var sortiere = function() {
             that.burgen.sort(function(a, b) {
