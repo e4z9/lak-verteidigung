@@ -108,7 +108,10 @@ angular.module('lakmeldung', [])
         ladeBurgen();
         this.burg = this.burgen[0];
         this.instructionsVisible = false;
-        this.importVisible = true;
+        this.importVisible = false;
+        this.importSpielerLink = localStorage['e4z9.lak.importSpielerLink'];
+        if (typeof this.importSpielerLink !== 'string')
+          this.importSpielerLink = '';
 
         var sortiere = function() {
             that.burgen.sort(function(a, b) {
@@ -130,6 +133,47 @@ angular.module('lakmeldung', [])
                 that.burgen.splice(index, 1);
                 that.burg = that.burgen[Math.min(that.burgen.length-1, index)];
             }
+        };
+
+        this.importLakkt = function() {
+            var link = that.importSpielerLink.trim();
+            if (!link)
+                return;
+            var url = "https://lakkt.de/de/function/downloadCSV.php?link="
+                + encodeURIComponent(link) + "&type=castle";
+            Papa.parse(url, {
+                download: true,
+                complete: function(results) {
+                    $scope.$apply(function() {
+                        if (results.errors.length > 0) {
+                            alert("Fehler beim herunterladen!");
+                            console.log(results);
+                            return;
+                        }
+                        var burgen = []
+                        results.data.forEach(function(row) {
+                            if (row.length >= 2) {
+                                var burg = createBurg();
+                                burg.displayName = row[0];
+                                burg.name = burg.displayName;
+                                burg.link = row[1];
+                                burgen.push(burg);
+                            }
+                        });
+                        if (burgen.length <= 0) {
+                            alert("Fehler beim herunterladen! Keine Burgen gefunden...");
+                            console.log(results);
+                            return;
+                        }
+                        var text = "Willst du " + burgen.length + " Burgen importieren? Das überschreibt alle existierenden Burgen.\n";
+                        if (confirm(text)) {
+                            that.burgen = burgen;
+                            sortiere();
+                            that.burg = that.burgen[0];
+                        }
+                    });
+                }
+            })
         };
 
         this.angriffsInfoLoeschen = function() {
@@ -166,6 +210,9 @@ angular.module('lakmeldung', [])
             sortiereMeldungen();
             localStorage['e4z9.lak.meldungsSortierung'] = JSON.stringify(that.sortierungen.indexOf(newValue));
         });
+        $scope.$watch(function() { return that.importSpielerLink; }, function(newValue) {
+            localStorage['e4z9.lak.importSpielerLink'] = newValue;
+        })
     })
     .directive('ezBurg', function() {
         return {
