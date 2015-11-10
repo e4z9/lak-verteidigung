@@ -5,13 +5,15 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
-        <title>L&K Angriffsmeldungstool</title>
+        <title>L&amp;K Angriffsmeldungstool</title>
     </head>
     <body style="margin: 1em">
         <script type="text/javascript" src="angular/angular.min.js"></script>
+        <script type="text/javascript" src="papaparse/papaparse.min.js"></script>
         <script type="text/javascript" src="app.js"></script>
 
         <div ng-controller="appController as appCtrl">
+            <!-- Anleitung -->
             <div class="alert alert-info" role="alert" style="position: relative">
                 <button class="btn btn-default btn-xs"
                         style="position: absolute; margin-top: -1px; margin-right: -1px; top: 0; right: 0; z-index: 10; border-radius: 0 4px 0 4px;"
@@ -27,7 +29,7 @@
                     <br/>
                     Im Angriffsfall wähle die angegriffenen Burgen aus der Liste aus,
                     und setze <b>Datum</b> und <b>Zeit</b> des Angriffs.<br/>
-                    Wenn du das L&K-interne Brückentool benutzen willst, kopiere den Link in das
+                    Wenn du das L&amp;K-interne Brückentool benutzen willst, kopiere den Link in das
                     Feld <b>Brückenlink</b>.<br/>
                     Wenn du LaKKT benutzen willst, kannst du mit dem Knopf <b>Erstelle LaKKT Link</b>
                     eine LaKKT Brücke mit den davor eingegebenen Daten (Burgname, Link, Datum, Zeit)
@@ -44,6 +46,7 @@
                     entfernen. Burgnamen und Links bleiben erhalten.
                 </div>
             </div>
+            <!-- Ende Anleitung -->
             <p>
                 <div class="form-group">
                     <label for="spielerName" class="control-label">Spielername:</label>
@@ -51,6 +54,23 @@
                 </div>
                 <div class="form-group">
                     <label for="burgSelektion" class="control-label">Burg:</label>
+                    <!-- Burg import -->
+                    <div class="alert alert-info" role="alert" style="position: relative">
+                        <button class="btn btn-default btn-xs"
+                                style="position: absolute; margin-top: -1px; margin-right: -1px; top: 0; right: 0; z-index: 10; border-radius: 0 4px 0 4px;"
+                                ng-click="appCtrl.importVisible = !appCtrl.importVisible">
+                            Burgenliste importieren
+                        </button>
+                        <div ng-show="appCtrl.importVisible">
+                            <div><b>Von <a href="https://lakkt.de">LaKKT</a> importieren:</b></div>
+                            <div>
+                              Spielerlink:
+                              <input type="text" ng-model="appCtrl.importSpielerLink"/>
+                              <button class="btn btn-default btn-xs" ng-click="appCtrl.importLakkt()">Importieren</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Ende Burg import -->
                     <select id="burgSelektion" class="form-control" ng-model="appCtrl.burg" ng-options="burg.displayName for burg in appCtrl.burgen">
                     </select>
                 </div>
