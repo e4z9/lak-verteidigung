@@ -1,0 +1,4 @@
+<div>Burg: {{burg.name}} <a href="{{burg.link}}">{{burg.link}}</a></div>
+<div>Zeit: {{burg.datum | date:'d.M.'}}, {{burg.zeit | date:'H:mm'}}</div>
+<div>Brücke: <a href="{{burg.brueckenLink}}">{{burg.brueckenLink}}</a></div>
+<div ng-if="burg.angreifer">Angreifer: {{burg.angreifer}}</div>
