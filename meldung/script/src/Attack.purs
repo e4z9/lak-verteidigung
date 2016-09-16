@@ -1,8 +1,7 @@
-module Data.Attack (CastleName
-  , CastleLink
-  , BridgeLink
-  , Attack(..)
-  , fromString) where
+module Data.Attack
+  (Attack(..)
+  , fromString)
+  where
 
 import Control.MonadZero (guard)
 import Data.Array (some, many) as A
@@ -18,11 +17,10 @@ import Text.Parsing.Parser (Parser, runParser)
 import Text.Parsing.Parser.Combinators ((<?>))
 import Text.Parsing.Parser.String (oneOf, char, string, noneOf)
 
-type CastleName = String
-type CastleLink = String
-type BridgeLink = String
-
-data Attack = Attack CastleName CastleLink BridgeLink DateTime
+data Attack = Attack { castleName :: String
+                     , castleLink :: String
+                     , bridgeLink :: String
+                     , dateTime :: DateTime }
 
 type ParserS a = Parser String a
 
@@ -87,7 +85,7 @@ attack = do
   char ','
   spaces
   t <- time
-  pure $ Attack name link bridge (DateTime d t)
+  pure $ Attack { castleName: name, castleLink: link, bridgeLink: bridge, dateTime: (DateTime d t) }
 
 fromString :: String -> Maybe Attack
 fromString s = either (const Nothing) Just $ runParser s attack
