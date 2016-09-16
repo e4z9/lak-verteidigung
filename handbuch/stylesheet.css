@@ -1,0 +1,152 @@
+body {
+   line-height: 140%;
+}
+h2 {
+    background-color: #dddddd;
+    line-height: 130%;
+}
+h3 { background-color: #eeeeee; }
+h4 { font-variant: small-caps; font-weight: bolder; }
+ul { list-style-type: disc; padding-left: 1.5em; }
+
+img {
+    border: 0;
+    -ms-interpolation-mode: bicubic
+}
+figure {
+    display: inline-block;
+    position: relative;
+    margin: 1em 2em 2em 2em
+}
+figcaption {
+    font-style: italic;
+    text-align: center;
+    background: #f6f6f6;
+    color: #444;
+    position: absolute;
+    left: 0;
+    bottom: -24px;
+    width: 98%;
+    padding: 1%;
+}
+a:focus {
+    outline: thin dotted
+}
+a:hover,a:active {
+    outline: 0
+}
+a:link,a:visited {
+    text-decoration:none;
+    border-bottom: 1px solid;
+    color: rgba(27, 139, 170, 1)
+}
+a:hover,a:active {
+    color: rgba(61, 189, 225, 1)
+}
+table {
+    border-spacing: 0;
+    margin-bottom: 2em;
+    padding: 0;
+    font-size: 14px;
+    border-collapse: collapse;
+    -webkit-box-shadow: 1px 1px 2px rgba(0,0,0,0.35);
+    -moz-box-shadow: 1px 1px 2px rgba(0,0,0,0.35);
+    box-shadow: 1px 1px 2px rgba(0,0,0,0.35);
+    margin:0 2em 2em 2em;
+    border: 1px solid #ddd;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+table caption, table col, table colgroup, table table, table tbody, table td, table tfoot, table th, table thead, table tr {
+    border-spacing: 0;
+    font-weight: 400;
+    font-size: 24px;
+}
+table caption {
+    display: table-caption;
+    font-weight: 700;
+    font-size: 12px;
+    text-transform: uppercase;
+    background: rgba(22,22,22,0.75);
+    color: #EEE;
+    padding: 8px 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    margin: 4px 0;
+    -webkit-box-shadow: 2px 2px 2px rgba(0,0,0,0.35);
+    -moz-box-shadow: 2px 2px 2px rgba(0,0,0,0.35);
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.35);
+}
+table col {
+    display: table-column
+}
+table colgroup {
+    display: table-column-group
+}
+table tbody {
+    display: table-row-group
+}
+table tfoot {
+    display: table-footer-group
+}
+table th,table td {
+    padding: 10px 10px 9px;
+    line-height: 18px;
+    text-align: left
+}
+table th {
+    padding-top: 9px;
+    font-size: 14px;
+    font-weight: 700!important;
+    text-transform: uppercase;
+    vertical-align: middle;
+    text-align: center
+}
+table td {
+    vertical-align: top;
+    border-top: 1px solid #ddd;
+    font-size: 14px!important
+}
+table tbody th {
+    border-top: 1px solid #ddd;
+    vertical-align: top
+}
+table th+th,table td+td,table th+td {
+    border-left: 1px solid #ddd
+}
+table thead tr:first-child th:first-child,table tbody tr:first-child td:first-child {
+    -webkit-border-radius: 4px 0 0 0;
+    -moz-border-radius: 4px 0 0 0;
+    border-radius: 4px 0 0 0
+}
+table thead tr:first-child th:last-child {
+    -webkit-border-radius: 0 4px 0 0;
+    -moz-border-radius: 0 4px 0 0;
+    border-radius: 0 4px 0 0
+}
+table tr:nth-child(odd), table th:nth-child(odd), table td:nth-child(odd) {
+    background:rgba(255,255,255,0.06)
+}
+table tr:nth-child(even), table td:nth-child(even) {
+    background: rgba(0,0,0,0.06)
+}
+table tbody tr:first-child td:last-child {
+    -webkit-border-radius:0 4px 0 0;
+    -moz-border-radius:0 4px 0 0;
+    border-radius:0 4px 0 0
+}
+table tbody tr:last-child td:first-child {
+    -webkit-border-radius:0 0 0 4px;
+    -moz-border-radius:0 0 0 4px;
+    border-radius:0 0 0 4px
+}
+table tbody tr:last-child td:last-child {
+    -webkit-border-radius:0 0 4px 0;
+    -moz-border-radius:0 0 4px 0;
+    border-radius:0 0 4px 0
+}
+table tbody tr:nth-child(odd) {
+    background-color: rgba(0,0,0,0.03);
+}

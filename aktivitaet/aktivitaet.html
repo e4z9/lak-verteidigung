@@ -1,0 +1,49 @@
+<html>
+<head>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript">
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+                vars[key] = decodeURIComponent(value);
+            });
+            return vars;
+        }
+        function initialize() {
+            var value = getUrlVars()["link"];
+            if (value) {
+                document.getElementById("link").value = value;
+                document.getElementById("button").click();
+            } else {
+                document.getElementById("input-form").style.visibility = "visible";
+            }
+        }
+        function encode() {
+            var value = document.getElementById("input").value;
+            var result = window.location.href + "?link=" + encodeURIComponent(value);
+            document.getElementById("output").innerHTML = result;
+            document.getElementById("output").href = result;
+        }
+    </script>
+</head>
+<body onLoad="initialize();" style="margin: 1em">
+
+<div id="input-form" style="visibility: hidden;">
+    <h4>Aktivität</h4>
+    Link:
+    <input id="input" value="" oninput="encode();" />
+</div>
+<p>
+<a id="output"/>
+</p>
+
+<form style="visibility: hidden;" action="https://lakkt.de/de/reporting.php" method="post">
+    <input id="link" name="link" value=""/><!-- e.g. l+k://alliance?9513&103 -->
+    <input name="type" value="alliance"/>
+    <button id="button" type="submit">Abfragen</button>
+</form>
+</body>
+</html>
