@@ -1,4 +1,4 @@
-#!/bin/bash
-multimarkdown "`dirname "$0"`/handbuch/HandbuchDerVerteidigung.md" | sed 's@<head>@<head>\
-	<meta name="viewport" content="width = device-width"/><!-- scaling on iphone -->\
-	<link rel="stylesheet" href="stylesheet.css" type="text/css">@'
+#/usr/bin/bash
+
+BASE=`dirname $0`
+$BASE/generate.hs "$BASE" "$@"
