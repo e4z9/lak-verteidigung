@@ -1,26 +1,34 @@
 module Data.Attack
   (Attack(..)
+  , AttackDay
+  , AttackTime
+  , AttackDateTime
   , fromString)
   where
 
 import Control.MonadZero (guard)
 import Data.Array (some, many) as A
-import Data.Bounded (bottom)
-import Data.DateTime (DateTime(..), Date, Day, Month, Year, canonicalDate, Time(..), Hour, Minute, Second, Millisecond)
 import Data.Either (either)
-import Data.Enum (class BoundedEnum, toEnum)
 import Data.Int (fromString) as I
 import Data.Maybe (Maybe(..), isJust, fromMaybe)
+import Data.Ord ((>=), (<=))
 import Data.String (fromCharArray) as S
-import Prelude (bind, (<$>), pure, ($), const)
+import Prelude (bind, (<$>), pure, ($), const, (&&))
 import Text.Parsing.Parser (Parser, runParser)
 import Text.Parsing.Parser.Combinators ((<?>))
 import Text.Parsing.Parser.String (oneOf, char, string, noneOf)
 
+data AttackDay = AttackDay { day :: Int
+                           , month :: Int
+                           , year :: Int }
+data AttackTime = AttackTime { hour :: Int
+                             , minute :: Int }
+data AttackDateTime = AttackDateTime { day :: AttackDay
+                                     , time :: AttackTime }
 data Attack = Attack { castleName :: String
                      , castleLink :: String
                      , bridgeLink :: String
-                     , dateTime :: DateTime }
+                     , dateTime :: AttackDateTime }
 
 type ParserS a = Parser String a
 
@@ -47,28 +55,27 @@ positiveInt = do
   guard (isJust i)
   pure $ fromMaybe 0 i
 
-enum :: forall a. (BoundedEnum a) => ParserS a
-enum = do
+bounded :: Int -> Int -> ParserS Int
+bounded min max = do
   d <- positiveInt
-  let maybeDay = toEnum d :: Maybe a
-  guard (isJust maybeDay)
-  pure $ fromMaybe (bottom :: a) maybeDay
+  guard (d >= min && d <= max)
+  pure d
 
-date :: ParserS Date
+date :: ParserS AttackDay
 date = do
-  d <- (enum :: ParserS Day)
+  d <- bounded 1 31
   char '.'
-  m <- (enum :: ParserS Month)
+  m <- bounded 1 12
   char '.'
-  y <- (enum :: ParserS Year)
-  pure $ canonicalDate y m d
+  y <- positiveInt
+  pure $ AttackDay { day: d, month: m, year: y }
 
-time :: ParserS Time
+time :: ParserS AttackTime
 time = do
-  h <- (enum :: ParserS Hour)
+  h <- bounded 0 23
   char ':'
-  m <- (enum :: ParserS Minute)
-  pure $ Time h m (bottom :: Second) (bottom :: Millisecond)
+  m <- bounded 0 59
+  pure $ AttackTime { hour: h, minute: m }
 
 attack :: ParserS Attack
 attack = do
@@ -85,7 +92,7 @@ attack = do
   char ','
   spaces
   t <- time
-  pure $ Attack { castleName: name, castleLink: link, bridgeLink: bridge, dateTime: (DateTime d t) }
+  pure $ Attack { castleName: name, castleLink: link, bridgeLink: bridge, dateTime: (AttackDateTime { day: d, time: t }) }
 
 fromString :: String -> Maybe Attack
 fromString s = either (const Nothing) Just $ runParser s attack
