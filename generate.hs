@@ -3,6 +3,7 @@
 {-# LANGUAGE OverloadedStrings #-}
 import Turtle
 import Prelude hiding (FilePath)
+import qualified Data.Text as T
 
 targets :: [Target]
 targets = [handbuch, aktivitaet, meldung]
@@ -30,6 +31,8 @@ meldung = Target "meldung" $ cpToDir "meldung" [
     ("meldung/site/angular/angular.min.js",          "meldung/angular")
   , ("meldung/site/bootstrap/css/bootstrap.min.css", "meldung/bootstrap/css")
   , ("meldung/site/papaparse/papaparse.min.js",      "meldung/papaparse")
+  ] ++ [
+    pscBundle "meldung/script/output/**/*.js" ["Data.Attack"] "meldung/script.js"
   ]
 
 -- src.md target.html
@@ -44,6 +47,16 @@ genMarkdown src target srcBase targetBase = do
                      ("<head>\n"
                      <> "<meta name=\"viewport\" content=\"width = device-width\"/><!-- scaling on iphone -->\n"
                      <> "<link rel=\"stylesheet\" href=\"stylesheet.css\" type=\"text/css\">"))
+
+pscBundle :: Text -> [Text] -> FilePath -> Operation
+pscBundle srcPattern modules target srcBase targetBase = do
+  let to = targetBase </> target
+  let srcBaseText = either id id $ toText srcBase
+  let fromPattern = srcBaseText `T.append` "/" `T.append` srcPattern
+  printf (fp % " <- psc-bundle " % s % "\n") to fromPattern
+  ensurePath to
+  let moduleArgs = do m <- modules; ["-m", m]
+  output to $ inproc "psc-bundle" (fromPattern : moduleArgs) empty
 
 -- BASE STUFF
 
