@@ -18,17 +18,17 @@ import Text.Parsing.Parser (Parser, runParser)
 import Text.Parsing.Parser.Combinators ((<?>))
 import Text.Parsing.Parser.String (oneOf, char, string, noneOf)
 
-data AttackDay = AttackDay { day :: Int
-                           , month :: Int
-                           , year :: Int }
-data AttackTime = AttackTime { hour :: Int
-                             , minute :: Int }
-data AttackDateTime = AttackDateTime { day :: AttackDay
-                                     , time :: AttackTime }
-data Attack = Attack { castleName :: String
-                     , castleLink :: String
-                     , bridgeLink :: String
-                     , dateTime :: AttackDateTime }
+newtype AttackDay = AttackDay { day :: Int
+                                , month :: Int
+                                , year :: Int }
+newtype AttackTime = AttackTime { hour :: Int
+                                , minute :: Int }
+newtype AttackDateTime = AttackDateTime { day :: AttackDay
+                                        , time :: AttackTime }
+newtype Attack = Attack { castleName :: String
+                        , castleLink :: String
+                        , bridgeLink :: String
+                        , dateTime :: AttackDateTime }
 
 type ParserS a = Parser String a
 
