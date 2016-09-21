@@ -1,7 +1,9 @@
 "use strict";
 angular.module('lakmeldung', [])
-    .controller('appController', function($scope) {
+    .controller('appController', function($scope, $timeout) {
         var that = this;
+        var Attack = PS["Data.Attack"];
+        var Maybe = PS["Data.Maybe"];
         this.burgen = [];
         this.meldungen = [];
 
@@ -197,6 +199,13 @@ angular.module('lakmeldung', [])
             return new Date();
         };
 
+        this.onBridgePaste = function(evt) {
+            var link = evt.clipboardData.getData('text/plain');
+            var maybeAttack = Attack.fromString(link);
+            var newLink = Maybe.maybe(link)(function(at) { return at.bridgeLink; })(maybeAttack);
+            $timeout(function(){ that.burg.brueckenLink = newLink; });
+        };
+
         $scope.$watch(function() { return that.spielerName; }, function(newValue) {
             localStorage['e4z9.lak.spielerName'] = newValue;
         });
@@ -212,7 +221,7 @@ angular.module('lakmeldung', [])
         });
         $scope.$watch(function() { return that.importSpielerLink; }, function(newValue) {
             localStorage['e4z9.lak.importSpielerLink'] = newValue;
-        })
+        });
     })
     .directive('ezBurg', function() {
         return {

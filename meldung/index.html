@@ -10,6 +10,7 @@
     <body style="margin: 1em">
         <script type="text/javascript" src="angular/angular.min.js"></script>
         <script type="text/javascript" src="papaparse/papaparse.min.js"></script>
+        <script type="text/javascript" src="script.js"></script>
         <script type="text/javascript" src="app.js"></script>
 
         <div ng-controller="appController as appCtrl">
@@ -99,7 +100,7 @@
                 </div>
                 <div class="form-group">
                     <label for="brueckenLink" class="control-label">Brückenlink:</label>
-                    <input type="text" class="form-control" id="brueckenLink" ng-model="appCtrl.burg.brueckenLink"/>
+                    <input type="text" class="form-control" id="brueckenLink" ng-model="appCtrl.burg.brueckenLink" ng-paste="appCtrl.onBridgePaste($event)"/>
                     <form target="_blank" method="post" action="https://lakkt.de/de/function/createDefList.php">
                         <input type="hidden" name="time" value="{{appCtrl.burg.zeit | date:'medium'}}"/>
                         <input type="hidden" name="date" value="{{appCtrl.burg.datum | date:'medium'}}"/>
