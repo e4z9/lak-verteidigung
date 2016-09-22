@@ -854,17 +854,6 @@ var PS = {};
     return a.join("");
   };
 
-  exports._indexOf = function (just) {
-    return function (nothing) {
-      return function (x) {
-        return function (s) {
-          var i = s.indexOf(x);
-          return i === -1 ? nothing : just(i);
-        };
-      };
-    };
-  };
-
   exports.length = function (s) {
     return s.length;
   };
@@ -892,14 +881,11 @@ var PS = {};
   var Data_Eq = PS["Data.Eq"];
   var Data_Ordering = PS["Data.Ordering"];
   var Data_Ring = PS["Data.Ring"];
-  var Data_Function = PS["Data.Function"];                                                    
-  var indexOf = $foreign._indexOf(Data_Maybe.Just.create)(Data_Maybe.Nothing.value);      
+  var Data_Function = PS["Data.Function"];                                                
   var charAt = $foreign._charAt(Data_Maybe.Just.create)(Data_Maybe.Nothing.value);
   exports["charAt"] = charAt;
-  exports["indexOf"] = indexOf;
   exports["drop"] = $foreign.drop;
   exports["fromCharArray"] = $foreign.fromCharArray;
-  exports["length"] = $foreign.length;
   exports["singleton"] = $foreign.singleton;
   exports["split"] = $foreign.split;
 })(PS["Data.String"] = PS["Data.String"] || {});
@@ -1325,25 +1311,7 @@ var PS = {};
   var Data_Unit = PS["Data.Unit"];
   var Control_Bind = PS["Control.Bind"];
   var Data_Eq = PS["Data.Eq"];
-  var Data_HeytingAlgebra = PS["Data.HeytingAlgebra"];        
-  var string = function (dictMonad) {
-      return function (str) {
-          return Data_Function.apply(Text_Parsing_Parser.ParserT)(function (v) {
-              return Data_Function.apply(Control_Applicative.pure(dictMonad["__superclass_Control.Applicative.Applicative_0"]()))((function () {
-                  var $16 = Data_String.indexOf(str)(v.value0.input);
-                  if ($16 instanceof Data_Maybe.Just && $16.value0 === 0) {
-                      return {
-                          consumed: true, 
-                          input: Data_String.drop(Data_String.length(str))(v.value0.input), 
-                          result: new Data_Either.Right(str), 
-                          position: Text_Parsing_Parser_Pos.updatePosString(v.value0.position)(str)
-                      };
-                  };
-                  return Text_Parsing_Parser.parseFailed(v.value0.input)(v.value0.position)("Expected " + str);
-              })());
-          });
-      };
-  };
+  var Data_HeytingAlgebra = PS["Data.HeytingAlgebra"];
   var anyChar = function (dictMonad) {
       return Data_Function.apply(Text_Parsing_Parser.ParserT)(function (v) {
           return Data_Function.apply(Control_Applicative.pure(dictMonad["__superclass_Control.Applicative.Applicative_0"]()))((function () {
@@ -1399,7 +1367,6 @@ var PS = {};
   exports["noneOf"] = noneOf;
   exports["oneOf"] = oneOf;
   exports["satisfy"] = satisfy;
-  exports["string"] = string;
 })(PS["Text.Parsing.Parser.String"] = PS["Text.Parsing.Parser.String"] || {});
 (function(exports) {
     "use strict";
@@ -1481,27 +1448,31 @@ var PS = {};
           });
       });
   });
-  var attack = Control_Bind.bind(Text_Parsing_Parser.bindParserT(Data_Identity.monadIdentity))(Text_Parsing_Parser_String.string(Data_Identity.monadIdentity)("Burg: "))(function () {
-      return Control_Bind.bind(Text_Parsing_Parser.bindParserT(Data_Identity.monadIdentity))(toEOL1)(function (v) {
+  var attack = Control_Bind.bind(Text_Parsing_Parser.bindParserT(Data_Identity.monadIdentity))(Data_Function.apply(many)(Text_Parsing_Parser_String.noneOf(Data_Identity.monadIdentity)([ ":" ])))(function () {
+      return Control_Bind.bind(Text_Parsing_Parser.bindParserT(Data_Identity.monadIdentity))(Text_Parsing_Parser_String["char"](Data_Identity.monadIdentity)(":"))(function () {
           return Control_Bind.bind(Text_Parsing_Parser.bindParserT(Data_Identity.monadIdentity))(spaces)(function () {
-              return Control_Bind.bind(Text_Parsing_Parser.bindParserT(Data_Identity.monadIdentity))(toEOL1)(function (v1) {
+              return Control_Bind.bind(Text_Parsing_Parser.bindParserT(Data_Identity.monadIdentity))(toEOL1)(function (v) {
                   return Control_Bind.bind(Text_Parsing_Parser.bindParserT(Data_Identity.monadIdentity))(spaces)(function () {
-                      return Control_Bind.bind(Text_Parsing_Parser.bindParserT(Data_Identity.monadIdentity))(toEOL1)(function (v2) {
-                          return Control_Bind.bind(Text_Parsing_Parser.bindParserT(Data_Identity.monadIdentity))(Data_Function.apply(many)(Text_Parsing_Parser_String.noneOf(Data_Identity.monadIdentity)([ ":" ])))(function () {
-                              return Control_Bind.bind(Text_Parsing_Parser.bindParserT(Data_Identity.monadIdentity))(Text_Parsing_Parser_String["char"](Data_Identity.monadIdentity)(":"))(function () {
-                                  return Control_Bind.bind(Text_Parsing_Parser.bindParserT(Data_Identity.monadIdentity))(spaces)(function () {
-                                      return Control_Bind.bind(Text_Parsing_Parser.bindParserT(Data_Identity.monadIdentity))(date)(function (v3) {
-                                          return Control_Bind.bind(Text_Parsing_Parser.bindParserT(Data_Identity.monadIdentity))(Text_Parsing_Parser_String["char"](Data_Identity.monadIdentity)(","))(function () {
-                                              return Control_Bind.bind(Text_Parsing_Parser.bindParserT(Data_Identity.monadIdentity))(spaces)(function () {
-                                                  return Control_Bind.bind(Text_Parsing_Parser.bindParserT(Data_Identity.monadIdentity))(time)(function (v4) {
-                                                      return Data_Function.apply(Control_Applicative.pure(Text_Parsing_Parser.applicativeParserT(Data_Identity.monadIdentity)))({
-                                                          castleName: v, 
-                                                          castleLink: v1, 
-                                                          bridgeLink: v2, 
-                                                          dateTime: {
-                                                              day: v3, 
-                                                              time: v4
-                                                          }
+                      return Control_Bind.bind(Text_Parsing_Parser.bindParserT(Data_Identity.monadIdentity))(toEOL1)(function (v1) {
+                          return Control_Bind.bind(Text_Parsing_Parser.bindParserT(Data_Identity.monadIdentity))(spaces)(function () {
+                              return Control_Bind.bind(Text_Parsing_Parser.bindParserT(Data_Identity.monadIdentity))(toEOL1)(function (v2) {
+                                  return Control_Bind.bind(Text_Parsing_Parser.bindParserT(Data_Identity.monadIdentity))(Data_Function.apply(many)(Text_Parsing_Parser_String.noneOf(Data_Identity.monadIdentity)([ ":" ])))(function () {
+                                      return Control_Bind.bind(Text_Parsing_Parser.bindParserT(Data_Identity.monadIdentity))(Text_Parsing_Parser_String["char"](Data_Identity.monadIdentity)(":"))(function () {
+                                          return Control_Bind.bind(Text_Parsing_Parser.bindParserT(Data_Identity.monadIdentity))(spaces)(function () {
+                                              return Control_Bind.bind(Text_Parsing_Parser.bindParserT(Data_Identity.monadIdentity))(date)(function (v3) {
+                                                  return Control_Bind.bind(Text_Parsing_Parser.bindParserT(Data_Identity.monadIdentity))(Text_Parsing_Parser_String["char"](Data_Identity.monadIdentity)(","))(function () {
+                                                      return Control_Bind.bind(Text_Parsing_Parser.bindParserT(Data_Identity.monadIdentity))(spaces)(function () {
+                                                          return Control_Bind.bind(Text_Parsing_Parser.bindParserT(Data_Identity.monadIdentity))(time)(function (v4) {
+                                                              return Data_Function.apply(Control_Applicative.pure(Text_Parsing_Parser.applicativeParserT(Data_Identity.monadIdentity)))({
+                                                                  castleName: v, 
+                                                                  castleLink: v1, 
+                                                                  bridgeLink: v2, 
+                                                                  dateTime: {
+                                                                      day: v3, 
+                                                                      time: v4
+                                                                  }
+                                                              });
+                                                          });
                                                       });
                                                   });
                                               });
