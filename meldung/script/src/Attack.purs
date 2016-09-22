@@ -16,7 +16,7 @@ import Data.String (fromCharArray) as S
 import Prelude (bind, (<$>), pure, ($), const, (&&))
 import Text.Parsing.Parser (Parser, runParser)
 import Text.Parsing.Parser.Combinators ((<?>))
-import Text.Parsing.Parser.String (oneOf, char, string, noneOf)
+import Text.Parsing.Parser.String (oneOf, char, noneOf)
 
 newtype AttackDay = AttackDay { day :: Int
                                 , month :: Int
@@ -79,7 +79,9 @@ time = do
 
 attack :: ParserS Attack
 attack = do
-  string "Burg: "
+  many $ noneOf [':']
+  char ':'
+  spaces
   name <- toEOL1
   spaces
   link <- toEOL1
