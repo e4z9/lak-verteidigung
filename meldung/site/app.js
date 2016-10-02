@@ -7,6 +7,16 @@ angular.module('lakmeldung', [])
         this.burgen = [];
         this.meldungen = [];
 
+        function getJSDate(dateTime) {
+            return new Date(dateTime.day.year, dateTime.day.month - 1, dateTime.day.day)
+        }
+        function getJSTime(dateTime) {
+            var t = new Date(0); // initialized to 1.1.1970, 0:00
+            t.setHours(dateTime.time.hour);
+            t.setMinutes(dateTime.time.minute);
+            return t;
+        }
+
         this.sortierungen = [
             { name: 'Zeitpunkt',
               fun: function(a, b) {
@@ -114,6 +124,8 @@ angular.module('lakmeldung', [])
         this.importSpielerLink = localStorage['e4z9.lak.importSpielerLink'];
         if (typeof this.importSpielerLink !== 'string')
           this.importSpielerLink = '';
+        this.fromLinkVisible = false;
+        this.extendedBridgeLink = '';
 
         var sortiere = function() {
             that.burgen.sort(function(a, b) {
@@ -122,9 +134,10 @@ angular.module('lakmeldung', [])
         };
 
         this.neueBurg = function() {
-            that.burgen.push(createBurg());
-            that.burg = that.burgen[that.burgen.length-1];
+            that.burg = createBurg();
+            that.burgen.push(that.burg);
             sortiere();
+            return that.burg;
         };
 
         this.burgEntfernen = function() {
@@ -178,6 +191,36 @@ angular.module('lakmeldung', [])
             })
         };
 
+        this.findCastleForLinkOr = function(link, defaultProd) {
+            var castle = undefined;
+            var trimmedLink = link.trim();
+            that.burgen.forEach(function(b) {
+                if (!castle && b.link.trim() === trimmedLink)
+                    castle = b;
+            });
+            if (castle)
+                return castle;
+            return defaultProd();
+        }
+
+        this.reportFromBridgeLink = function() {
+            var maybeAttack = Attack.fromString(that.extendedBridgeLink);
+            if (Maybe.isJust(maybeAttack)) {
+                var at = maybeAttack.value0;
+                var castle = that.findCastleForLinkOr(at.castleLink, function() { return that.neueBurg() } );
+                castle.displayName = at.castleName;
+                castle.name = at.castleName;
+                castle.link = at.castleLink;
+                castle.datum = getJSDate(at.dateTime);
+                castle.zeit = getJSTime(at.dateTime);
+                castle.brueckenLink = at.bridgeLink;
+                that.extendedBridgeLink = "";
+                that.burg = castle;
+            } else {
+                alert("Fehler beim Lesen der Daten. Der Brückenlink muss in der Form\n\nBurg: <Name>\n<Burglink>\n<Brückenlink>\nNächste Schlacht: DD.MM.YYYY, HH:MM\n\nsein.")
+            }
+        };
+
         this.angriffsInfoLoeschen = function() {
             that.burgen.forEach(resetBurg);
         };
@@ -200,10 +243,32 @@ angular.module('lakmeldung', [])
         };
 
         this.onBridgePaste = function(evt) {
+            function z2(val) { return ("0" + val).slice(-2); } // fill with zero to 2 chars
+            function askForConfirmation(oldDate, oldTime, newDate, newTime) {
+              function formatDate(d) { return "" + z2(d.getJSDate()) + "." + z2(d.getMonth() + 1) + "." + d.getFullYear(); }
+              function formatTime(d) { return "" + z2(d.getHours()) + ":" + z2(d.getMinutes()); }
+              function formatDateTime(d, t) { return formatDate(d) + ", " + formatTime(t); }
+              var text = "Willst du die aktuelle Zeit mit der neuen Zeit ersetzen? \n" +
+                  formatDateTime(oldDate, oldTime) + "\n-> " + formatDateTime(newDate, newTime);
+              return confirm(text);
+            }
+            function dateEqual(d1, d2) { return (!d1 && !d2) || (d1 && d2 && d1.getTime() == d2.getTime()); }
             var link = evt.clipboardData.getData('text/plain');
             var maybeAttack = Attack.fromString(link);
-            var newLink = Maybe.maybe(link)(function(at) { return at.bridgeLink; })(maybeAttack);
-            $timeout(function(){ that.burg.brueckenLink = newLink; });
+            if (Maybe.isJust(maybeAttack)) {
+                var at = maybeAttack.value0;
+                var newLink = at.bridgeLink;
+                var atDate = getJSDate(at.dateTime);
+                var atTime = getJSTime(at.dateTime);
+                var emptyDateTime = !that.burg.datum && !that.burg.zeit;
+                if (emptyDateTime
+                        || (dateEqual(that.burg.datum, atDate) && dateEqual(that.burg.zeit, atTime))
+                        || askForConfirmation(that.burg.datum, that.burg.zeit, atDate, atTime)) {
+                    that.burg.datum = atDate;
+                    that.burg.zeit = atTime;
+                }
+                $timeout(function(){ that.burg.brueckenLink = newLink; });
+            }
         };
 
         $scope.$watch(function() { return that.spielerName; }, function(newValue) {

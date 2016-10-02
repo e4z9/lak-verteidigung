@@ -81,6 +81,23 @@
             </p>
             <hr/>
             <p>
+                <!-- Meldung aus Brückenlink -->
+                <div class="alert alert-info" role="alert" style="position: relative">
+                    <button class="btn btn-default btn-xs"
+                            style="position: absolute; margin-top: -1px; margin-right: -1px; top: 0; right: 0; z-index: 10; border-radius: 0 4px 0 4px;"
+                            ng-click="appCtrl.fromLinkVisible = !appCtrl.fromLinkVisible">
+                        Meldung aus Brückenlink
+                    </button>
+                    <div ng-show="appCtrl.fromLinkVisible">
+                        <br/>
+                        <div>Meldung aus einem erweiterten Brückenlink generieren, der schon Burgname, -link und Angriffszeit enthält:</div>
+                        <div>
+                          <textarea rows="4" cols="50" ng-model="appCtrl.extendedBridgeLink"></textarea><br/>
+                          <button class="btn btn-default btn-xs" ng-click="appCtrl.reportFromBridgeLink()">Erstellen</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Meldung aus Brückenlink -->
                 <h3>Burg</h3>
                 <div class="form-group">
                     <label for="burgName" class="control-label">Burgname:</label>
