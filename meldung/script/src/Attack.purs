@@ -15,7 +15,7 @@ import Data.Ord ((>=), (<=))
 import Data.String (fromCharArray) as S
 import Prelude (bind, (<$>), pure, ($), const, (&&))
 import Text.Parsing.Parser (Parser, runParser)
-import Text.Parsing.Parser.Combinators ((<?>))
+import Text.Parsing.Parser.Combinators (optional)
 import Text.Parsing.Parser.String (oneOf, char, noneOf)
 
 newtype AttackDay = AttackDay { day :: Int
@@ -91,7 +91,7 @@ attack = do
   char ':'
   spaces
   d <- date
-  char ','
+  optional $ char ',' -- ',' only on iOS
   spaces
   t <- time
   pure $ Attack { castleName: name, castleLink: link, bridgeLink: bridge, dateTime: (AttackDateTime { day: d, time: t }) }
